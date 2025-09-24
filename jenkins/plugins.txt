@@ -1,0 +1,24 @@
+# Required Jenkins plugins for the CI/CD pipeline
+allure-jenkins-plugin:latest
+email-ext:latest
+slack:latest
+docker-workflow:latest
+pipeline-stage-view:latest
+build-timeout:latest
+credentials-binding:latest
+timestamper:latest
+workspace-cleanup:latest
+ant:latest
+gradle:latest
+workflow-aggregator:latest
+github-branch-source:latest
+pipeline-github-lib:latest
+ssh-slaves:latest
+matrix-auth:latest
+pam-auth:latest
+ldap:latest
+junit:latest
+jira:latest
+htmlpublisher:latest
+performance:latest
+blueocean:latest
