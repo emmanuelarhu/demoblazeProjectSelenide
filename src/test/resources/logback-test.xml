@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Logback configuration for comprehensive test execution logging -->
 <configuration>
     <!-- Console appender for test output -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
