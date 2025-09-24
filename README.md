@@ -136,23 +136,51 @@ See `jenkins/jenkins-setup.md` for detailed configuration guide.
 
 ## Browser Support
 
-Currently configured for Chrome browser with full-screen execution and screenshot capabilities.
+Supports multiple browsers with full-screen execution and screenshot capabilities:
+- **Chrome** (default) - Stable and fast execution
+- **Firefox** - Cross-browser compatibility testing
+- **Headless mode** - For CI/CD and faster execution
 
 ## Quick Start Commands
 
+### Local Execution
 ```bash
-# Run all tests
+# Run all tests (Chrome by default)
 mvn test
 
-# Run tests with specific browser
+# Run tests with Chrome
 mvn test -Dselenide.browser=chrome
+
+# Run tests with Firefox
+mvn test -Dselenide.browser=firefox
 
 # Run in headless mode
 mvn test -Dselenide.headless=true
 
+# Run Firefox in headless mode
+mvn test -Dselenide.browser=firefox -Dselenide.headless=true
+
 # Generate Allure report
 mvn allure:serve
-
-# Docker execution
-./docker-scripts/build-and-run.sh
 ```
+
+### Docker Execution
+```bash
+# Default (Chrome headless)
+./docker-scripts/build-and-run.sh
+
+# Firefox headless
+BROWSER=firefox ./docker-scripts/build-and-run.sh
+
+# Chrome with UI (non-headless) - requires X11 forwarding
+HEADLESS=false ./docker-scripts/build-and-run.sh
+
+# Windows - Firefox
+set BROWSER=firefox && docker-scripts\build-and-run.bat
+```
+
+### Browser Configuration
+The framework automatically configures browser-specific settings:
+- **Chrome**: Optimized for speed and stability
+- **Firefox**: Enhanced for cross-browser compatibility
+- **Headless**: Faster execution for CI/CD pipelines

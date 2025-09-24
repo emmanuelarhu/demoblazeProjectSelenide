@@ -33,6 +33,11 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     apt-get install -y google-chrome-stable && \
     rm -rf /var/lib/apt/lists/*
 
+# Install Firefox
+RUN apt-get update && \
+    apt-get install -y firefox-esr && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install Maven
 RUN wget https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz && \
     tar xzf apache-maven-3.9.6-bin.tar.gz -C /opt && \

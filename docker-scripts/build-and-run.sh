@@ -9,6 +9,10 @@ IMAGE_NAME="demoblaze-selenium-tests"
 CONTAINER_NAME="demoblaze-test-run"
 BUILD_NUMBER=${BUILD_NUMBER:-"local-$(date +%Y%m%d-%H%M%S)"}
 
+# Browser configuration (default to chrome, can be overridden)
+BROWSER=${BROWSER:-"chrome"}
+HEADLESS=${HEADLESS:-"true"}
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -35,10 +39,11 @@ docker run --rm \
     -v "$(pwd)/target/logs:/app/target/logs" \
     -v "$(pwd)/target/screenshots:/app/target/screenshots" \
     -v "$(pwd)/target/surefire-reports:/app/target/surefire-reports" \
-    -e SELENIDE_HEADLESS=true \
-    -e SELENIDE_BROWSER=chrome \
+    -e SELENIDE_HEADLESS=${HEADLESS} \
+    -e SELENIDE_BROWSER=${BROWSER} \
     -e SELENIDE_BROWSER_SIZE=1920x1080 \
-    ${IMAGE_NAME}:${BUILD_NUMBER}
+    ${IMAGE_NAME}:${BUILD_NUMBER} \
+    mvn clean test -Dselenide.browser=${BROWSER} -Dselenide.headless=${HEADLESS}
 
 # Check test results
 if [ $? -eq 0 ]; then

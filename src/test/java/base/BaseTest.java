@@ -25,9 +25,10 @@ public abstract class BaseTest {
     void setUpBase() {
         logger.info("Setting up base test configuration");
 
-        Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-        Configuration.headless = false;
+        // Browser configuration - can be overridden by system properties
+        Configuration.browser = System.getProperty("selenide.browser", "chrome");
+        Configuration.browserSize = System.getProperty("selenide.browserSize", "1920x1080");
+        Configuration.headless = Boolean.parseBoolean(System.getProperty("selenide.headless", "false"));
         Configuration.screenshots = true;
         Configuration.savePageSource = true;
         Configuration.reportsFolder = "target/screenshots";

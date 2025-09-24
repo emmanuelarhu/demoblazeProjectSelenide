@@ -8,6 +8,10 @@ REM Configuration
 set IMAGE_NAME=demoblaze-selenium-tests
 set CONTAINER_NAME=demoblaze-test-run
 
+REM Browser configuration (default to chrome, can be overridden)
+if "%BROWSER%"=="" set BROWSER=chrome
+if "%HEADLESS%"=="" set HEADLESS=true
+
 REM Get build number or use local timestamp
 if "%BUILD_NUMBER%"=="" (
     for /f "tokens=1-4 delims=/ " %%a in ('date /t') do set mydate=%%c%%a%%b
@@ -34,10 +38,11 @@ docker run --rm ^
     -v "%cd%\target\logs:/app/target/logs" ^
     -v "%cd%\target\screenshots:/app/target/screenshots" ^
     -v "%cd%\target\surefire-reports:/app/target/surefire-reports" ^
-    -e SELENIDE_HEADLESS=true ^
-    -e SELENIDE_BROWSER=chrome ^
+    -e SELENIDE_HEADLESS=%HEADLESS% ^
+    -e SELENIDE_BROWSER=%BROWSER% ^
     -e SELENIDE_BROWSER_SIZE=1920x1080 ^
-    %IMAGE_NAME%:%BUILD_NUMBER%
+    %IMAGE_NAME%:%BUILD_NUMBER% ^
+    mvn clean test -Dselenide.browser=%BROWSER% -Dselenide.headless=%HEADLESS%
 
 REM Check test results
 if %errorlevel% equ 0 (
