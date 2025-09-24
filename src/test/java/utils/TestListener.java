@@ -9,6 +9,10 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 
 
+/**
+ * JUnit 5 test listener for automatic screenshot capture on test failures
+ * Integrates with Allure reporting to attach screenshots when tests fail or are aborted
+ */
 public class TestListener implements TestWatcher {
 
     private static final Logger logger = LoggerFactory.getLogger(TestListener.class);
