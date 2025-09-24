@@ -12,6 +12,10 @@ import utils.TestListener;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
+/**
+ * Base test class providing common configuration for all tests
+ * Configures Selenide settings, Allure integration, and automatic screenshot capture
+ */
 @ExtendWith(TestListener.class)
 public abstract class BaseTest {
 
