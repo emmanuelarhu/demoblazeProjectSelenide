@@ -86,6 +86,73 @@ All test data is centralized in `TestData.java` with organized sections:
 - ✅ Order placement workflow
 - ✅ Form validation scenarios
 
+## CI/CD Integration
+
+### 🐳 Docker Support
+The framework supports containerized execution with Docker:
+
+```bash
+# Build and run tests in Docker (Linux/Mac)
+./docker-scripts/build-and-run.sh
+
+# Build and run tests in Docker (Windows)
+docker-scripts\build-and-run.bat
+
+# Manual Docker build
+docker build -t demoblaze-tests .
+docker run --rm -v $(pwd)/target:/app/target demoblaze-tests
+```
+
+### 🔄 Jenkins Pipeline
+Complete CI/CD pipeline with Jenkins integration:
+
+**Features:**
+- ✅ **Parameterized builds** (test suite, browser, headless mode)
+- ✅ **Docker containerized execution**
+- ✅ **Allure reporting** with screenshots
+- ✅ **Slack notifications** for build status
+- ✅ **Email notifications** with detailed reports
+- ✅ **JIRA integration** for failed test tickets
+- ✅ **Artifact archival** (logs, screenshots, reports)
+
+**Setup:**
+1. Install required Jenkins plugins (see `jenkins/plugins.txt`)
+2. Configure global tools (Maven, JDK, Allure)
+3. Set up credentials (Slack, JIRA, Email)
+4. Create pipeline job with `Jenkinsfile`
+
+See `jenkins/jenkins-setup.md` for detailed configuration guide.
+
+### 📊 Reporting
+- **JUnit XML reports** for Jenkins test results
+- **Allure HTML reports** with interactive dashboards
+- **Screenshots** automatically captured on test failures
+- **Logs** with separate files for page actions and test execution
+
+### 🔔 Notifications
+- **Slack integration** with build status messages
+- **Email notifications** with HTML formatting
+- **JIRA tickets** created automatically for test failures
+
 ## Browser Support
 
 Currently configured for Chrome browser with full-screen execution and screenshot capabilities.
+
+## Quick Start Commands
+
+```bash
+# Run all tests
+mvn test
+
+# Run tests with specific browser
+mvn test -Dselenide.browser=chrome
+
+# Run in headless mode
+mvn test -Dselenide.headless=true
+
+# Generate Allure report
+mvn allure:serve
+
+# Docker execution
+./docker-scripts/build-and-run.sh
+```
