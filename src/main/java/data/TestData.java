@@ -1,5 +1,9 @@
 package data;
 
+/**
+ * Centralized test data and configuration constants
+ * Provides organized access to all test data including products, forms, selectors, and timeouts
+ */
 public class TestData {
 
     public static final String BASE_URL = "https://www.demoblaze.com/index.html";
