@@ -8,6 +8,10 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Page Object for DemoBlaze home page functionality
+ * Provides methods for navigation, product interaction, and element verification
+ */
 public class HomePage {
 
     private static final Logger logger = LoggerFactory.getLogger(HomePage.class);
