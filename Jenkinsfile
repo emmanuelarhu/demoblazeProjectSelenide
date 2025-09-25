@@ -1,16 +1,17 @@
 pipeline {
-    agent any
+    agent {
+        label 'linux-agent'
+    }
 
-    tools {
-        maven 'Maven-3.9.6' // Configure this in Jenkins Global Tool Configuration
-        jdk 'JDK-21'        // Configure this in Jenkins Global Tool Configuration
+    triggers {
+        githubPush()
     }
 
     environment {
-        DOCKER_IMAGE = "demoblaze-selenium-tests"
+        DOCKER_IMAGE = 'demoblaze-selenium-tests'
         ALLURE_RESULTS = "target/allure-results"
-        SLACK_CHANNEL = "#test-automation" // Configure your Slack channel
-        JIRA_PROJECT = "TEST" // Configure your JIRA project key
+        SLACK_CHANNEL = "#test-automation"
+        JIRA_PROJECT = "TEST"
     }
 
     parameters {
@@ -73,17 +74,66 @@ pipeline {
 
                     def testCommands = []
 
-                    // Determine which tests to run based on TEST_TYPE
-                    if (params.TEST_TYPE == 'all') {
-                        // Run both JUnit and BDD tests
-                        testCommands.add(buildJUnitCommand())
-                        testCommands.add(buildBDDCommand())
-                    } else if (params.TEST_TYPE == 'junit-only') {
-                        // Run only JUnit tests
-                        testCommands.add(buildJUnitCommand())
-                    } else if (params.TEST_TYPE == 'bdd-only') {
-                        // Run only BDD tests
-                        testCommands.add(buildBDDCommand())
+                    // Build JUnit command
+                    if (params.TEST_TYPE == 'all' || params.TEST_TYPE == 'junit-only') {
+                        def junitCommand = "mvn test"
+                        if (params.TEST_SUITE != 'all') {
+                            switch(params.TEST_SUITE) {
+                                case 'contact':
+                                    junitCommand += " -Dtest=tests.ContactModalTest"
+                                    break
+                                case 'cart':
+                                    junitCommand += " -Dtest=tests.CartPageTest"
+                                    break
+                                case 'homepage':
+                                    junitCommand += " -Dtest=tests.HomePageTest"
+                                    break
+                                case 'orderplacement':
+                                    junitCommand += " -Dtest=tests.OrderPlacementTest"
+                                    break
+                                case 'smoke':
+                                case 'regression':
+                                    junitCommand += " -Dtest=tests.*Test"
+                                    break
+                            }
+                        }
+                        junitCommand += " -Dselenide.browser=${params.BROWSER}"
+                        if (params.HEADLESS) {
+                            junitCommand += " -Dselenide.headless=true"
+                        }
+                        testCommands.add(junitCommand)
+                    }
+
+                    // Build BDD command
+                    if (params.TEST_TYPE == 'all' || params.TEST_TYPE == 'bdd-only') {
+                        def bddCommand = "mvn test -Dtest=runners.CucumberTestRunner"
+                        if (params.TEST_SUITE != 'all') {
+                            switch(params.TEST_SUITE) {
+                                case 'smoke':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@Smoke\""
+                                    break
+                                case 'regression':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@regression\""
+                                    break
+                                case 'cart':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@Cart\""
+                                    break
+                                case 'homepage':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@HomePage\""
+                                    break
+                                case 'contact':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@Contact\""
+                                    break
+                                case 'orderplacement':
+                                    bddCommand += " -Dcucumber.filter.tags=\"@OrderPlacement\""
+                                    break
+                            }
+                        }
+                        bddCommand += " -Dselenide.browser=${params.BROWSER}"
+                        if (params.HEADLESS) {
+                            bddCommand += " -Dselenide.headless=true"
+                        }
+                        testCommands.add(bddCommand)
                     }
 
                     // Execute all test commands
@@ -99,77 +149,6 @@ pipeline {
                     """
                 }
             }
-        }
-
-        // Helper method to build JUnit test command
-        def buildJUnitCommand() {
-            def junitCommand = "mvn test"
-
-            if (params.TEST_SUITE != 'all') {
-                switch(params.TEST_SUITE) {
-                    case 'contact':
-                        junitCommand += " -Dtest=tests.ContactModalTest"
-                        break
-                    case 'cart':
-                        junitCommand += " -Dtest=tests.CartPageTest"
-                        break
-                    case 'homepage':
-                        junitCommand += " -Dtest=tests.HomePageTest"
-                        break
-                    case 'orderplacement':
-                        junitCommand += " -Dtest=tests.OrderPlacementTest"
-                        break
-                    case 'smoke':
-                    case 'regression':
-                        // For smoke/regression, run all JUnit tests
-                        junitCommand += " -Dtest=tests.*Test"
-                        break
-                }
-            }
-
-            // Add browser and headless configuration
-            junitCommand += " -Dselenide.browser=${params.BROWSER}"
-            if (params.HEADLESS) {
-                junitCommand += " -Dselenide.headless=true"
-            }
-
-            return junitCommand
-        }
-
-        // Helper method to build BDD test command
-        def buildBDDCommand() {
-            def bddCommand = "mvn test -Dtest=runners.CucumberTestRunner"
-
-            if (params.TEST_SUITE != 'all') {
-                switch(params.TEST_SUITE) {
-                    case 'smoke':
-                        bddCommand += " -Dcucumber.filter.tags=\"@Smoke\""
-                        break
-                    case 'regression':
-                        bddCommand += " -Dcucumber.filter.tags=\"@regression\""
-                        break
-                    case 'cart':
-                        bddCommand += " -Dcucumber.filter.tags=\"@Cart\""
-                        break
-                    case 'homepage':
-                        bddCommand += " -Dcucumber.filter.tags=\"@HomePage\""
-                        break
-                    case 'contact':
-                        bddCommand += " -Dcucumber.filter.tags=\"@Contact\""
-                        break
-                    case 'orderplacement':
-                        bddCommand += " -Dcucumber.filter.tags=\"@OrderPlacement\""
-                        break
-                }
-            }
-
-            // Add browser and headless configuration
-            bddCommand += " -Dselenide.browser=${params.BROWSER}"
-            if (params.HEADLESS) {
-                bddCommand += " -Dselenide.headless=true"
-            }
-
-            return bddCommand
         }
 
         stage('Generate Reports') {
