@@ -11,7 +11,6 @@ pipeline {
         DOCKER_IMAGE = 'demoblaze-selenium-tests'
         ALLURE_RESULTS = "target/allure-results"
         SLACK_CHANNEL = "#test-automation"
-        JIRA_PROJECT = "TEST"
     }
 
     parameters {
@@ -195,44 +194,6 @@ pipeline {
 
                     // Archive additional reports
                     archiveArtifacts artifacts: 'target/cucumber-reports/cucumber-html-report.html, target/allure-report/index.html', allowEmptyArchive: true
-                }
-            }
-        }
-
-        stage('JIRA Integration') {
-            when {
-                anyOf {
-                    expression { currentBuild.result == 'FAILURE' }
-                    expression { currentBuild.result == 'UNSTABLE' }
-                }
-            }
-            steps {
-                script {
-                    echo "🐛 Creating JIRA ticket for failed tests..."
-
-                    def testResults = readFile('target/surefire-reports/TEST-*.xml')
-                    def failedTests = sh(
-                        script: "grep -o 'testcase.*failure' target/surefire-reports/TEST-*.xml | wc -l || echo 0",
-                        returnStdout: true
-                    ).trim()
-
-                    if (failedTests.toInteger() > 0) {
-                        jiraCreateIssue(
-                            projectKey: env.JIRA_PROJECT,
-                            issueType: 'Bug',
-                            summary: "Automated Test Failures - Build #${BUILD_NUMBER}",
-                            description: """
-                                Automated tests failed in build #${BUILD_NUMBER}
-
-                                *Failed Tests Count:* ${failedTests}
-                                *Build URL:* ${BUILD_URL}
-                                *Allure Report:* ${BUILD_URL}allure/
-
-                                Please investigate and fix the failing tests.
-                            """,
-                            priority: 'High'
-                        )
-                    }
                 }
             }
         }
