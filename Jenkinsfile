@@ -188,36 +188,41 @@ pipeline {
                     // Get test type from previous stage or use default
                     def testType = env.BUILD_TEST_TYPE ?: 'all'
 
-                    // Generate Cucumber HTML reports first (if BDD tests were run)
-                    if (testType == 'all' || testType == 'bdd-only') {
-                        echo "🥒 Generating Cucumber HTML reports..."
-                        sh 'mvn verify || true'  // Continue even if some tests failed
-                    }
+                    // Check for available test results
+                    echo "🔍 Checking for test result files..."
+                    sh '''
+                        echo "📁 Target directory contents:"
+                        ls -la target/ || echo "No target directory found"
 
-                    // Generate Allure reports
+                        if [ -d "target/allure-results" ]; then
+                            echo "✅ Allure results directory found with $(ls target/allure-results/ | wc -l) files"
+                        fi
+
+                        if [ -d "target/surefire-reports" ]; then
+                            echo "✅ Surefire reports directory found with $(ls target/surefire-reports/ | wc -l) files"
+                        fi
+                    '''
+
+                    // Generate Allure reports using Docker (where Allure is installed)
                     echo "📊 Generating Allure reports..."
                     sh """
                         if [ -d "target/allure-results" ] && [ "\$(ls -A target/allure-results)" ]; then
                             echo "✅ Found Allure results, generating report..."
                             ls -la target/allure-results/
-                            allure generate target/allure-results -o target/allure-report --clean
-                            echo "📊 Allure report generated successfully"
+
+                            # Use Docker container to generate Allure report (since Allure is installed there)
+                            docker run --rm \\
+                                -v \$(pwd)/target:/app/target \\
+                                ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
+                                allure generate /app/target/allure-results -o /app/target/allure-report --clean
+
+                            echo "📊 Allure report generated successfully using Docker"
                         else
                             echo "⚠️ No Allure results found in target/allure-results/"
                             echo "📁 Checking target directory contents:"
                             ls -la target/ || echo "No target directory found"
                             mkdir -p target/allure-report
                             echo '<h1>No test results available</h1><p>Tests may have failed to generate results or did not run.</p>' > target/allure-report/index.html
-                        fi
-                    """
-
-                    // Check for surefire reports as well
-                    sh """
-                        if [ -d "target/surefire-reports" ] && [ "\$(ls -A target/surefire-reports)" ]; then
-                            echo "📋 Found Surefire reports:"
-                            ls -la target/surefire-reports/
-                        else
-                            echo "⚠️ No Surefire reports found"
                         fi
                     """
                 }
