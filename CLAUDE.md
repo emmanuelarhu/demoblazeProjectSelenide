@@ -89,7 +89,7 @@ mvn test -Dtest=runners.TestRunner
 
 # Run BDD tests with specific tags
 mvn test -Dtest=runners.TestRunner -Dcucumber.filter.tags="@Smoke"
-mvn test -Dtest=runners.TestRunner -Dcucumber.filter.tags="@Critical"
+mvn test -Dtest=runners.TestRunner -Dcucumber.filter.tags="@regression"
 mvn test -Dtest=runners.TestRunner -Dcucumber.filter.tags="@HomePage"
 
 # Run BDD tests with browser configuration

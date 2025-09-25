@@ -30,7 +30,7 @@ mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@OrderPlaceme
 
 # Run by priority tags
 mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke"
-mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Critical"
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression"
 mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Functional"
 
 # Run by test type
@@ -40,7 +40,7 @@ mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Edge"
 
 # Combine tags (AND operation)
 mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Cart and @Smoke"
-mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@OrderPlacement and @Critical"
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@OrderPlacement and @regression"
 
 # Exclude tags (NOT operation)
 mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="not @ignore"
@@ -151,8 +151,8 @@ mvn clean compile test -Dtest=runners.CucumberTestRunner -Dselenide.browser=chro
 # Smoke tests for CI/CD
 mvn clean test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke" -Dselenide.headless=true
 
-# Critical tests for CI/CD
-mvn clean test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Critical" -Dselenide.headless=true
+# regression tests for CI/CD
+mvn clean test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression" -Dselenide.headless=true
 
 # Generate reports for CI/CD
 mvn clean test verify allure:report -Dtest=runners.CucumberTestRunner -Dselenide.headless=true
@@ -167,8 +167,8 @@ mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=chrome -Dcucumber.
 mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=firefox -Dcucumber.filter.tags="@Smoke"
 
 # Test both browsers (run separately)
-mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=chrome -Dcucumber.filter.tags="@Critical"
-mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=firefox -Dcucumber.filter.tags="@Critical"
+mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=chrome -Dcucumber.filter.tags="@regression"
+mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=firefox -Dcucumber.filter.tags="@regression"
 ```
 
 ### **Debug and Development**
@@ -202,8 +202,8 @@ mvn clean test -Dtest=runners.CucumberTestRunner allure:serve
 # Stage 1: Smoke tests
 mvn clean test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke" -Dselenide.headless=true
 
-# Stage 2: Critical tests
-mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Critical" -Dselenide.headless=true
+# Stage 2: regression tests
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression" -Dselenide.headless=true
 
 # Stage 3: Full regression
 mvn test -Dtest=runners.CucumberTestRunner -Dselenide.headless=true
@@ -251,7 +251,7 @@ mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Cart" -Dsele
 
 ### **Priority Tags**
 - `@Smoke` - Critical smoke tests
-- `@Critical` - High-priority tests
+- `@regression` - High-priority tests
 - `@Functional` - Functional testing
 - `@Edge` - Edge case testing
 
