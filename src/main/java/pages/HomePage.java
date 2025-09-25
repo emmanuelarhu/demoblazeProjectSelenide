@@ -150,4 +150,35 @@ public class HomePage {
         logger.info("Successfully clicked home link");
         return this;
     }
+
+    // BDD-specific methods
+    public HomePage openHomePage() {
+        logger.info("BDD: Opening home page");
+        return open();
+    }
+
+    public HomePage verifyProductDetails(String productName, String price) {
+        logger.info("BDD: Verifying product details for: {} with price: {}", productName, price);
+        getProductLink(productName).shouldBe(visible);
+        getProductPrice(price).shouldBe(visible);
+        logger.info("BDD: Product details verified successfully for: {}", productName);
+        return this;
+    }
+
+    public HomePage clickOnFirstProduct(String productName) {
+        logger.info("BDD: Clicking on first product: {}", productName);
+        return clickProduct(productName);
+    }
+
+    public HomePage clickContactLink() {
+        logger.info("BDD: Clicking contact link");
+        contactLink.click();
+        logger.info("BDD: Contact link clicked successfully");
+        return this;
+    }
+
+    public CartPage navigateToCart() {
+        logger.info("BDD: Navigating to cart");
+        return clickCartLink();
+    }
 }

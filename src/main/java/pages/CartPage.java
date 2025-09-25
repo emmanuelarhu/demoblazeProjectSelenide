@@ -96,4 +96,17 @@ public class CartPage {
         logger.info("Successfully navigated to home page from cart");
         return new HomePage();
     }
+
+    // BDD-specific methods
+    public CartPage verifyCartTotal() {
+        logger.info("BDD: Verifying cart total is visible");
+        totalHeading.shouldBe(visible);
+        logger.info("BDD: Cart total verified");
+        return this;
+    }
+
+    public CartPage removeProductFromCart(String productName) {
+        logger.info("BDD: Removing product from cart: {}", productName);
+        return clickDeleteButton(productName);
+    }
 }

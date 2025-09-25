@@ -56,4 +56,15 @@ public class ProductDetailsPage {
         logger.info("Successfully navigated to home page");
         return new HomePage();
     }
+
+    // BDD-specific methods
+    public ProductDetailsPage addToCart() {
+        logger.info("BDD: Adding product to cart");
+        return clickAddToCart();
+    }
+
+    public HomePage navigateBackToHomePage() {
+        logger.info("BDD: Navigating back to home page");
+        return clickHome();
+    }
 }

@@ -17,20 +17,7 @@ public class TestData {
         public static final String SONY_XPERIA_Z5 = "Sony xperia z5";
     }
 
-    public static class Categories {
-        public static final String PHONES = "Phones";
-        public static final String LAPTOPS = "Laptops";
-        public static final String MONITORS = "Monitors";
-    }
-
     public static class NavigationLinks {
-        public static final String HOME = "Home (current)";
-        public static final String CONTACT = "Contact";
-        public static final String ABOUT_US = "About us";
-        public static final String CART = "Cart";
-        public static final String LOGIN = "Log in";
-        public static final String SIGN_UP = "Sign up";
-        public static final String PRODUCT_STORE = "PRODUCT STORE";
         public static final String CATEGORIES = "CATEGORIES";
     }
 
@@ -59,35 +46,12 @@ public class TestData {
     }
 
     public static class CartTableHeaders {
-        public static final String PIC = "Pic";
-        public static final String TITLE = "Title";
-        public static final String PRICE = "Price";
         public static final String X = "x";
-    }
-
-    public static class FooterText {
-        public static final String COPYRIGHT = "Copyright © Product Store";
-        public static final String ABOUT_US_HEADING = "About Us";
-        public static final String GET_IN_TOUCH_HEADING = "Get in Touch";
-    }
-
-    public static class PageHeadings {
-        public static final String PRODUCTS = "Products";
-        public static final String TOTAL = "Total";
-    }
-
-    public static class Buttons {
-        public static final String ADD_TO_CART = "Add to cart";
-        public static final String PLACE_ORDER = "Place Order";
-        public static final String DELETE = "Delete";
-        public static final String PREVIOUS = "Previous";
-        public static final String NEXT = "Next";
     }
 
     public static class ContactFormData {
         public static final String VALID_EMAIL = "test@example.com";
         public static final String VALID_NAME = "Test User";
-        public static final String VALID_MESSAGE = "This is a test message";
         public static final String ANOTHER_VALID_EMAIL = "emmanuel@example.com";
         public static final String ANOTHER_VALID_NAME = "Emmanuel Arhu";
         public static final String ANOTHER_VALID_MESSAGE = "This is a Selenide test please ignore";
@@ -114,21 +78,11 @@ public class TestData {
 
     public static class TestValues {
         public static final String SAMPLE_PRICE = "360";
-        public static final String COPYRIGHT_YEAR = "2017";
-        public static final String FULL_COPYRIGHT = "Copyright © Product Store 2017";
     }
 
     public static class Selectors {
-        public static class Common {
-            public static final String HOME_LINK = "li[class='nav-item active'] a[class='nav-link']";
-            public static final String PRICE_CONTAINER = ".price-container";
-            public static final String PRODUCT_NAME = ".name";
-            public static final String CARD_TITLE = ".card-title";
-        }
 
         public static class Cart {
-            public static final String DELETE_BUTTON_XPATH = "//a[text()='Delete']";
-            public static final String PRODUCT_IN_CART_XPATH = "//td[normalize-space()='%s']";
             public static final String PRODUCT_PRICE_XPATH = "//td[text()='%s']";
         }
 

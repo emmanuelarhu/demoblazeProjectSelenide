@@ -73,4 +73,26 @@ public class ContactModal {
         logger.info("Contact form fields verified successfully");
         return this;
     }
+
+    // BDD-specific methods
+    public ContactModal verifyModalVisible() {
+        logger.info("BDD: Verifying contact modal visibility");
+        return verifyContactModalVisible();
+    }
+
+    public ContactModal verifyFormFields() {
+        logger.info("BDD: Verifying contact form fields");
+        contactEmailField.shouldBe(visible);
+        contactNameField.shouldBe(visible);
+        messageField.shouldBe(visible);
+        sendMessageButton.shouldBe(visible);
+        closeButton.shouldBe(visible);
+        logger.info("BDD: All contact form fields verified");
+        return this;
+    }
+
+    public ContactModal closeModal() {
+        logger.info("BDD: Closing contact modal");
+        return clickClose();
+    }
 }
