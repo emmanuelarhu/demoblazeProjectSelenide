@@ -15,8 +15,13 @@ pipeline {
 
     parameters {
         choice(
+            name: 'TEST_TYPE',
+            choices: ['all', 'junit-only', 'bdd-only'],
+            description: 'Select test type to run (all tests, JUnit only, or BDD only)'
+        )
+        choice(
             name: 'TEST_SUITE',
-            choices: ['all', 'smoke', 'regression', 'contact', 'cart', 'homepage'],
+            choices: ['all', 'smoke', 'regression', 'cart', 'homepage', 'contact', 'orderplacement'],
             description: 'Select test suite to run'
         )
         choice(
@@ -64,67 +69,130 @@ pipeline {
             steps {
                 script {
                     echo "🧪 Running tests in Docker container..."
+                    echo "Test Type: ${params.TEST_TYPE}, Test Suite: ${params.TEST_SUITE}, Browser: ${params.BROWSER}"
 
-                    // Determine test command based on parameters
-                    def testCommand = "mvn clean test"
+                    def testCommands = []
 
-                    if (params.TEST_SUITE != 'all') {
-                        switch(params.TEST_SUITE) {
-                            case 'smoke':
-                                testCommand += " -Dgroups=smoke"
-                                break
-                            case 'regression':
-                                testCommand += " -Dgroups=regression"
-                                break
-                            case 'contact':
-                                testCommand += " -Dtest=ContactModalTest"
-                                break
-                            case 'cart':
-                                testCommand += " -Dtest=CartPageTest"
-                                break
-                            case 'homepage':
-                                testCommand += " -Dtest=HomePageTest"
-                                break
-                        }
+                    // Determine which tests to run based on TEST_TYPE
+                    if (params.TEST_TYPE == 'all') {
+                        // Run both JUnit and BDD tests
+                        testCommands.add(buildJUnitCommand())
+                        testCommands.add(buildBDDCommand())
+                    } else if (params.TEST_TYPE == 'junit-only') {
+                        // Run only JUnit tests
+                        testCommands.add(buildJUnitCommand())
+                    } else if (params.TEST_TYPE == 'bdd-only') {
+                        // Run only BDD tests
+                        testCommands.add(buildBDDCommand())
                     }
 
-                    // Add browser and headless configuration
-                    testCommand += " -Dselenide.browser=${params.BROWSER}"
-                    if (params.HEADLESS) {
-                        testCommand += " -Dselenide.headless=true"
-                    }
+                    // Execute all test commands
+                    def allCommands = testCommands.join(' && ')
 
                     sh """
                         docker run --rm \\
                             -v \$(pwd)/target:/app/target \\
-                            -e SELENIDE_BROWSER=${params.BROWSER} \\
-                            -e SELENIDE_HEADLESS=${params.HEADLESS} \\
+                            --shm-size=2g \\
+                            -e DISPLAY=:99 \\
                             ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
-                            ${testCommand}
+                            sh -c "Xvfb :99 -screen 0 1920x1080x24 & ${allCommands}"
                     """
                 }
             }
         }
 
-        stage('Generate Allure Report') {
+        // Helper method to build JUnit test command
+        def buildJUnitCommand() {
+            def junitCommand = "mvn test"
+
+            if (params.TEST_SUITE != 'all') {
+                switch(params.TEST_SUITE) {
+                    case 'contact':
+                        junitCommand += " -Dtest=tests.ContactModalTest"
+                        break
+                    case 'cart':
+                        junitCommand += " -Dtest=tests.CartPageTest"
+                        break
+                    case 'homepage':
+                        junitCommand += " -Dtest=tests.HomePageTest"
+                        break
+                    case 'orderplacement':
+                        junitCommand += " -Dtest=tests.OrderPlacementTest"
+                        break
+                    case 'smoke':
+                    case 'regression':
+                        // For smoke/regression, run all JUnit tests
+                        junitCommand += " -Dtest=tests.*Test"
+                        break
+                }
+            }
+
+            // Add browser and headless configuration
+            junitCommand += " -Dselenide.browser=${params.BROWSER}"
+            if (params.HEADLESS) {
+                junitCommand += " -Dselenide.headless=true"
+            }
+
+            return junitCommand
+        }
+
+        // Helper method to build BDD test command
+        def buildBDDCommand() {
+            def bddCommand = "mvn test -Dtest=runners.CucumberTestRunner"
+
+            if (params.TEST_SUITE != 'all') {
+                switch(params.TEST_SUITE) {
+                    case 'smoke':
+                        bddCommand += " -Dcucumber.filter.tags=\"@Smoke\""
+                        break
+                    case 'regression':
+                        bddCommand += " -Dcucumber.filter.tags=\"@regression\""
+                        break
+                    case 'cart':
+                        bddCommand += " -Dcucumber.filter.tags=\"@Cart\""
+                        break
+                    case 'homepage':
+                        bddCommand += " -Dcucumber.filter.tags=\"@HomePage\""
+                        break
+                    case 'contact':
+                        bddCommand += " -Dcucumber.filter.tags=\"@Contact\""
+                        break
+                    case 'orderplacement':
+                        bddCommand += " -Dcucumber.filter.tags=\"@OrderPlacement\""
+                        break
+                }
+            }
+
+            // Add browser and headless configuration
+            bddCommand += " -Dselenide.browser=${params.BROWSER}"
+            if (params.HEADLESS) {
+                bddCommand += " -Dselenide.headless=true"
+            }
+
+            return bddCommand
+        }
+
+        stage('Generate Reports') {
             steps {
                 script {
-                    echo "📊 Generating Allure report..."
+                    echo "📊 Generating test reports..."
 
-                    // Install Allure if not present
-                    sh '''
-                        if ! command -v allure &> /dev/null; then
-                            echo "Installing Allure..."
-                            curl -o allure-commandline.zip -Ls https://github.com/allure-framework/allure2/releases/latest/download/allure-commandline.zip
-                            unzip -q allure-commandline.zip
-                            sudo mv allure-* /opt/allure
-                            sudo ln -s /opt/allure/bin/allure /usr/bin/allure
-                            rm allure-commandline.zip
+                    // Generate Cucumber HTML reports first (if BDD tests were run)
+                    if (params.TEST_TYPE == 'all' || params.TEST_TYPE == 'bdd-only') {
+                        sh 'mvn verify || true'  // Continue even if some tests failed
+                    }
+
+                    // Allure is already installed in Docker image, so we can generate directly
+                    sh """
+                        if [ -d "target/allure-results" ] && [ "\$(ls -A target/allure-results)" ]; then
+                            allure generate target/allure-results -o target/allure-report --clean
+                            echo "📊 Allure report generated successfully"
+                        else
+                            echo "⚠️ No Allure results found - creating empty report"
+                            mkdir -p target/allure-report
+                            echo '<h1>No test results available</h1>' > target/allure-report/index.html
                         fi
-                    '''
-
-                    // Generate Allure report
-                    sh "allure generate ${ALLURE_RESULTS} -o target/allure-report --clean"
+                    """
                 }
             }
         }
@@ -134,10 +202,10 @@ pipeline {
                 script {
                     echo "📋 Publishing test reports..."
 
-                    // Publish JUnit results
-                    publishTestResults testResultsPattern: 'target/surefire-reports/*.xml'
+                    // Publish JUnit results (works for both traditional JUnit and Cucumber XML reports)
+                    publishTestResults testResultsPattern: 'target/surefire-reports/*.xml, target/cucumber-reports/*.xml'
 
-                    // Publish Allure report
+                    // Publish Allure report (includes both JUnit and BDD results)
                     allure([
                         includeProperties: false,
                         jdk: '',
@@ -145,6 +213,9 @@ pipeline {
                         reportBuildPolicy: 'ALWAYS',
                         results: [[path: 'target/allure-results']]
                     ])
+
+                    // Archive additional reports
+                    archiveArtifacts artifacts: 'target/cucumber-reports/cucumber-html-report.html, target/allure-report/index.html', allowEmptyArchive: true
                 }
             }
         }
@@ -215,6 +286,7 @@ pipeline {
 
                         *Job:* ${env.JOB_NAME}
                         *Build:* #${env.BUILD_NUMBER}
+                        *Test Type:* ${params.TEST_TYPE}
                         *Test Suite:* ${params.TEST_SUITE}
                         *Browser:* ${params.BROWSER}
                         *Duration:* ${currentBuild.durationString}
@@ -229,6 +301,7 @@ pipeline {
                         <h2>Test Execution Completed Successfully!</h2>
                         <p><strong>Job:</strong> ${env.JOB_NAME}</p>
                         <p><strong>Build Number:</strong> #${env.BUILD_NUMBER}</p>
+                        <p><strong>Test Type:</strong> ${params.TEST_TYPE}</p>
                         <p><strong>Test Suite:</strong> ${params.TEST_SUITE}</p>
                         <p><strong>Browser:</strong> ${params.BROWSER}</p>
                         <p><strong>Duration:</strong> ${currentBuild.durationString}</p>
@@ -251,6 +324,7 @@ pipeline {
 
                         *Job:* ${env.JOB_NAME}
                         *Build:* #${env.BUILD_NUMBER}
+                        *Test Type:* ${params.TEST_TYPE}
                         *Test Suite:* ${params.TEST_SUITE}
                         *Browser:* ${params.BROWSER}
                         *Duration:* ${currentBuild.durationString}
@@ -266,6 +340,7 @@ pipeline {
                         <h2>Test Execution Failed!</h2>
                         <p><strong>Job:</strong> ${env.JOB_NAME}</p>
                         <p><strong>Build Number:</strong> #${env.BUILD_NUMBER}</p>
+                        <p><strong>Test Type:</strong> ${params.TEST_TYPE}</p>
                         <p><strong>Test Suite:</strong> ${params.TEST_SUITE}</p>
                         <p><strong>Browser:</strong> ${params.BROWSER}</p>
                         <p><strong>Duration:</strong> ${currentBuild.durationString}</p>
@@ -291,6 +366,7 @@ pipeline {
 
                         *Job:* ${env.JOB_NAME}
                         *Build:* #${env.BUILD_NUMBER}
+                        *Test Type:* ${params.TEST_TYPE}
                         *Test Suite:* ${params.TEST_SUITE}
                         *Browser:* ${params.BROWSER}
                         *Duration:* ${currentBuild.durationString}
