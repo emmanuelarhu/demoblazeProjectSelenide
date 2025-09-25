@@ -1,4 +1,4 @@
-@OrderPlacement @E2E @Critical
+@OrderPlacement @E2E @regression
 Feature: DemoBlaze Order Placement
   As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart

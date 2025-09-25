@@ -15,7 +15,7 @@ Feature: DemoBlaze Contact Modal
     When I close the contact modal
     Then the contact modal should be hidden
 
-  @ContactForm @Critical
+  @ContactForm @regression
   Scenario: Send valid contact message
     When I click on "Contact" link
     And I fill the contact form with valid data:

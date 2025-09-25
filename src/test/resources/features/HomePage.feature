@@ -27,7 +27,7 @@ Feature: DemoBlaze Home Page
     And I should see "Laptops" category
     And I should see "Monitors" category
 
-  @Products @Critical
+  @Products @regression
   Scenario: Verify product listings on home page
     When I view the home page
     Then I should see product listings
@@ -38,7 +38,7 @@ Feature: DemoBlaze Home Page
     And I should see "Sony xperia z5" product with price "$320"
     And I should see "Nokia lumia 1520" product with price "$820"
 
-  @ProductDetails @Critical
+  @ProductDetails @regression
   Scenario Outline: Verify individual product details
     When I view the home page
     And I click on "<productName>" product

@@ -1,4 +1,4 @@
-@Cart @UI @Critical
+@Cart @UI @regression
 Feature: DemoBlaze Shopping Cart
   As a customer on DemoBlaze e-commerce website
   I want to manage items in my shopping cart
@@ -16,7 +16,7 @@ Feature: DemoBlaze Shopping Cart
     Then I should see "Samsung galaxy s6" in the cart
     And I should see cart total price
 
-  @CartManagement @Critical
+  @CartManagement @regression
   Scenario: Manage multiple products in cart
     When I add "Samsung galaxy s6" to cart
     And I add "Nexus 6" to cart
