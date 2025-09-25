@@ -1,0 +1,1 @@
+mvn test -Dtest=tests.HomePageTest -Dselenide.browser=firefox
