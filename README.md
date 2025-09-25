@@ -1,16 +1,30 @@
 # DemoBlaze Test Automation Framework
 
-A comprehensive test automation framework for DemoBlaze e-commerce website using Selenide, JUnit 5, and Allure reporting.
+A comprehensive dual-architecture test automation framework for DemoBlaze e-commerce website featuring both traditional JUnit testing and BDD Cucumber implementation with Selenide, comprehensive reporting, and Docker containerization.
 
 ## Framework Features
 
-- **Selenide 7.10.0** - Simplified WebDriver automation
-- **JUnit 5** - Modern testing framework
-- **Allure Reporting** - Rich test reports with screenshots
-- **Page Object Model** - Clean separation of page logic
-- **Centralized Test Data** - Organized test data management
-- **Comprehensive Logging** - SLF4J with Logback
-- **Screenshot on Failure** - Automatic screenshot capture
+### Core Technologies
+- **Selenide 7.10.0** - Simplified WebDriver automation with built-in waits
+- **Java 21** - Latest LTS Java version with enhanced performance
+- **Maven** - Build automation and dependency management
+
+### Testing Frameworks
+- **JUnit 5** - Traditional unit/integration testing approach
+- **Cucumber 7.14.1** - BDD framework with Gherkin syntax for business-readable scenarios
+- **Dual Architecture** - Support both traditional and BDD testing approaches
+
+### Reporting & Analysis
+- **Allure 2.30.0** - Rich interactive reports with screenshots, videos, and trends
+- **Cucumber HTML Reports** - Native BDD reporting with scenario details
+- **Page Object Model** - Clean separation of page logic and test scenarios
+- **Screenshot on Failure** - Automatic screenshot capture with Allure integration
+
+### DevOps & CI/CD
+- **Docker Support** - Complete containerization with Chrome/Firefox browsers
+- **Jenkins Pipeline** - Comprehensive CI/CD with auto-triggers and notifications
+- **Multi-browser Testing** - Chrome and Firefox support with headless execution
+- **Comprehensive Logging** - SLF4J with Logback, separate log files by component
 
 ## Project Structure
 
@@ -18,8 +32,8 @@ A comprehensive test automation framework for DemoBlaze e-commerce website using
 src/
 ├── main/java/
 │   ├── data/
-│   │   └── TestData.java          # Centralized test data and selectors
-│   └── pages/                     # Page Object Model classes
+│   │   └── TestData.java                    # Centralized test data and selectors
+│   └── pages/                               # Page Object Model classes
 │       ├── HomePage.java
 │       ├── ProductDetailsPage.java
 │       ├── CartPage.java
@@ -27,39 +41,95 @@ src/
 │       └── OrderPlacementPage.java
 └── test/java/
     ├── base/
-    │   └── BaseTest.java          # Base test configuration
-    ├── tests/                     # Test classes
+    │   └── BaseTest.java                    # Base test configuration with Docker support
+    ├── tests/                               # Traditional JUnit test classes
     │   ├── HomePageTest.java
     │   ├── CartPageTest.java
     │   ├── ContactModalTest.java
     │   └── OrderPlacementTest.java
+    ├── bdd/                                 # BDD implementation (new)
+    │   ├── BddStyleTests.java               # BDD-style test utilities
+    │   ├── BddTestRunner.java               # BDD test runner configuration
+    │   └── BddTestUtils.java                # BDD helper utilities
+    ├── stepDefinitions/                     # Cucumber step definitions (new)
+    │   ├── HomePageSteps.java
+    │   ├── CartSteps.java
+    │   └── ContactSteps.java
+    ├── runners/                             # Cucumber test runners (new)
+    │   └── CucumberTestRunner.java
+    ├── hooks/                               # BDD hooks and setup (new)
+    │   └── TestHooks.java
     └── utils/
-        └── TestListener.java      # Test listener for screenshots
+        └── TestListener.java                # Test listener for screenshots
+
+src/test/resources/
+└── features/                                # Gherkin feature files (new)
+    ├── HomePage.feature
+    ├── Cart.feature
+    ├── Contact.feature
+    └── OrderPlacement.feature
 ```
 
 ## Getting Started
 
 ### Prerequisites
-- Java 21
-- Maven 3.6+
-- Chrome browser
+- **Java 21** (LTS)
+- **Maven 3.6+**
+- **Chrome browser** (or Firefox)
+- **Docker** (optional, for containerized execution)
 
-### Running Tests
+### Running Traditional JUnit Tests
 ```bash
-# Run all tests
+# Run all JUnit tests
 mvn test
 
 # Run specific test class
-mvn test -Dtest=HomePageTest
+mvn test -Dtest=tests.HomePageTest
 
 # Run specific test method
-mvn test -Dtest=ContactModalTest#testContactModalClose
+mvn test -Dtest=tests.ContactModalTest#testContactModalClose
+
+# Run with different browsers
+mvn test -Dselenide.browser=chrome
+mvn test -Dselenide.browser=firefox
+
+# Run in headless mode
+mvn test -Dselenide.headless=true
 ```
 
-### Generate Allure Reports
+### Running BDD Cucumber Tests
 ```bash
-# Generate Allure report
+# Run all BDD tests
+mvn test -Dtest=runners.CucumberTestRunner
+
+# Run tests with specific tags
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke"
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression"
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Cart"
+
+# Run BDD tests with browser configuration
+mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=firefox
+```
+
+### Running Both Test Types
+```bash
+# Run all tests (JUnit + BDD) sequentially
+mvn test && mvn test -Dtest=runners.CucumberTestRunner
+```
+
+### Generate Reports
+```bash
+# Generate and serve Allure report (works for both JUnit and BDD)
 mvn allure:serve
+
+# Generate Allure report only
+mvn allure:report
+
+# Generate Cucumber HTML reports (for BDD tests)
+mvn verify
+
+# View Cucumber reports
+# Reports location: target/cucumber-reports/overview-features.html
 ```
 
 ## Test Data Management
@@ -89,98 +159,143 @@ All test data is centralized in `TestData.java` with organized sections:
 ## CI/CD Integration
 
 ### 🐳 Docker Support
-The framework supports containerized execution with Docker:
+The framework supports containerized execution with enhanced multi-test capabilities:
 
 ```bash
-# Build and run tests in Docker (Linux/Mac)
+# Run all tests (JUnit + BDD) - Linux/Mac
 ./docker-scripts/build-and-run.sh
 
-# Build and run tests in Docker (Windows)
+# Run all tests (JUnit + BDD) - Windows
 docker-scripts\build-and-run.bat
 
-# Manual Docker build
+# Run specific test types with browser selection
+./docker-scripts/build-and-run.sh junit-only chrome true    # JUnit only, Chrome, headless
+./docker-scripts/build-and-run.sh bdd-only firefox false    # BDD only, Firefox, with GUI
+./docker-scripts/build-and-run.sh all chrome true           # Both test types, Chrome, headless
+
+# Windows examples
+docker-scripts\build-and-run.bat junit-only firefox true
+docker-scripts\build-and-run.bat bdd-only chrome true
+
+# Manual Docker execution
 docker build -t demoblaze-tests .
-docker run --rm -v $(pwd)/target:/app/target demoblaze-tests
+docker run --rm -v "$(pwd)/target:/app/target" --shm-size=2g demoblaze-tests
 ```
 
 ### 🔄 Jenkins Pipeline
-Complete CI/CD pipeline with Jenkins integration:
+Enhanced CI/CD pipeline with comprehensive test type support:
 
 **Features:**
-- ✅ **Parameterized builds** (test suite, browser, headless mode)
-- ✅ **Docker containerized execution**
-- ✅ **Allure reporting** with screenshots
-- ✅ **Slack notifications** for build status
-- ✅ **Email notifications** with detailed reports
-- ✅ **JIRA integration** for failed test tickets
-- ✅ **Artifact archival** (logs, screenshots, reports)
+- ✅ **Multi-test execution** - JUnit only, BDD only, or combined execution
+- ✅ **Auto-trigger on push** - Pipeline automatically starts on repository changes
+- ✅ **Parameterized builds** - Test type, suite, browser, and headless mode selection
+- ✅ **Docker containerized execution** - Isolated test environment with Xvfb display
+- ✅ **Dual reporting** - Both Allure and Cucumber HTML reports
+- ✅ **Comprehensive notifications** - Slack, email with build status and test type info
+- ✅ **Enhanced artifact management** - Screenshots, logs, multiple report formats
+- ✅ **Tag-based filtering** - Support for @Smoke, @regression, @Cart, etc.
 
-**Setup:**
-1. Install required Jenkins plugins (see `jenkins/plugins.txt`)
-2. Configure global tools (Maven, JDK, Allure)
-3. Set up credentials (Slack, JIRA, Email)
-4. Create pipeline job with `Jenkinsfile`
+**Pipeline Parameters:**
+- `TEST_TYPE`: all, junit-only, bdd-only
+- `TEST_SUITE`: all, smoke, regression, cart, homepage, contact, orderplacement
+- `BROWSER`: chrome, firefox
+- `HEADLESS`: true, false
 
-See `jenkins/jenkins-setup.md` for detailed configuration guide.
+**Auto-Trigger Setup:**
+The pipeline includes `githubPush()` trigger for automatic execution on repository changes.
+
+**Setup Requirements:**
+- Jenkins agent with `linux-agent` label
+- Docker capability on Jenkins agent
+- Configured webhooks for GitHub integration
 
 ### 📊 Reporting
-- **JUnit XML reports** for Jenkins test results
-- **Allure HTML reports** with interactive dashboards
-- **Screenshots** automatically captured on test failures
-- **Logs** with separate files for page actions and test execution
+Multiple reporting formats for comprehensive test analysis:
+- **Allure Reports** - Interactive dashboards with trends, history, and detailed test results
+- **Cucumber HTML Reports** - Business-readable BDD scenarios with step-by-step execution
+- **JUnit XML Reports** - Standard format for CI/CD integration
+- **Screenshots** - Automatic capture on test failures with Allure integration
+- **Comprehensive Logs** - Separate files for test execution and page actions with rolling policy
 
 ### 🔔 Notifications
-- **Slack integration** with build status messages
-- **Email notifications** with HTML formatting
-- **JIRA tickets** created automatically for test failures
+Enhanced notification system with test type information:
+- **Auto-trigger notifications** - Pipeline starts automatically on repository changes
+- **Slack integration** - Real-time build status with test type and suite details
+- **Email notifications** - HTML-formatted reports with comprehensive build information
+- **Status updates** - Success, failure, and unstable build notifications
 
 ## Browser Support
 
-Supports multiple browsers with full-screen execution and screenshot capabilities:
-- **Chrome** (default) - Stable and fast execution
-- **Firefox** - Cross-browser compatibility testing
-- **Headless mode** - For CI/CD and faster execution
+Enhanced multi-browser testing with Docker containerization:
+- **Chrome** (default) - Optimized for stability with Docker-specific configurations
+- **Firefox** - Cross-browser compatibility with ESR version in containers
+- **Headless mode** - CI/CD optimized execution with Xvfb display server
+- **Docker optimization** - Automatic browser arguments for containerized execution
+- **Session management** - Unique user-data directories to prevent conflicts
 
 ## Quick Start Commands
 
 ### Local Execution
 ```bash
-# Run all tests (Chrome by default)
-mvn test
+# Traditional JUnit Tests
+mvn test                                                    # All JUnit tests (Chrome)
+mvn test -Dtest=tests.HomePageTest                         # Specific JUnit test class
+mvn test -Dselenide.browser=firefox                       # JUnit tests with Firefox
 
-# Run tests with Chrome
-mvn test -Dselenide.browser=chrome
+# BDD Cucumber Tests
+mvn test -Dtest=runners.CucumberTestRunner                 # All BDD tests
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke"  # Smoke tests
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression"  # Regression tests
 
-# Run tests with Firefox
-mvn test -Dselenide.browser=firefox
+# Combined Execution
+mvn test && mvn test -Dtest=runners.CucumberTestRunner     # Both JUnit and BDD
 
-# Run in headless mode
-mvn test -Dselenide.headless=true
+# Browser and Mode Configuration
+mvn test -Dselenide.browser=firefox -Dselenide.headless=true  # Firefox headless
+mvn test -Dtest=runners.CucumberTestRunner -Dselenide.browser=chrome  # BDD with Chrome
 
-# Run Firefox in headless mode
-mvn test -Dselenide.browser=firefox -Dselenide.headless=true
-
-# Generate Allure report
-mvn allure:serve
+# Generate Reports
+mvn allure:serve                                           # Interactive Allure report
+mvn verify                                                 # Generate Cucumber HTML reports
 ```
 
-### Docker Execution
+### Docker Execution with Test Type Selection
 ```bash
-# Default (Chrome headless)
-./docker-scripts/build-and-run.sh
+# All tests (JUnit + BDD) - Default
+./docker-scripts/build-and-run.sh                         # Linux/Mac
+docker-scripts\build-and-run.bat                          # Windows
 
-# Firefox headless
-BROWSER=firefox ./docker-scripts/build-and-run.sh
+# Test type specific execution
+./docker-scripts/build-and-run.sh junit-only chrome true  # JUnit only, Chrome, headless
+./docker-scripts/build-and-run.sh bdd-only firefox true   # BDD only, Firefox, headless
+./docker-scripts/build-and-run.sh all firefox false       # Both types, Firefox, with GUI
 
-# Chrome with UI (non-headless) - requires X11 forwarding
-HEADLESS=false ./docker-scripts/build-and-run.sh
-
-# Windows - Firefox
-set BROWSER=firefox && docker-scripts\build-and-run.bat
+# Windows examples with test type selection
+docker-scripts\build-and-run.bat junit-only chrome true   # JUnit only
+docker-scripts\build-and-run.bat bdd-only firefox true    # BDD only
+docker-scripts\build-and-run.bat all chrome true          # Both test types
 ```
 
-### Browser Configuration
-The framework automatically configures browser-specific settings:
-- **Chrome**: Optimized for speed and stability
-- **Firefox**: Enhanced for cross-browser compatibility
-- **Headless**: Faster execution for CI/CD pipelines
+### Advanced Configuration
+The framework automatically handles:
+- **Docker Chrome/Firefox** - Container-specific browser arguments and session management
+- **Headless Display** - Xvfb server setup for GUI testing in Docker containers
+- **Report Generation** - Automatic Allure and Cucumber report creation
+- **Multi-format Output** - JUnit XML, Allure JSON, Cucumber JSON reports
+- **Screenshot Management** - Failure screenshots with unique timestamps
+
+### BDD Tag-Based Execution
+```bash
+# Priority-based tags
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Smoke"        # Critical smoke tests
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@regression"   # High-priority regression
+
+# Feature-based tags
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@HomePage"     # Home page scenarios
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Cart"        # Shopping cart scenarios
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Contact"     # Contact form scenarios
+
+# Combined tags (AND/OR operations)
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@Cart and @Smoke"      # Cart smoke tests
+mvn test -Dtest=runners.CucumberTestRunner -Dcucumber.filter.tags="@HomePage or @Cart"    # HomePage OR Cart tests
+```
