@@ -236,8 +236,8 @@ pipeline {
 
                     // Publish JUnit results with error handling
                     try {
-                        publishTestResults(
-                            testResultsPattern: 'target/surefire-reports/*.xml',
+                        junit(
+                            testResults: 'target/surefire-reports/*.xml',
                             allowEmptyResults: true
                         )
                         echo "✅ JUnit test results published"
