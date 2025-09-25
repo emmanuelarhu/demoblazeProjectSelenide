@@ -33,6 +33,14 @@ public abstract class BaseTest {
         Configuration.savePageSource = true;
         Configuration.reportsFolder = "target/screenshots";
 
+        // Docker-specific Chrome configuration
+        if ("chrome".equals(Configuration.browser)) {
+            System.setProperty("chromeoptions.args",
+                "--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-extensions," +
+                "--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis() +
+                ",--remote-debugging-port=9222");
+        }
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
             .screenshots(true)
             .savePageSource(true));
