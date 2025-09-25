@@ -202,8 +202,8 @@ pipeline {
         stage('JIRA Integration') {
             when {
                 anyOf {
-                    currentBuild.result == 'FAILURE'
-                    currentBuild.result == 'UNSTABLE'
+                    expression { currentBuild.result == 'FAILURE' }
+                    expression { currentBuild.result == 'UNSTABLE' }
                 }
             }
             steps {
