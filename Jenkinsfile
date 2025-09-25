@@ -69,15 +69,22 @@ pipeline {
             steps {
                 script {
                     echo "🧪 Running tests in Docker container..."
-                    echo "Test Type: ${params.TEST_TYPE}, Test Suite: ${params.TEST_SUITE}, Browser: ${params.BROWSER}"
+
+                    // Set defaults if parameters are null or empty
+                    def testType = params.TEST_TYPE ?: 'all'
+                    def testSuite = params.TEST_SUITE ?: 'all'
+                    def browser = params.BROWSER ?: 'chrome'
+                    def headless = params.HEADLESS != null ? params.HEADLESS : true
+
+                    echo "Test Type: ${testType}, Test Suite: ${testSuite}, Browser: ${browser}, Headless: ${headless}"
 
                     def testCommands = []
 
                     // Build JUnit command
-                    if (params.TEST_TYPE == 'all' || params.TEST_TYPE == 'junit-only') {
+                    if (testType == 'all' || testType == 'junit-only') {
                         def junitCommand = "mvn test"
-                        if (params.TEST_SUITE != 'all') {
-                            switch(params.TEST_SUITE) {
+                        if (testSuite != 'all') {
+                            switch(testSuite) {
                                 case 'contact':
                                     junitCommand += " -Dtest=tests.ContactModalTest"
                                     break
@@ -96,18 +103,18 @@ pipeline {
                                     break
                             }
                         }
-                        junitCommand += " -Dselenide.browser=${params.BROWSER}"
-                        if (params.HEADLESS) {
+                        junitCommand += " -Dselenide.browser=${browser}"
+                        if (headless) {
                             junitCommand += " -Dselenide.headless=true"
                         }
                         testCommands.add(junitCommand)
                     }
 
                     // Build BDD command
-                    if (params.TEST_TYPE == 'all' || params.TEST_TYPE == 'bdd-only') {
+                    if (testType == 'all' || testType == 'bdd-only') {
                         def bddCommand = "mvn test -Dtest=runners.CucumberTestRunner"
-                        if (params.TEST_SUITE != 'all') {
-                            switch(params.TEST_SUITE) {
+                        if (testSuite != 'all') {
+                            switch(testSuite) {
                                 case 'smoke':
                                     bddCommand += " -Dcucumber.filter.tags=\"@Smoke\""
                                     break
@@ -128,8 +135,8 @@ pipeline {
                                     break
                             }
                         }
-                        bddCommand += " -Dselenide.browser=${params.BROWSER}"
-                        if (params.HEADLESS) {
+                        bddCommand += " -Dselenide.browser=${browser}"
+                        if (headless) {
                             bddCommand += " -Dselenide.headless=true"
                         }
                         testCommands.add(bddCommand)
@@ -137,6 +144,13 @@ pipeline {
 
                     // Execute all test commands
                     def allCommands = testCommands.join(' && ')
+
+                    echo "Debug: Test commands list: ${testCommands}"
+                    echo "Debug: Combined commands: ${allCommands}"
+
+                    if (allCommands.trim().isEmpty()) {
+                        error("No test commands were generated. Check TEST_TYPE parameter: ${testType}")
+                    }
 
                     sh """
                         docker run --rm \\
