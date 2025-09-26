@@ -8,8 +8,8 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-.allure/
-.allure
+#.allure/
+#.allure
 
 # JMeter Reports
 #target/jmeter-results/
@@ -35,8 +35,8 @@ Thumbs.db
 # Test Results
 test-output/
 screenshots/
-allure-results/
-allure-report/
+#allure-results/
+#allure-report/
 
 # Logs
 *.log
