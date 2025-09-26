@@ -9,6 +9,15 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+.allure/
+.allure
+
+# JMeter Reports
+target/jmeter-results/
+target/jmeter-reports/
+
+# Security Reports
+target/zap-reports/
 
 # IDE
 .idea/
