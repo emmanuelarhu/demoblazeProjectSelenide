@@ -291,36 +291,40 @@ pipeline {
                                     sh -c "
                                         echo '🔒 Starting OWASP ZAP scan...'
 
-                                        # Start ZAP in daemon mode
-                                        /opt/zaproxy/zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true &
+                                        # Start ZAP in daemon mode with API key disabled
+                                        /opt/zaproxy/zap.sh -daemon -host 0.0.0.0 -port 8080 \\
+                                            -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true \\
+                                            -config api.key= -config api.disablekey=true &
                                         ZAP_PID=\$!
 
                                         # Wait for ZAP to start
                                         echo 'Waiting for ZAP to start...'
-                                        sleep 30
+                                        sleep 45
 
                                         # Run spider scan
                                         echo '🕷️ Running spider scan...'
-                                        curl -s 'http://localhost:8080/JSON/spider/action/scan/?url=https://www.demoblaze.com&maxChildren=10' || echo 'Spider scan started'
-                                        sleep 15
+                                        curl -s 'http://localhost:8080/JSON/spider/action/scan/?url=https://www.demoblaze.com&maxChildren=5' \\
+                                            && echo 'Spider scan initiated' || echo 'Spider scan failed'
+                                        sleep 30
 
                                         # Run active scan
                                         echo '🎯 Running active scan...'
-                                        curl -s 'http://localhost:8080/JSON/ascan/action/scan/?url=https://www.demoblaze.com&recurse=true&inScopeOnly=false' || echo 'Active scan started'
-                                        sleep 60
+                                        curl -s 'http://localhost:8080/JSON/ascan/action/scan/?url=https://www.demoblaze.com&recurse=true&inScopeOnly=false' \\
+                                            && echo 'Active scan initiated' || echo 'Active scan failed'
+                                        sleep 90
 
-                                        # Generate HTML report
-                                        echo '📊 Generating HTML report...'
-                                        curl -s 'http://localhost:8080/OTHER/core/other/htmlreport/' -o /zap/wrk/zap-report.html || echo 'HTML report generated'
+                                        # Generate reports
+                                        echo '📊 Generating reports...'
+                                        curl -s 'http://localhost:8080/OTHER/core/other/htmlreport/' -o /zap/wrk/zap-report.html
+                                        curl -s 'http://localhost:8080/OTHER/core/other/xmlreport/' -o /zap/wrk/zap-report.xml
+                                        curl -s 'http://localhost:8080/JSON/core/view/alerts/' -o /zap/wrk/zap-alerts.json
 
-                                        # Generate XML report
-                                        curl -s 'http://localhost:8080/OTHER/core/other/xmlreport/' -o /zap/wrk/zap-report.xml || echo 'XML report generated'
+                                        # Verify reports generated
+                                        ls -la /zap/wrk/
 
-                                        # Generate JSON report
-                                        curl -s 'http://localhost:8080/JSON/core/view/alerts/' -o /zap/wrk/zap-alerts.json || echo 'JSON report generated'
-
-                                        # Stop ZAP
-                                        kill \$ZAP_PID || echo 'ZAP process ended'
+                                        # Stop ZAP gracefully
+                                        curl -s 'http://localhost:8080/JSON/core/action/shutdown/' || echo 'ZAP shutdown initiated'
+                                        sleep 5
 
                                         echo '✅ ZAP scan completed'
                                     "
@@ -336,13 +340,15 @@ pipeline {
                             ls -la target/zap-reports/ || echo "No ZAP reports directory found"
 
                             if [ -f "target/zap-reports/zap-report.html" ]; then
-                                echo "✅ HTML report generated: $(wc -c < target/zap-reports/zap-report.html) bytes"
+                                FILESIZE=\$(stat -c%s "target/zap-reports/zap-report.html" 2>/dev/null || echo "0")
+                                echo "✅ HTML report generated: \${FILESIZE} bytes"
                             else
                                 echo "⚠️ HTML report not found"
                             fi
 
                             if [ -f "target/zap-reports/zap-report.xml" ]; then
-                                echo "✅ XML report generated: $(wc -c < target/zap-reports/zap-report.xml) bytes"
+                                FILESIZE=\$(stat -c%s "target/zap-reports/zap-report.xml" 2>/dev/null || echo "0")
+                                echo "✅ XML report generated: \${FILESIZE} bytes"
                             else
                                 echo "⚠️ XML report not found"
                             fi
@@ -435,12 +441,15 @@ pipeline {
                             echo "📊 Checking JMeter test results:"
 
                             if [ -f "target/jmeter-results/performance-test-results.jtl" ]; then
-                                echo "✅ Performance results file generated: $(wc -l < target/jmeter-results/performance-test-results.jtl) samples"
+                                LINES=\$(wc -l < target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo "0")
+                                echo "✅ Performance results file generated: \${LINES} samples"
 
                                 # Basic result analysis
                                 echo "📈 Performance Test Summary:"
-                                echo "- Total Samples: $(grep -c '^[0-9]' target/jmeter-results/performance-test-results.jtl || echo 'N/A')"
-                                echo "- Failed Samples: $(grep -c ',false,' target/jmeter-results/performance-test-results.jtl || echo '0')"
+                                TOTAL=\$(grep -c '^[0-9]' target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo 'N/A')
+                                FAILED=\$(grep -c ',false,' target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo '0')
+                                echo "- Total Samples: \${TOTAL}"
+                                echo "- Failed Samples: \${FAILED}"
 
                             else
                                 echo "⚠️ Performance results file not found"
@@ -462,7 +471,7 @@ pipeline {
                                     TOTAL_COUNT=$(grep -c "^[0-9]" target/jmeter-results/performance-test-results.jtl || echo "1")
 
                                     if [ "$TOTAL_COUNT" -gt 0 ]; then
-                                        FAILURE_RATE=$(( (FAILED_COUNT * 100) / TOTAL_COUNT ))
+                                        FAILURE_RATE=$((FAILED_COUNT * 100 / TOTAL_COUNT))
                                         echo "Performance failure rate: ${FAILURE_RATE}%"
 
                                         if [ "$FAILURE_RATE" -gt 10 ]; then
