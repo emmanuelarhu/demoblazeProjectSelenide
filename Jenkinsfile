@@ -234,15 +234,15 @@ pipeline {
                 script {
                     echo "📋 Publishing test reports..."
 
-                    // Publish JUnit results with error handling
+                    // Archive JUnit results without Checks API
                     try {
-                        junit(
-                            testResults: 'target/surefire-reports/*.xml',
-                            allowEmptyResults: true
+                        archiveArtifacts(
+                            artifacts: 'target/surefire-reports/*.xml',
+                            allowEmptyArchive: true
                         )
-                        echo "✅ JUnit test results published"
+                        echo "✅ JUnit test results archived"
                     } catch (Exception e) {
-                        echo "⚠️ Could not publish JUnit results: ${e.getMessage()}"
+                        echo "⚠️ Could not archive JUnit results: ${e.getMessage()}"
                     }
 
                     // Publish Allure report (includes both JUnit and BDD results)
