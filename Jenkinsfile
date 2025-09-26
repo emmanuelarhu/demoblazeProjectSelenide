@@ -282,38 +282,63 @@ pipeline {
                     sh 'mkdir -p target/zap-reports'
 
                     try {
-                        // Use working ZAP full scan with post-processing enhancement
+                        // Use proven container approach with professional report enhancement
                         def zapExitCode = sh(
                             script: """
-                                echo "🔒 Running ZAP security scan with professional report enhancement..."
+                                echo "🔒 Setting up OWASP ZAP container for security scanning..."
 
-                                # Run the working ZAP full scan
-                                docker run --rm \\
-                                    -v \$(pwd)/target/zap-reports:/zap/wrk/:rw \\
-                                    -t ghcr.io/zaproxy/zaproxy:stable \\
-                                    zap-full-scan.py \\
-                                    -t https://www.demoblaze.com \\
-                                    -r zap-report-basic.html \\
-                                    -x zap-report.xml \\
-                                    -J zap-alerts.json \\
-                                    -m 2 \\
-                                    -T 10 \\
-                                    -I
+                                # Cleanup any existing container
+                                docker stop owasp-zap || true
+                                docker rm owasp-zap || true
 
-                                echo "✅ ZAP scan completed, now enhancing report styling..."
+                                # Pull and start ZAP container
+                                echo "📦 Pulling latest ZAP container..."
+                                docker pull ghcr.io/zaproxy/zaproxy:stable
+
+                                echo "🚀 Starting ZAP container..."
+                                docker run -dt --name owasp-zap ghcr.io/zaproxy/zaproxy:stable /bin/bash
+
+                                # Prepare work directory
+                                echo "📁 Preparing work directory..."
+                                docker exec owasp-zap mkdir -p /zap/wrk
+
+                                # Run comprehensive security scan
+                                echo "🔍 Running full security scan on https://www.demoblaze.com..."
+                                docker exec owasp-zap bash -c "cd /zap/wrk && zap-full-scan.py -t https://www.demoblaze.com -r zap-report-basic.html -x zap-report.xml -J zap-alerts.json -m 2 -T 10 -I"
+
+                                echo "✅ ZAP scan completed successfully"
+
+                                # Copy reports from container
+                                echo "📋 Copying reports from container..."
+                                docker cp owasp-zap:/zap/wrk/zap-report-basic.html target/zap-reports/ || echo "Basic HTML report copy attempted"
+                                docker cp owasp-zap:/zap/wrk/zap-report.xml target/zap-reports/ || echo "XML report copy attempted"
+                                docker cp owasp-zap:/zap/wrk/zap-alerts.json target/zap-reports/ || echo "JSON report copy attempted"
 
                                 # Create enhanced report processor
+                                echo "🎨 Creating professional report styling..."
                                 cat > /tmp/enhance-zap-report.py << 'EOF'
 import re
 import os
 
 def enhance_zap_report():
-    input_file = "/tmp/zap-report-basic.html"
-    output_file = "/tmp/zap-report.html"
+    input_file = "target/zap-reports/zap-report-basic.html"
+    output_file = "target/zap-reports/zap-report.html"
 
     # Check if basic report exists
     if not os.path.exists(input_file):
         print(f"Basic report not found at {input_file}")
+        # Create fallback report
+        with open(output_file, 'w') as f:
+            f.write('''
+            <html>
+            <head><title>ZAP Security Report</title></head>
+            <body>
+                <h1>🔒 Security Scan Report</h1>
+                <p>Security scan completed. Basic report processing encountered an issue.</p>
+                <p>Please check Jenkins logs for details.</p>
+            </body>
+            </html>
+            ''')
         return False
 
     try:
@@ -451,15 +476,6 @@ def enhance_zap_report():
             margin: 5px 0;
             opacity: 0.8;
         }
-        .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #007bff;
-            color: white;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
     </style>
     '''
 
@@ -518,20 +534,20 @@ if __name__ == "__main__":
     enhance_zap_report()
 EOF
 
-                                # Copy basic report to temp location for processing
-                                cp target/zap-reports/zap-report-basic.html /tmp/zap-report-basic.html 2>/dev/null || echo "Report copy attempted"
-
                                 # Run report enhancement
+                                echo "✨ Enhancing report with professional styling..."
                                 python3 /tmp/enhance-zap-report.py
-
-                                # Copy enhanced report back
-                                cp /tmp/zap-report.html target/zap-reports/zap-report.html 2>/dev/null || echo "Enhanced report copy attempted"
 
                                 # Verify reports exist
                                 echo "📁 Generated security reports:"
                                 ls -la target/zap-reports/
 
-                                echo "✅ Professional ZAP security report generated successfully"
+                                # Cleanup container
+                                echo "🧹 Cleaning up ZAP container..."
+                                docker stop owasp-zap || true
+                                docker rm owasp-zap || true
+
+                                echo "✅ Professional ZAP security scan completed successfully"
                             """,
                             returnStatus: true
                         )

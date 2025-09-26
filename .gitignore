@@ -1,5 +1,4 @@
 # Maven
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -17,7 +16,7 @@ target/jmeter-results/
 target/jmeter-reports/
 
 # Security Reports
-target/zap-reports/
+
 
 # IDE
 .idea/
