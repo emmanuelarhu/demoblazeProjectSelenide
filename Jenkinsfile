@@ -282,12 +282,12 @@ pipeline {
                     sh 'mkdir -p target/zap-reports'
 
                     try {
-                        // Use ZAP's automated full scan script
+                        // Use official ZAP stable Docker image with full scan script
                         def zapExitCode = sh(
                             script: """
                                 docker run --rm \\
                                     -v \$(pwd)/target/zap-reports:/zap/wrk/:rw \\
-                                    ghcr.io/zaproxy/zaproxy:stable \\
+                                    -t ghcr.io/zaproxy/zaproxy:stable \\
                                     zap-full-scan.py \\
                                     -t https://www.demoblaze.com \\
                                     -r zap-report.html \\
@@ -295,7 +295,7 @@ pipeline {
                                     -J zap-report.json \\
                                     -m 2 \\
                                     -T 10 \\
-                                    -d
+                                    -I
                             """,
                             returnStatus: true
                         )

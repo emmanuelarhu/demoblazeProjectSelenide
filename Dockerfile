@@ -28,20 +28,12 @@ RUN ALLURE_VERSION="2.30.0" \
     && ln -s /opt/allure/bin/allure /usr/bin/allure \
     && rm allure-commandline.zip
 
-# Install OWASP ZAP for security scanning
+# Install Python for any additional scripting needs
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     python3 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
-
-RUN ZAP_VERSION="2.16.1" \
-    && wget -q "https://github.com/zaproxy/zaproxy/releases/download/v${ZAP_VERSION}/ZAP_${ZAP_VERSION}_Linux.tar.gz" \
-    && tar -xzf "ZAP_${ZAP_VERSION}_Linux.tar.gz" \
-    && mv "ZAP_${ZAP_VERSION}" /opt/zaproxy \
-    && ln -s /opt/zaproxy/zap.sh /usr/local/bin/zap.sh \
-    && rm "ZAP_${ZAP_VERSION}_Linux.tar.gz" \
-    && chmod +x /opt/zaproxy/zap.sh
 
 # Install Apache JMeter for performance testing
 RUN JMETER_VERSION="5.6.2" \
