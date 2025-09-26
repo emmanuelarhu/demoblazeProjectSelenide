@@ -31,11 +31,11 @@ RUN ALLURE_VERSION="2.30.0" \
 # Install OWASP ZAP for security scanning
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    openjdk-11-jdk \
     python3 \
     python3-pip \
-    && rm -rf /var/lib/apt/lists/* \
-    && ZAP_VERSION="2.14.0" \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN ZAP_VERSION="2.16.1" \
     && wget -q "https://github.com/zaproxy/zaproxy/releases/download/v${ZAP_VERSION}/ZAP_${ZAP_VERSION}_Linux.tar.gz" \
     && tar -xzf "ZAP_${ZAP_VERSION}_Linux.tar.gz" \
     && mv "ZAP_${ZAP_VERSION}" /opt/zaproxy \
