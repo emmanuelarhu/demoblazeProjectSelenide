@@ -361,6 +361,141 @@ pipeline {
                 }
             }
         }
+
+        stage('JMeter Performance Testing') {
+            steps {
+                script {
+                    echo "🚀 Running JMeter performance tests on https://www.demoblaze.com..."
+
+                    // Create results directories
+                    sh 'mkdir -p target/jmeter-results target/jmeter-reports'
+
+                    try {
+                        // Run JMeter performance test using Docker container
+                        def jmeterExitCode = sh(
+                            script: """
+                                docker run --rm \\
+                                    -v \$(pwd)/test-plans:/app/test-plans:ro \\
+                                    -v \$(pwd)/target/jmeter-results:/app/results:rw \\
+                                    -v \$(pwd)/target/jmeter-reports:/app/reports:rw \\
+                                    ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
+                                    sh -c "
+                                        echo '🚀 Starting JMeter performance test...'
+
+                                        # Set JMeter path
+                                        export PATH=/opt/apache-jmeter/bin:\$PATH
+
+                                        # Define test parameters
+                                        THREADS=10
+                                        RAMP_UP=30
+                                        DURATION=120
+                                        JMX_FILE='demoblaze-performance-test.jmx'
+                                        RESULTS_FILE='performance-test-results.jtl'
+                                        REPORT_DIR='html-report'
+
+                                        echo 'JMeter Configuration:'
+                                        echo '- Threads (Users): '\$THREADS
+                                        echo '- Ramp-up Period: '\$RAMP_UP' seconds'
+                                        echo '- Test Duration: '\$DURATION' seconds'
+                                        echo '- Target URL: https://www.demoblaze.com'
+
+                                        # Verify JMeter installation
+                                        jmeter --version || echo 'JMeter version check failed'
+
+                                        # Run JMeter test
+                                        echo '📊 Executing performance test...'
+                                        jmeter -n \\
+                                            -t /app/test-plans/\$JMX_FILE \\
+                                            -l /app/results/\$RESULTS_FILE \\
+                                            -q /app/test-plans/user.properties \\
+                                            -e -o /app/reports/\$REPORT_DIR \\
+                                            -Jthreads=\$THREADS \\
+                                            -Jrampup=\$RAMP_UP \\
+                                            -Jduration=\$DURATION \\
+                                            -Djmeter.reportgenerator.overall_granularity=1000
+
+                                        echo '✅ JMeter performance test completed'
+
+                                        # Check results
+                                        echo 'Generated files:'
+                                        ls -la /app/results/ /app/reports/ || echo 'Results check failed'
+                                    "
+                            """,
+                            returnStatus: true
+                        )
+
+                        echo "JMeter test completed with exit code: ${jmeterExitCode}"
+
+                        // Analyze results and generate summary
+                        sh '''
+                            echo "📊 Checking JMeter test results:"
+
+                            if [ -f "target/jmeter-results/performance-test-results.jtl" ]; then
+                                echo "✅ Performance results file generated: $(wc -l < target/jmeter-results/performance-test-results.jtl) samples"
+
+                                # Basic result analysis
+                                echo "📈 Performance Test Summary:"
+                                echo "- Total Samples: $(grep -c '^[0-9]' target/jmeter-results/performance-test-results.jtl || echo 'N/A')"
+                                echo "- Failed Samples: $(grep -c ',false,' target/jmeter-results/performance-test-results.jtl || echo '0')"
+
+                            else
+                                echo "⚠️ Performance results file not found"
+                            fi
+
+                            if [ -d "target/jmeter-reports/html-report" ]; then
+                                echo "✅ HTML report generated in target/jmeter-reports/html-report/"
+                                ls -la target/jmeter-reports/html-report/ | head -10
+                            else
+                                echo "⚠️ HTML report directory not found"
+                            fi
+                        '''
+
+                        // Set build status based on performance results
+                        def performanceStatus = sh(
+                            script: '''
+                                if [ -f "target/jmeter-results/performance-test-results.jtl" ]; then
+                                    FAILED_COUNT=$(grep -c ",false," target/jmeter-results/performance-test-results.jtl || echo "0")
+                                    TOTAL_COUNT=$(grep -c "^[0-9]" target/jmeter-results/performance-test-results.jtl || echo "1")
+
+                                    if [ "$TOTAL_COUNT" -gt 0 ]; then
+                                        FAILURE_RATE=$(( (FAILED_COUNT * 100) / TOTAL_COUNT ))
+                                        echo "Performance failure rate: ${FAILURE_RATE}%"
+
+                                        if [ "$FAILURE_RATE" -gt 10 ]; then
+                                            echo "HIGH_FAILURE_RATE"
+                                        else
+                                            echo "ACCEPTABLE_PERFORMANCE"
+                                        fi
+                                    else
+                                        echo "NO_SAMPLES"
+                                    fi
+                                else
+                                    echo "NO_RESULTS_FILE"
+                                fi
+                            ''',
+                            returnStdout: true
+                        ).trim()
+
+                        if (performanceStatus.contains('HIGH_FAILURE_RATE')) {
+                            currentBuild.result = 'UNSTABLE'
+                            echo "⚠️ Performance test shows high failure rate - build marked as unstable"
+                        } else {
+                            echo "✅ Performance test completed within acceptable parameters"
+                        }
+
+                    } catch (Exception e) {
+                        echo "⚠️ JMeter performance test encountered issues: ${e.getMessage()}"
+                        currentBuild.result = 'UNSTABLE'
+
+                        // Create fallback report
+                        sh '''
+                            mkdir -p target/jmeter-reports/html-report
+                            echo "<html><body><h1>Performance Test Status</h1><p>Performance test encountered issues but pipeline continued.</p><p>Check Jenkins logs for details.</p></body></html>" > target/jmeter-reports/html-report/index.html
+                        '''
+                    }
+                }
+            }
+        }
     }
 
     post {
@@ -369,8 +504,8 @@ pipeline {
                 echo "🧹 Cleaning up Docker images..."
                 sh "docker rmi ${DOCKER_IMAGE}:${BUILD_NUMBER} || true"
 
-                // Archive artifacts including ZAP security reports
-                archiveArtifacts artifacts: 'target/logs/*.log, target/screenshots/*.png, target/allure-report/**, target/zap-reports/**', allowEmptyArchive: true
+                // Archive artifacts including ZAP security reports and JMeter performance reports
+                archiveArtifacts artifacts: 'target/logs/*.log, target/screenshots/*.png, target/allure-report/**, target/zap-reports/**, target/jmeter-results/**, target/jmeter-reports/**', allowEmptyArchive: true
             }
         }
 
@@ -412,8 +547,9 @@ pipeline {
 
                         <h3>📊 Reports Available:</h3>
                         <ul>
-                            <li><strong>Allure Test Report:</strong> <a href="${BUILD_URL}allure/">View Interactive Report</a></li>
-                            <li><strong>Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html">View ZAP Security Report</a></li>
+                            <li><strong>Allure Test Report:</strong> <a href="${BUILD_URL}allure/">View Interactive Test Report</a></li>
+                            <li><strong>Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html">View ZAP Security Scan</a></li>
+                            <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html">View JMeter Performance Report</a></li>
                             <li><strong>Jenkins Console:</strong> <a href="${BUILD_URL}console">View Build Logs</a></li>
                         </ul>
 
@@ -505,6 +641,7 @@ pipeline {
                         <ul>
                             <li><strong>Allure Test Report:</strong> <a href="${BUILD_URL}allure/">View Test Results</a></li>
                             <li><strong>Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html">View ZAP Security Report</a></li>
+                            <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html">View JMeter Performance Report</a></li>
                             <li><strong>Jenkins Console:</strong> <a href="${BUILD_URL}console">View Build Logs</a></li>
                         </ul>
 

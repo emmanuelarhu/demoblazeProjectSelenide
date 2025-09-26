@@ -43,6 +43,17 @@ RUN apt-get update && \
     && rm "ZAP_${ZAP_VERSION}_Linux.tar.gz" \
     && chmod +x /opt/zaproxy/zap.sh
 
+# Install Apache JMeter for performance testing
+RUN JMETER_VERSION="5.6.2" \
+    && wget -q "https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz" \
+    && tar -xzf "apache-jmeter-${JMETER_VERSION}.tgz" \
+    && mv "apache-jmeter-${JMETER_VERSION}" /opt/apache-jmeter \
+    && ln -s /opt/apache-jmeter/bin/jmeter /usr/local/bin/jmeter \
+    && ln -s /opt/apache-jmeter/bin/jmeter.sh /usr/local/bin/jmeter.sh \
+    && rm "apache-jmeter-${JMETER_VERSION}.tgz" \
+    && chmod +x /opt/apache-jmeter/bin/jmeter \
+    && chmod +x /opt/apache-jmeter/bin/jmeter.sh
+
 # Set browser paths and display for headless mode
 ENV CHROME_BIN=/usr/bin/google-chrome
 ENV FIREFOX_BIN=/usr/bin/firefox
