@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CartPageTest" time="46.479" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/test-classes:/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/classes:/home/arhu/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/home/arhu/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/home/arhu/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/home/arhu/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/home/arhu/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/home/arhu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/arhu/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/home/arhu/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/arhu/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/home/arhu/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/home/arhu/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/arhu/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/arhu/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/arhu/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/home/arhu/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/arhu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/arhu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/arhu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/arhu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/arhu/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/arhu/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/home/arhu/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/arhu/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/arhu/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/home/arhu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/arhu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Atlantic/Reykjavik"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+    <property name="selenide.browser" value="firefox"/>
+    <property name="sun.java.command" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/surefire/surefirebooter-20250925024211724_3.jar /mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/surefire 2025-09-25T02-42-05_938-jvmRun1 surefire-20250925024211724_1tmp surefire_0-20250925024211724_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/test-classes:/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/classes:/home/arhu/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/home/arhu/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/home/arhu/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/home/arhu/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/home/arhu/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/home/arhu/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/home/arhu/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/home/arhu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/arhu/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/arhu/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/home/arhu/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/arhu/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/home/arhu/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/home/arhu/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/arhu/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/arhu/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/arhu/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/home/arhu/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/arhu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/arhu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/arhu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/arhu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/arhu/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/arhu/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/arhu/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/arhu/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/home/arhu/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/arhu/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/arhu/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/home/arhu/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/home/arhu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/arhu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/arhu/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
+    <property name="allure.results.directory" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/arhu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/target/surefire/surefirebooter-20250925024211724_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="user.name" value="arhu"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.6.87.2-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/arhu/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testAddMultipleProductsToCart" classname="tests.CartPageTest" time="23.013">
+    <system-out><![CDATA[02:43:01.322 [main] INFO  base.BaseTest - Setting up base test configuration
+02:43:01.323 [main] INFO  base.BaseTest - Base test configuration completed
+02:43:01.324 [main] INFO  tests.CartPageTest - Setting up cart test instances
+02:43:01.325 [main] INFO  tests.CartPageTest - Cart test setup completed
+02:43:01.327 [main] INFO  tests.CartPageTest - Starting test: Add multiple products to cart
+02:43:01.327 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+02:43:01.328 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+02:43:04.111 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
+02:43:04.154 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 143.0.1 linux
+02:43:06.327 [main] INFO  pages.HomePage - Home page opened successfully
+02:43:06.329 [main] INFO  pages.HomePage - Verifying categories section
+02:43:06.948 [main] INFO  pages.HomePage - Categories section verified successfully
+02:43:06.949 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
+02:43:08.284 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
+02:43:08.286 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Samsung galaxy s6 with price: $360 *includes tax
+02:43:09.026 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Samsung galaxy s6
+02:43:09.026 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:09.165 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:06.894 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+02:43:13.151 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+02:43:13.152 [main] INFO  pages.HomePage - Verifying categories section
+02:43:13.721 [main] INFO  pages.HomePage - Categories section verified successfully
+02:43:13.722 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
+02:43:14.184 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
+02:43:14.187 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nokia lumia 1520 with price: $820 *includes tax
+02:43:14.711 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nokia lumia 1520
+02:43:14.711 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:14.854 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:15.884 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+02:43:16.716 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+02:43:16.717 [main] INFO  pages.HomePage - Verifying categories section
+02:43:17.246 [main] INFO  pages.HomePage - Categories section verified successfully
+02:43:17.247 [main] INFO  pages.HomePage - Clicking on first product: Nexus 6
+02:43:18.138 [main] INFO  pages.HomePage - Successfully clicked on first product: Nexus 6
+02:43:18.139 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nexus 6 with price: $650 *includes tax
+02:43:19.082 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nexus 6
+02:43:19.082 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:19.215 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:20.245 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:20.369 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:21.399 [main] INFO  pages.HomePage - Navigating to cart page
+02:43:22.283 [main] INFO  pages.HomePage - Successfully navigated to cart page
+02:43:22.284 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+02:43:22.413 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+02:43:22.413 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
+02:43:23.457 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
+02:43:23.457 [main] INFO  pages.CartPage - Verifying product is in cart: Nokia lumia 1520
+02:43:23.475 [main] INFO  pages.CartPage - Product verified in cart: Nokia lumia 1520
+02:43:23.475 [main] INFO  tests.CartPageTest - Test completed successfully: Add multiple products to cart
+02:43:23.479 [main] INFO  base.BaseTest - Cleaning up test resources
+02:43:24.311 [main] INFO  base.BaseTest - Test cleanup completed
+02:43:24.329 [main] INFO  utils.TestListener - Test passed: Add multiple products to cart and verify cart functionality
+]]></system-out>
+  </testcase>
+  <testcase name="testCartItemDeletion" classname="tests.CartPageTest" time="23.261">
+    <system-out><![CDATA[02:43:24.383 [main] INFO  base.BaseTest - Setting up base test configuration
+02:43:24.384 [main] INFO  base.BaseTest - Base test configuration completed
+02:43:24.385 [main] INFO  tests.CartPageTest - Setting up cart test instances
+02:43:24.412 [main] INFO  tests.CartPageTest - Cart test setup completed
+02:43:24.623 [main] INFO  tests.CartPageTest - Starting test: Cart item deletion functionality
+02:43:24.623 [main] INFO  tests.CartPageTest - Adding test products to cart
+02:43:24.624 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+02:43:24.626 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+02:43:28.289 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
+02:43:28.319 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 143.0.1 linux
+02:43:30.473 [main] INFO  pages.HomePage - Home page opened successfully
+02:43:30.474 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
+02:43:32.546 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
+02:43:32.547 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:33.442 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:34.476 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+02:43:34.619 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+02:43:34.619 [main] INFO  pages.HomePage - Verifying categories section
+02:43:35.151 [main] INFO  pages.HomePage - Categories section verified successfully
+02:43:35.152 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
+02:43:35.618 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
+02:43:35.619 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:36.261 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:37.288 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+02:43:37.406 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+02:43:37.407 [main] INFO  pages.HomePage - Verifying categories section
+02:43:37.910 [main] INFO  pages.HomePage - Categories section verified successfully
+02:43:37.911 [main] INFO  pages.HomePage - Clicking on product at index 3: Samsung galaxy s7
+02:43:38.340 [main] INFO  pages.HomePage - Successfully clicked on product at index 3: Samsung galaxy s7
+02:43:38.340 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:39.238 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:40.273 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+02:43:40.398 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+02:43:41.425 [main] INFO  tests.CartPageTest - Test products added to cart successfully
+02:43:41.426 [main] INFO  pages.HomePage - Navigating to cart page
+02:43:42.335 [main] INFO  pages.HomePage - Successfully navigated to cart page
+02:43:42.336 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+02:43:42.448 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+02:43:42.448 [main] INFO  pages.CartPage - Clicking first delete button in cart
+02:43:46.544 [main] INFO  pages.CartPage - Successfully clicked first delete button
+02:43:46.544 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
+02:43:46.559 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
+02:43:46.560 [main] INFO  pages.CartPage - Deleting product from cart: Samsung galaxy s6
+02:43:46.651 [main] INFO  pages.CartPage - Successfully deleted product from cart: Samsung galaxy s6
+02:43:46.652 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s7
+02:43:46.670 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s7
+02:43:46.671 [main] INFO  tests.CartPageTest - Test completed successfully: Cart item deletion functionality
+02:43:46.672 [main] INFO  base.BaseTest - Cleaning up test resources
+02:43:47.641 [main] INFO  base.BaseTest - Test cleanup completed
+02:43:47.642 [main] INFO  utils.TestListener - Test passed: Test cart item deletion functionality
+]]></system-out>
+  </testcase>
+</testsuite>

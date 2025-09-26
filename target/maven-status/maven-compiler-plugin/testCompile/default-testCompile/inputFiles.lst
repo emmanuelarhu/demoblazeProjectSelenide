@@ -1,0 +1,16 @@
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/runners/CucumberTestRunner.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/stepDefinitions/ContactSteps.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/base/BaseTest.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/bdd/BddStyleTests.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/tests/ContactModalTest.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/stepDefinitions/CartSteps.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/stepDefinitions/HomePageSteps.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/tests/CartPageTest.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/utils/TestListener.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/hooks/Hooks.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/runners/TestRunner.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/tests/HomePageTest.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/bdd/BddTestRunner.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/bdd/BddTestUtils.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/stepDefinitions/OrderPlacementSteps.java
+/mnt/e/Courses/Amalitech GTP/Projects/demoblazeProjectPlaywright/src/test/java/tests/OrderPlacementTest.java
