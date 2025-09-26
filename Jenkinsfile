@@ -276,58 +276,26 @@ pipeline {
         stage('OWASP ZAP Security Scan') {
             steps {
                 script {
-                    echo "🔒 Running OWASP ZAP security scan on https://www.demoblaze.com..."
+                    echo "🔒 Running OWASP ZAP automated security scan on https://www.demoblaze.com..."
 
                     // Create security reports directory
                     sh 'mkdir -p target/zap-reports'
 
                     try {
-                        // Run ZAP security scan using Docker container
+                        // Use ZAP's automated full scan script
                         def zapExitCode = sh(
                             script: """
                                 docker run --rm \\
                                     -v \$(pwd)/target/zap-reports:/zap/wrk/:rw \\
-                                    ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
-                                    sh -c "
-                                        echo '🔒 Starting OWASP ZAP scan...'
-
-                                        # Start ZAP in daemon mode with API key disabled
-                                        /opt/zaproxy/zap.sh -daemon -host 0.0.0.0 -port 8080 \\
-                                            -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true \\
-                                            -config api.key= -config api.disablekey=true &
-                                        ZAP_PID=\$!
-
-                                        # Wait for ZAP to start
-                                        echo 'Waiting for ZAP to start...'
-                                        sleep 45
-
-                                        # Run spider scan
-                                        echo '🕷️ Running spider scan...'
-                                        curl -s 'http://localhost:8080/JSON/spider/action/scan/?url=https://www.demoblaze.com&maxChildren=5' \\
-                                            && echo 'Spider scan initiated' || echo 'Spider scan failed'
-                                        sleep 30
-
-                                        # Run active scan
-                                        echo '🎯 Running active scan...'
-                                        curl -s 'http://localhost:8080/JSON/ascan/action/scan/?url=https://www.demoblaze.com&recurse=true&inScopeOnly=false' \\
-                                            && echo 'Active scan initiated' || echo 'Active scan failed'
-                                        sleep 90
-
-                                        # Generate reports
-                                        echo '📊 Generating reports...'
-                                        curl -s 'http://localhost:8080/OTHER/core/other/htmlreport/' -o /zap/wrk/zap-report.html
-                                        curl -s 'http://localhost:8080/OTHER/core/other/xmlreport/' -o /zap/wrk/zap-report.xml
-                                        curl -s 'http://localhost:8080/JSON/core/view/alerts/' -o /zap/wrk/zap-alerts.json
-
-                                        # Verify reports generated
-                                        ls -la /zap/wrk/
-
-                                        # Stop ZAP gracefully
-                                        curl -s 'http://localhost:8080/JSON/core/action/shutdown/' || echo 'ZAP shutdown initiated'
-                                        sleep 5
-
-                                        echo '✅ ZAP scan completed'
-                                    "
+                                    ghcr.io/zaproxy/zaproxy:stable \\
+                                    zap-full-scan.py \\
+                                    -t https://www.demoblaze.com \\
+                                    -r zap-report.html \\
+                                    -x zap-report.xml \\
+                                    -J zap-report.json \\
+                                    -m 2 \\
+                                    -T 10 \\
+                                    -d
                             """,
                             returnStatus: true
                         )
@@ -377,7 +345,7 @@ pipeline {
                     sh 'mkdir -p target/jmeter-results target/jmeter-reports'
 
                     try {
-                        // Run JMeter performance test using Docker container
+                        // Run JMeter performance test using Docker container with simplified approach
                         def jmeterExitCode = sh(
                             script: """
                                 docker run --rm \\
@@ -387,48 +355,49 @@ pipeline {
                                     ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
                                     sh -c "
                                         echo '🚀 Starting JMeter performance test...'
+                                        cd /app
 
-                                        # Set JMeter path
-                                        export PATH=/opt/apache-jmeter/bin:\$PATH
+                                        # Verify JMeter and test files
+                                        echo 'Checking JMeter installation and test files:'
+                                        which jmeter || export PATH=/opt/apache-jmeter/bin:\\\$PATH
+                                        jmeter --version
+                                        ls -la test-plans/
 
-                                        # Define test parameters
-                                        THREADS=10
-                                        RAMP_UP=30
-                                        DURATION=120
-                                        JMX_FILE='demoblaze-performance-test.jmx'
-                                        RESULTS_FILE='performance-test-results.jtl'
-                                        REPORT_DIR='html-report'
+                                        # Set test parameters from user.properties
+                                        THREADS=\\\$(grep '^threads=' test-plans/user.properties | cut -d'=' -f2 || echo '5')
+                                        RAMP_UP=\\\$(grep '^rampup=' test-plans/user.properties | cut -d'=' -f2 || echo '10')
+                                        DURATION=\\\$(grep '^duration=' test-plans/user.properties | cut -d'=' -f2 || echo '60')
 
                                         echo 'JMeter Configuration:'
-                                        echo \"- Threads (Users): \$THREADS\"
-                                        echo \"- Ramp-up Period: \$RAMP_UP seconds\"
-                                        echo \"- Test Duration: \$DURATION seconds\"
+                                        echo \"- Threads (Users): \\\$THREADS\"
+                                        echo \"- Ramp-up Period: \\\$RAMP_UP seconds\"
+                                        echo \"- Test Duration: \\\$DURATION seconds\"
                                         echo '- Target URL: https://www.demoblaze.com'
 
-                                        # Verify JMeter installation
-                                        jmeter --version || echo 'JMeter version check failed'
-
-                                        # List available files for debugging
-                                        echo 'Available test plans:'
-                                        ls -la /app/test-plans/ || echo 'Test plans directory not found'
+                                        # Create results directory
+                                        mkdir -p results reports
 
                                         # Run JMeter test
                                         echo '📊 Executing performance test...'
                                         jmeter -n \\
-                                            -t \"/app/test-plans/\$JMX_FILE\" \\
-                                            -l \"/app/results/\$RESULTS_FILE\" \\
-                                            -q \"/app/test-plans/user.properties\" \\
-                                            -e -o \"/app/reports/\$REPORT_DIR\" \\
-                                            -Jthreads=\$THREADS \\
-                                            -Jrampup=\$RAMP_UP \\
-                                            -Jduration=\$DURATION \\
-                                            -Djmeter.reportgenerator.overall_granularity=1000
+                                            -t test-plans/demoblaze-performance-test.jmx \\
+                                            -l results/performance-test-results.jtl \\
+                                            -q test-plans/user.properties \\
+                                            -e -o reports/html-report \\
+                                            -Jthreads=\\\$THREADS \\
+                                            -Jrampup=\\\$RAMP_UP \\
+                                            -Jduration=\\\$DURATION
 
                                         echo '✅ JMeter performance test completed'
 
-                                        # Check results
-                                        echo 'Generated files:'
-                                        ls -la /app/results/ /app/reports/ || echo 'Results check failed'
+                                        # Copy results to mounted volumes
+                                        echo 'Copying results to mounted volumes:'
+                                        cp -r results/* /app/results/ 2>/dev/null || echo 'Results copy completed'
+                                        cp -r reports/* /app/reports/ 2>/dev/null || echo 'Reports copy completed'
+
+                                        # Verify final results
+                                        echo 'Final generated files:'
+                                        ls -la /app/results/ /app/reports/ || echo 'Results verification completed'
                                     "
                             """,
                             returnStatus: true
