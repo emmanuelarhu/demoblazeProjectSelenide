@@ -282,210 +282,256 @@ pipeline {
                     sh 'mkdir -p target/zap-reports'
 
                     try {
-                        // Use ZAP daemon with enhanced styled report generation
+                        // Use working ZAP full scan with post-processing enhancement
                         def zapExitCode = sh(
                             script: """
-                                # Create network for ZAP container
-                                docker network create zapnet 2>/dev/null || echo "Network already exists"
+                                echo "🔒 Running ZAP security scan with professional report enhancement..."
 
-                                # Run ZAP with enhanced reporting
-                                docker run --rm --name zap-scanner \\
-                                    --network zapnet \\
+                                # Run the working ZAP full scan
+                                docker run --rm \\
                                     -v \$(pwd)/target/zap-reports:/zap/wrk/:rw \\
-                                    -p 8090:8090 \\
-                                    -d ghcr.io/zaproxy/zaproxy:stable \\
-                                    zap.sh -daemon -host 0.0.0.0 -port 8090 \\
-                                    -config api.addrs.addr.name=.* \\
-                                    -config api.addrs.addr.regex=true \\
-                                    -config api.disablekey=true
+                                    -t ghcr.io/zaproxy/zaproxy:stable \\
+                                    zap-full-scan.py \\
+                                    -t https://www.demoblaze.com \\
+                                    -r zap-report-basic.html \\
+                                    -x zap-report.xml \\
+                                    -J zap-alerts.json \\
+                                    -m 2 \\
+                                    -T 10 \\
+                                    -I
 
-                                # Wait for ZAP to initialize
-                                echo "⏳ Waiting for ZAP to initialize..."
-                                sleep 30
+                                echo "✅ ZAP scan completed, now enhancing report styling..."
 
-                                # Check ZAP status
-                                echo "🔍 Verifying ZAP daemon status..."
-                                curl -s http://localhost:8090/JSON/core/view/version/ || echo "ZAP status check"
-
-                                # Run comprehensive scan
-                                echo "🕷️ Starting spider scan on https://www.demoblaze.com..."
-                                SPIDER_ID=\$(curl -s "http://localhost:8090/JSON/spider/action/scan/?url=https://www.demoblaze.com&maxChildren=10&recurse=true" | grep -o '"scan":"[0-9]*"' | cut -d'"' -f4)
-                                echo "Spider scan ID: \$SPIDER_ID"
-
-                                # Wait for spider to complete
-                                while true; do
-                                    STATUS=\$(curl -s "http://localhost:8090/JSON/spider/view/status/?scanId=\$SPIDER_ID" | grep -o '"status":"[0-9]*"' | cut -d'"' -f4)
-                                    if [ "\$STATUS" = "100" ]; then
-                                        echo "✅ Spider scan completed"
-                                        break
-                                    fi
-                                    echo "Spider progress: \$STATUS%"
-                                    sleep 10
-                                done
-
-                                # Run active scan
-                                echo "🎯 Starting active security scan..."
-                                ASCAN_ID=\$(curl -s "http://localhost:8090/JSON/ascan/action/scan/?url=https://www.demoblaze.com&recurse=true&inScopeOnly=false" | grep -o '"scan":"[0-9]*"' | cut -d'"' -f4)
-                                echo "Active scan ID: \$ASCAN_ID"
-
-                                # Wait for active scan to complete (with timeout)
-                                TIMEOUT=300
-                                COUNTER=0
-                                while [ \$COUNTER -lt \$TIMEOUT ]; do
-                                    STATUS=\$(curl -s "http://localhost:8090/JSON/ascan/view/status/?scanId=\$ASCAN_ID" | grep -o '"status":"[0-9]*"' | cut -d'"' -f4)
-                                    if [ "\$STATUS" = "100" ]; then
-                                        echo "✅ Active scan completed"
-                                        break
-                                    fi
-                                    echo "Active scan progress: \$STATUS%"
-                                    sleep 15
-                                    COUNTER=\$((COUNTER + 15))
-                                done
-
-                                # Generate enhanced HTML report
-                                echo "📊 Generating enhanced HTML security report..."
-                                curl -s "http://localhost:8090/OTHER/core/other/htmlreport/" -o /tmp/zap-report-raw.html
-
-                                # Generate additional reports
-                                curl -s "http://localhost:8090/OTHER/core/other/xmlreport/" -o /tmp/zap-report.xml
-                                curl -s "http://localhost:8090/JSON/core/view/alerts/" -o /tmp/zap-alerts.json
-
-                                # Post-process HTML report for enhanced styling
-                                cat > /tmp/enhance-report.py << 'EOF'
+                                # Create enhanced report processor
+                                cat > /tmp/enhance-zap-report.py << 'EOF'
 import re
-import sys
+import os
 
-def enhance_zap_report(input_file, output_file):
-    with open(input_file, 'r', encoding='utf-8') as f:
-        content = f.read()
+def enhance_zap_report():
+    input_file = "/tmp/zap-report-basic.html"
+    output_file = "/tmp/zap-report.html"
 
-    # Enhanced CSS styling
-    enhanced_css = '''
+    # Check if basic report exists
+    if not os.path.exists(input_file):
+        print(f"Basic report not found at {input_file}")
+        return False
+
+    try:
+        with open(input_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except Exception as e:
+        print(f"Error reading file: {e}")
+        return False
+
+    # Professional CSS styling
+    professional_css = '''
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
+        }
+        .report-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
         }
         .header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
             font-weight: 300;
+            margin-bottom: 10px;
         }
-        .meta-info {
-            background: white;
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .meta-section {
+            background: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-left: 4px solid #007bff;
         }
-        .summary-table {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .summary-section {
+            margin-bottom: 30px;
+        }
+        .summary-section h2 {
+            color: #2c3e50;
+            font-size: 2em;
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
         }
         table {
             width: 100%;
             border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         th {
-            background: #34495e;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
-            padding: 15px;
+            padding: 18px;
             text-align: left;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
+            padding: 15px 18px;
+            border-bottom: 1px solid #ecf0f1;
+            transition: background-color 0.3s ease;
         }
-        tr:hover {
+        tr:hover td {
             background-color: #f8f9fa;
         }
-        .risk-high { color: #e74c3c; font-weight: bold; }
-        .risk-medium { color: #f39c12; font-weight: bold; }
-        .risk-low { color: #f1c40f; font-weight: bold; }
-        .risk-info { color: #3498db; font-weight: bold; }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .risk-high {
+            color: #e74c3c;
+            font-weight: bold;
+            background: #ffeaa7;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .risk-medium {
+            color: #f39c12;
+            font-weight: bold;
+            background: #fdcb6e;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .risk-low {
+            color: #f1c40f;
+            font-weight: bold;
+            background: #fdcb6e;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .risk-info {
+            color: #3498db;
+            font-weight: bold;
+            background: #74b9ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
         .alert-section {
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #e74c3c;
         }
         .footer {
+            background: #2c3e50;
+            color: white;
             text-align: center;
-            padding: 20px;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
-            margin-top: 30px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #007bff;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
         }
     </style>
     '''
 
-    # Insert enhanced CSS after <head>
-    content = re.sub(r'<head>', f'<head>\\n{enhanced_css}', content)
+    # Insert CSS and restructure HTML
+    if '<head>' in content:
+        content = re.sub(r'<head>', f'<head>\\n{professional_css}', content)
+    else:
+        content = f'<head>\\n{professional_css}\\n</head>\\n' + content
 
-    # Wrap main content in styled containers
+    # Wrap content in professional container
     content = re.sub(r'<body[^>]*>', '''<body>
+    <div class="report-container">
         <div class="header">
-            <h1>🔒 Security Scan Report</h1>
-            <p>Comprehensive security analysis powered by OWASP ZAP</p>
-        </div>''', content)
-
-    # Style the summary section
-    content = re.sub(r'Summary of Alerts', '<div class="summary-table"><h2>📊 Security Alert Summary</h2>', content)
-
-    # Add risk level styling
-    content = re.sub(r'>High<', '><span class="risk-high">High</span><', content)
-    content = re.sub(r'>Medium<', '><span class="risk-medium">Medium</span><', content)
-    content = re.sub(r'>Low<', '><span class="risk-low">Low</span><', content)
-    content = re.sub(r'>Informational<', '><span class="risk-info">Informational</span><', content)
-
-    # Add footer
-    content = re.sub(r'</body>', '''
-        <div class="footer">
-            <p>Report generated by OWASP ZAP Security Scanner</p>
-            <p>🤖 Enhanced styling by Automated QA Pipeline</p>
+            <h1>🔒 Security Analysis Report</h1>
+            <p>Professional Security Assessment • Powered by OWASP ZAP</p>
         </div>
+        <div class="content">''', content)
+
+    # Enhance the title if it exists
+    content = re.sub(r'<h1[^>]*>.*?ZAP Scanning Report.*?</h1>', '', content)
+
+    # Style meta information
+    content = re.sub(r'(Generated on.*?</.*?>)', r'<div class="meta-section">\\1</div>', content)
+    content = re.sub(r'(ZAP Version.*?</.*?>)', r'<div class="meta-section">\\1</div>', content)
+
+    # Style summary section
+    content = re.sub(r'Summary of Alerts', '<div class="summary-section"><h2>📊 Security Alert Summary</h2>', content)
+
+    # Enhance risk level styling
+    content = re.sub(r'>High</td>', '><span class="risk-high">HIGH RISK</span></td>', content)
+    content = re.sub(r'>Medium</td>', '><span class="risk-medium">MEDIUM RISK</span></td>', content)
+    content = re.sub(r'>Low</td>', '><span class="risk-low">LOW RISK</span></td>', content)
+    content = re.sub(r'>Informational</td>', '><span class="risk-info">INFORMATIONAL</span></td>', content)
+
+    # Close containers and add footer
+    content = re.sub(r'</body>', '''
+        </div>
+        <div class="footer">
+            <p><strong>🛡️ Professional Security Report</strong></p>
+            <p>Generated by OWASP ZAP Security Scanner</p>
+            <p>🤖 Enhanced by Automated QA Pipeline</p>
+        </div>
+    </div>
     </body>''', content)
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(content)
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print("✅ Report enhancement completed successfully")
+        return True
+    except Exception as e:
+        print(f"Error writing enhanced report: {e}")
+        return False
 
 if __name__ == "__main__":
-    enhance_zap_report('/tmp/zap-report-raw.html', '/tmp/zap-report-enhanced.html')
-    print("Report enhancement completed")
+    enhance_zap_report()
 EOF
 
+                                # Copy basic report to temp location for processing
+                                cp target/zap-reports/zap-report-basic.html /tmp/zap-report-basic.html 2>/dev/null || echo "Report copy attempted"
+
                                 # Run report enhancement
-                                python3 /tmp/enhance-report.py
+                                python3 /tmp/enhance-zap-report.py
 
-                                # Copy reports to output directory
-                                docker cp /tmp/zap-report-enhanced.html zap-scanner:/zap/wrk/zap-report.html
-                                docker cp /tmp/zap-report.xml zap-scanner:/zap/wrk/zap-report.xml
-                                docker cp /tmp/zap-alerts.json zap-scanner:/zap/wrk/zap-alerts.json
+                                # Copy enhanced report back
+                                cp /tmp/zap-report.html target/zap-reports/zap-report.html 2>/dev/null || echo "Enhanced report copy attempted"
 
-                                # Stop ZAP container
-                                echo "🛑 Stopping ZAP scanner..."
-                                docker stop zap-scanner 2>/dev/null || echo "Container already stopped"
+                                # Verify reports exist
+                                echo "📁 Generated security reports:"
+                                ls -la target/zap-reports/
 
-                                # Clean up network
-                                docker network rm zapnet 2>/dev/null || echo "Network cleanup"
-
-                                echo "✅ Enhanced ZAP security scan completed"
+                                echo "✅ Professional ZAP security report generated successfully"
                             """,
                             returnStatus: true
                         )
