@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: runners.CucumberTestRunner
 -------------------------------------------------------------------------------
-Tests run: 33, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 353.655 s <<< FAILURE! - in runners.CucumberTestRunner
-DemoBlaze Shopping Cart.Manage multiple products in cart  Time elapsed: 20.559 s  <<< FAILURE!
+Tests run: 33, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 9,768.019 s <<< FAILURE! - in runners.CucumberTestRunner
+DemoBlaze Shopping Cart.Manage multiple products in cart  Time elapsed: 20.009 s  <<< FAILURE!
 Element not found {By.xpath: //td[normalize-space()='Nexus 6']}
 Expected: visible
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775562996.0.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775562996.0.html
+Screenshot: file:/app/target/screenshots/1758894751337.0.png
+Page source: file:/app/target/screenshots/1758894751337.0.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nexus 6']"}
+Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nexus 6']
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -20,21 +20,20 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
-	at ✽.I should see "Nexus 6" in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/Cart.feature:25)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nexus 6']"}
-  (Session info: chrome=140.0.7339.185)
+	at ✽.I should see "Nexus 6" in the cart(file:///app/src/test/resources/features/Cart.feature:25)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nexus 6']
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cbdb82dc00611dee916e4c280e8b32e9, findElement {value=//td[normalize-space()='Nexus 6'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3820}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3820/devtool..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cbdb82dc00611dee916e4c280e8b32e9
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3a9d49b5-cabf-46f5-b759-baa94cf3d8cc, findElement {value=//td[normalize-space()='Nexus 6'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 6687, moz:profile: /tmp/rust_mozprofilex22wbs, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:34235/sessio...}
+Session ID: 3a9d49b5-cabf-46f5-b759-baa94cf3d8cc
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -58,7 +57,7 @@ Session ID: cbdb82dc00611dee916e4c280e8b32e9
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -89,13 +88,13 @@ Session ID: cbdb82dc00611dee916e4c280e8b32e9
 	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
 	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
 
-DemoBlaze Shopping Cart.Verify cart maintains items across navigation  Time elapsed: 15.529 s  <<< FAILURE!
+DemoBlaze Shopping Cart.Verify cart maintains items across navigation  Time elapsed: 17.403 s  <<< FAILURE!
 Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775596835.1.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775596835.1.html
+Screenshot: file:/app/target/screenshots/1758894791177.1.png
+Page source: file:/app/target/screenshots/1758894791177.1.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
+Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -107,21 +106,20 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.should_still_be_in_the_cart(CartSteps.java:172)
-	at ✽."Nokia lumia 1520" should still be in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/Cart.feature:47)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
-  (Session info: chrome=140.0.7339.185)
+	at ✽."Nokia lumia 1520" should still be in the cart(file:///app/src/test/resources/features/Cart.feature:47)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fc6e0a0a1a210598774c5bb5de678998, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3903}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3903/devtool..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fc6e0a0a1a210598774c5bb5de678998
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [18861be5-a91a-4810-a4be-6873061ec49c, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 7770, moz:profile: /tmp/rust_mozprofile7lvKrF, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:37803/sessio...}
+Session ID: 18861be5-a91a-4810-a4be-6873061ec49c
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -145,7 +143,7 @@ Session ID: fc6e0a0a1a210598774c5bb5de678998
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.should_still_be_in_the_cart(CartSteps.java:172)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -176,13 +174,279 @@ Session ID: fc6e0a0a1a210598774c5bb5de678998
 	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
 	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
 
-DemoBlaze Home Page.Verify individual product details #2  Time elapsed: 11.26 s  <<< FAILURE!
+DemoBlaze Contact Modal.Contact form data persistence during session  Time elapsed: 23.207 s  <<< FAILURE!
+Invalid element state [a[data-target='#exampleModal']]: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
+Screenshot: file:/app/target/screenshots/1758894873964.2.png
+Page source: file:/app/target/screenshots/1758894873964.2.html
+Timeout: 4 s.
+Caused by: ElementClickInterceptedException: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
+	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:19)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at pages.HomePage.clickContactLink(HomePage.java:175)
+	at stepDefinitions.ContactSteps.i_click_on_link(ContactSteps.java:36)
+	at stepDefinitions.ContactSteps.i_click_on_link_again(ContactSteps.java:143)
+	at ✽.I click on "Contact" link again(file:///app/src/test/resources/features/Contact.feature:60)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [259696cf-6c41-4258-9054-defc52f5cd64, clickElement {id=868dd09c-6ff4-465f-b79e-f45aac946663}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 10642, moz:profile: /tmp/rust_mozprofilemHTg1c, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:44133/sessio...}
+Element: [[FirefoxDriver: firefox on linux (259696cf-6c41-4258-9054-defc52f5cd64)] -> css selector: a[data-target='#exampleModal']]
+Session ID: 259696cf-6c41-4258-9054-defc52f5cd64
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:105)
+	at com.codeborne.selenide.commands.Click.doClick(Click.java:83)
+	at com.codeborne.selenide.commands.Click.click(Click.java:59)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at pages.HomePage.clickContactLink(HomePage.java:175)
+	at stepDefinitions.ContactSteps.i_click_on_link(ContactSteps.java:36)
+	at stepDefinitions.ContactSteps.i_click_on_link_again(ContactSteps.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+
+DemoBlaze Order Placement.Place order successfully with valid details  Time elapsed: 17.56 s  <<< FAILURE!
+Alert not found
+Screenshot: file:/app/target/screenshots/1758894966874.3.png
+Page source: file:/app/target/screenshots/1758894966874.3.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
+	at ✽.I should see order success message(file:///app/src/test/resources/features/OrderPlacement.feature:25)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+
+DemoBlaze Order Placement.Validate order form with different data combinations #1  Time elapsed: 21.731 s  <<< FAILURE!
+Alert not found
+Screenshot: file:/app/target/screenshots/1758895001605.4.png
+Page source: file:/app/target/screenshots/1758895001605.4.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at ✽.I should see appropriate response for order "valid_order"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+
+DemoBlaze Order Placement.Validate order form with different data combinations #3  Time elapsed: 26.497 s  <<< FAILURE!
+Alert not found
+Screenshot: file:/app/target/screenshots/1758895042036.5.png
+Page source: file:/app/target/screenshots/1758895042036.5.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at ✽.I should see appropriate response for order "missing_country"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+
+DemoBlaze Order Placement.Validate order form with different data combinations #4  Time elapsed: 24.708 s  <<< FAILURE!
+Alert not found
+Screenshot: file:/app/target/screenshots/1758895066878.6.png
+Page source: file:/app/target/screenshots/1758895066878.6.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at ✽.I should see appropriate response for order "missing_city"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+
+DemoBlaze Order Placement.Validate order form with different data combinations #5  Time elapsed: 9,288.238 s  <<< FAILURE!
 Element not found {.card-title[0]}
 Expected: visible
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775685393.2.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775685393.2.html
+Screenshot: file:/app/target/screenshots/1758904344726.7.png
+Page source: file:/app/target/screenshots/1758904344726.7.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".card-title"}
+Caused by: NoSuchElementException: Unable to locate element: .card-title
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:58)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
 	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
@@ -194,22 +458,21 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
 	at pages.HomePage.clickProduct(HomePage.java:119)
 	at pages.HomePage.clickOnFirstProduct(HomePage.java:170)
-	at stepDefinitions.HomePageSteps.i_click_on_product(HomePageSteps.java:99)
-	at ✽.I click on "Nexus 6" product(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/HomePage.feature:44)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".card-title"}
-  (Session info: chrome=140.0.7339.185)
+	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:80)
+	at ✽.I add "Nexus 6" to cart(file:///app/src/test/resources/features/OrderPlacement.feature:47)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .card-title
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4723efdae6719dc54cd9b4ebfb8db431, findElement {value=.card-title, using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4250}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4250/devtool..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4723efdae6719dc54cd9b4ebfb8db431
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [32971595-1702-4fcc-b5a4-e235238c3618, findElement {value=.card-title, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 16042, moz:profile: /tmp/rust_mozprofileE9IRoU, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:44223/sessio...}
+Session ID: 32971595-1702-4fcc-b5a4-e235238c3618
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -235,10 +498,10 @@ Session ID: 4723efdae6719dc54cd9b4ebfb8db431
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
 	at pages.HomePage.clickProduct(HomePage.java:119)
 	at pages.HomePage.clickOnFirstProduct(HomePage.java:170)
-	at stepDefinitions.HomePageSteps.i_click_on_product(HomePageSteps.java:99)
+	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:80)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
@@ -267,205 +530,13 @@ Session ID: 4723efdae6719dc54cd9b4ebfb8db431
 	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
 	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
 
-DemoBlaze Order Placement.Place order successfully with valid details  Time elapsed: 21.427 s  <<< FAILURE!
-Alert not found
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775723302.3.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775723302.3.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
-	at ✽.I should see order success message(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:25)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-
-DemoBlaze Order Placement.Validate order form with different data combinations #1  Time elapsed: 18.925 s  <<< FAILURE!
-Alert not found
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775755990.4.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775755990.4.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "valid_order"(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-
-DemoBlaze Order Placement.Validate order form with different data combinations #3  Time elapsed: 18.49 s  <<< FAILURE!
-Alert not found
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775787269.5.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775787269.5.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "missing_country"(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-
-DemoBlaze Order Placement.Validate order form with different data combinations #4  Time elapsed: 18.322 s  <<< FAILURE!
-Alert not found
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775805739.6.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775805739.6.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "missing_city"(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-
-DemoBlaze Order Placement.Place order with multiple products  Time elapsed: 21.068 s  <<< FAILURE!
+DemoBlaze Order Placement.Place order with multiple products  Time elapsed: 27.39 s  <<< FAILURE!
 Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775854545.7.png
-Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1758775854545.7.html
+Screenshot: file:/app/target/screenshots/1758904441828.8.png
+Page source: file:/app/target/screenshots/1758904441828.8.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
+Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -477,21 +548,20 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
-	at ✽.I should see "Nokia lumia 1520" in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:86)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
-  (Session info: chrome=140.0.7339.185)
+	at ✽.I should see "Nokia lumia 1520" in the cart(file:///app/src/test/resources/features/OrderPlacement.feature:86)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ddac078234387a129de3fd3ef1028e04, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:4621}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:4621/devtool..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddac078234387a129de3fd3ef1028e04
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1b503e0a-9285-485d-ba86-017f430c561c, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 16857, moz:profile: /tmp/rust_mozprofilebDjqUO, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:40931/sessio...}
+Session ID: 1b503e0a-9285-485d-ba86-017f430c561c
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -515,7 +585,7 @@ Session ID: ddac078234387a129de3fd3ef1028e04
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

@@ -1,6 +1,6 @@
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\pages\CartPage.java
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\pages\OrderPlacementPage.java
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\data\TestData.java
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\pages\ContactModal.java
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\pages\HomePage.java
-E:\Courses\Amalitech GTP\Projects\demoblazeProjectPlaywright\src\main\java\pages\ProductDetailsPage.java
+/app/src/main/java/data/TestData.java
+/app/src/main/java/pages/OrderPlacementPage.java
+/app/src/main/java/pages/ProductDetailsPage.java
+/app/src/main/java/pages/HomePage.java
+/app/src/main/java/pages/ContactModal.java
+/app/src/main/java/pages/CartPage.java

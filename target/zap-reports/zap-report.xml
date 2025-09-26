@@ -1,0 +1,2122 @@
+<?xml version="1.0"?>
+<OWASPZAPReport programName="ZAP" version="2.16.1" generated="Fri, 26 Sept 2025 11:47:49" created="2025-09-26T11:47:49.247745367Z">
+	
+		<site name="https://www.demoblaze.com" host="www.demoblaze.com" port="443" ssl="true">
+			<alerts>
+				
+					<alertitem>
+						<pluginid>10038</pluginid>
+						<alertRef>10038-1</alertRef>
+						<alert>Content Security Policy (CSP) Header Not Set</alert>
+						<name>Content Security Policy (CSP) Header Not Set</name>
+						<riskcode>2</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Medium (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &#x2014; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>6</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-csp/&lt;/p&gt;&lt;p&gt;https://web.dev/articles/csp&lt;/p&gt;&lt;p&gt;https://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;https://content-security-policy.com/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10020</pluginid>
+						<alertRef>10020-1</alertRef>
+						<alert>Missing Anti-clickjacking Header</alert>
+						<name>Missing Anti-clickjacking Header</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response does not protect against &apos;ClickJacking&apos; attacks. It should include either Content-Security-Policy with &apos;frame-ancestors&apos; directive or X-Frame-Options.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<solution>&lt;p&gt;Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.&lt;/p&gt;&lt;p&gt;If you expect the page to be framed only by pages on your server (e.g. it&apos;s part of a FRAMESET) then you&apos;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&apos;s &quot;frame-ancestors&quot; directive.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options&lt;/p&gt;</reference>
+						<cweid>1021</cweid>
+						<wascid>15</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>40025</pluginid>
+						<alertRef>40025</alertRef>
+						<alert>Proxy Disclosure</alert>
+						<name>Proxy Disclosure</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;1 proxy server(s) were detected or fingerprinted. This information helps a potential attacker to determine&lt;/p&gt;&lt;p&gt;- A list of targets for an attack against the application.&lt;/p&gt;&lt;p&gt; - Potential vulnerabilities on the proxy servers that service the application.&lt;/p&gt;&lt;p&gt; - The presence or absence of any proxy-based components that might cause attacks against the application to be detected, prevented, or mitigated.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/css/bootstrap.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/tether</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/videojs-contrib-hls</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/videojs-contrib-hls/dist</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>TRACE, OPTIONS methods with &apos;Max-Forwards&apos; header. TRACK method.</attack>
+									<evidence></evidence>
+									<otherinfo>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:
+- Google Frontend
+The following web/application server has been identified:
+- Google Frontend
+</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>44</count>
+						<solution>&lt;p&gt;Disable the &apos;TRACE&apos; method on the proxy servers, as well as the origin web/application server.&lt;/p&gt;&lt;p&gt;Disable the &apos;OPTIONS&apos; method on the proxy servers, as well as the origin web/application server, if it is not required for other purposes, such as &apos;CORS&apos; (Cross Origin Resource Sharing).&lt;/p&gt;&lt;p&gt;Configure the web and application servers with custom error pages, to prevent &apos;fingerprintable&apos; product-specific error pages being leaked to the user in the event of HTTP errors, such as &apos;TRACK&apos; requests for non-existent pages.&lt;/p&gt;&lt;p&gt;Configure all proxies, application servers, and web servers to prevent disclosure of the technology and version information in the &apos;Server&apos; and &apos;X-Powered-By&apos; HTTP response headers.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between ZAP and the application/web server:&lt;/p&gt;&lt;p&gt;- Google Frontend&lt;/p&gt;&lt;p&gt;The following web/application server has been identified:&lt;/p&gt;&lt;p&gt;- Google Frontend&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231#section-5.1.2&lt;/p&gt;</reference>
+						<cweid>204</cweid>
+						<wascid>45</wascid>
+						<sourceid>3382</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10003</pluginid>
+						<alertRef>10003</alertRef>
+						<alert>Vulnerable JS Library</alert>
+						<name>Vulnerable JS Library</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medium (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The identified library appears to be vulnerable.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>/*! jQuery v3.2.1</evidence>
+									<otherinfo>The identified library jquery, version 3.2.1 is vulnerable.
+CVE-2020-11023
+CVE-2020-11022
+CVE-2019-11358
+https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/
+https://nvd.nist.gov/vuln/detail/CVE-2019-11358
+https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b
+https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
+</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Upgrade to the latest version of the affected library.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The identified library jquery, version 3.2.1 is vulnerable.&lt;/p&gt;&lt;p&gt;CVE-2020-11023&lt;/p&gt;&lt;p&gt;CVE-2020-11022&lt;/p&gt;&lt;p&gt;CVE-2019-11358&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/&lt;/p&gt;&lt;p&gt;https://nvd.nist.gov/vuln/detail/CVE-2019-11358&lt;/p&gt;&lt;p&gt;https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b&lt;/p&gt;&lt;p&gt;https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/&lt;/p&gt;</reference>
+						<cweid>1395</cweid>
+						<wascid>-1</wascid>
+						<sourceid>60</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>90004</pluginid>
+						<alertRef>90004-1</alertRef>
+						<alert>Insufficient Site Isolation Against Spectre Vulnerability</alert>
+						<name>Insufficient Site Isolation Against Spectre Vulnerability</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Cross-Origin-Resource-Policy header is an opt-in header designed to counter side-channels attacks like Spectre. Resource should be specifically set as shareable amongst different origins.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Embedder-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Cross-Origin-Resource-Policy header appropriately, and that it sets the Cross-Origin-Resource-Policy header to &apos;same-origin&apos; for all web pages.&lt;/p&gt;&lt;p&gt;&apos;same-site&apos; is considered as less secured and should be avoided.&lt;/p&gt;&lt;p&gt;If resources must be shared, set the header to &apos;cross-origin&apos;.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Resource-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-resource-policy).&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>14</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10063</pluginid>
+						<alertRef>10063-1</alertRef>
+						<alert>Permissions Policy Header Not Set</alert>
+						<name>Permissions Policy Header Not Set</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>11</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy&lt;/p&gt;&lt;p&gt;https://developer.chrome.com/blog/feature-policy/&lt;/p&gt;&lt;p&gt;https://scotthelme.co.uk/a-new-security-header-feature-policy/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-feature-policy/&lt;/p&gt;&lt;p&gt;https://www.smashingmagazine.com/2018/12/feature-policy/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10035</pluginid>
+						<alertRef>10035-1</alertRef>
+						<alert>Strict-Transport-Security Header Not Set</alert>
+						<name>Strict-Transport-Security Header Not Set</name>
+						<riskcode>1</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Low (High)</riskdesc>
+						<confidencedesc>High</confidencedesc>
+						<desc>&lt;p&gt;HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;&lt;p&gt;https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&lt;/p&gt;&lt;p&gt;https://caniuse.com/stricttransportsecurity&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc6797&lt;/p&gt;</reference>
+						<cweid>319</cweid>
+						<wascid>15</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10021</pluginid>
+						<alertRef>10021</alertRef>
+						<alert>X-Content-Type-Options Header Missing</alert>
+						<name>X-Content-Type-Options Header Missing</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Low (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>11</count>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10027</pluginid>
+						<alertRef>10027</alertRef>
+						<alert>Information Disclosure - Suspicious Comments</alert>
+						<name>Information Disclosure - Suspicious Comments</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/jquery/dist/jquery.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Db</evidence>
+									<otherinfo>The following pattern was used: \bDB\b and was detected in likely comment: &quot;//,Ib={},Jb={},Kb=&quot;*/&quot;.concat(&quot;*&quot;),Lb=d.createElement(&quot;a&quot;);Lb.href=tb.href;function Mb(a){return function(b,c){&quot;string&quot;!=typeof &quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>query</evidence>
+									<otherinfo>The following pattern was used: \bQUERY\b and was detected in likely comment: &quot;//)){var t=h.createElement(&quot;div&quot;);t.innerHTML=&apos;&lt;a href=&quot;&apos;+e+&apos;&quot;&gt;x&lt;/a&gt;&apos;,e=t.firstChild.href}return e}function Rt(e){if(&quot;string&quot;==t&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>from</evidence>
+									<otherinfo>The following pattern was used: \bFROM\b and was detected in likely comment: &quot;//i.test(e)||(e=a[&quot;default&quot;].buildAbsoluteURL(o[&quot;default&quot;].location.href,e)),a[&quot;default&quot;].buildAbsoluteURL(e,t))};i[&quot;default&quot;]=u&quot;, see evidence field for the suspicious comment/snippet.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>3</count>
+						<solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The following pattern was used: \bDB\b and was detected in likely comment: &quot;//,Ib={},Jb={},Kb=&quot;*/&quot;.concat(&quot;*&quot;),Lb=d.createElement(&quot;a&quot;);Lb.href=tb.href;function Mb(a){return function(b,c){&quot;string&quot;!=typeof &quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>615</cweid>
+						<wascid>13</wascid>
+						<sourceid>60</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10109</pluginid>
+						<alertRef>10109</alertRef>
+						<alert>Modern Web Application</alert>
+						<name>Modern Web Application</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a class=&quot;nav-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a class=&quot;nav-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a class=&quot;nav-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;a class=&quot;nav-link&quot; data-toggle=&quot;modal&quot; data-target=&quot;#exampleModal&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;</evidence>
+									<otherinfo>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<solution>&lt;p&gt;This is an informational alert and so no changes are required.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.&lt;/p&gt;</otherinfo>
+						<reference></reference>
+						<cweid>-1</cweid>
+						<wascid>-1</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10015</pluginid>
+						<alertRef>10015</alertRef>
+						<alert>Re-examine Cache-control Directives</alert>
+						<name>Re-examine Cache-control Directives</name>
+						<riskcode>0</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Informational (Low)</riskdesc>
+						<confidencedesc>Low</confidencedesc>
+						<desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>cache-control</param>
+									<attack></attack>
+									<evidence>public, max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>cache-control</param>
+									<attack></attack>
+									<evidence>public, max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>cache-control</param>
+									<attack></attack>
+									<evidence>public, max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param>cache-control</param>
+									<attack></attack>
+									<evidence>public, max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>4</count>
+						<solution>&lt;p&gt;For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control&lt;/p&gt;&lt;p&gt;https://grayduck.mn/2021/09/13/cache-control-recommendations/&lt;/p&gt;</reference>
+						<cweid>525</cweid>
+						<wascid>13</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10050</pluginid>
+						<alertRef>10050-2</alertRef>
+						<alert>Retrieved from Cache</alert>
+						<name>Retrieved from Cache</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 3</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<solution>&lt;p&gt;Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:&lt;/p&gt;&lt;p&gt;Cache-Control: no-cache, no-store, must-revalidate, private&lt;/p&gt;&lt;p&gt;Pragma: no-cache&lt;/p&gt;&lt;p&gt;Expires: 0&lt;/p&gt;&lt;p&gt;This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.rfc-editor.org/rfc/rfc9110.html&lt;/p&gt;</reference>
+						<cweid>525</cweid>
+						<wascid>-1</wascid>
+						<sourceid>7</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10049</pluginid>
+						<alertRef>10049-3</alertRef>
+						<alert>Storable and Cacheable Content</alert>
+						<name>Storable and Cacheable Content</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where &quot;shared&quot; caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/bm.png</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latofonts.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/favicon.ico</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/imgs/front.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/nexus1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/robots.txt</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/sitemap.xml</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>12</count>
+						<solution>&lt;p&gt;Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:&lt;/p&gt;&lt;p&gt;Cache-Control: no-cache, no-store, must-revalidate, private&lt;/p&gt;&lt;p&gt;Pragma: no-cache&lt;/p&gt;&lt;p&gt;Expires: 0&lt;/p&gt;&lt;p&gt;This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&lt;/p&gt;</reference>
+						<cweid>524</cweid>
+						<wascid>13</wascid>
+						<sourceid>1</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10104</pluginid>
+						<alertRef>10104</alertRef>
+						<alert>User Agent Fuzzer</alert>
+						<name>User Agent Fuzzer</name>
+						<riskcode>0</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Informational (Medium)</riskdesc>
+						<confidencedesc>Medium</confidencedesc>
+						<desc>&lt;p&gt;Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>25</count>
+						<solution></solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://owasp.org/wstg&lt;/p&gt;</reference>
+						<cweid>0</cweid>
+						<wascid>0</wascid>
+						<sourceid>1485</sourceid>
+					</alertitem>
+				
+			</alerts>
+		</site>
+	
+</OWASPZAPReport>

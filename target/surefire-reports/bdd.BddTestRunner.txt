@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: bdd.BddTestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.742 s - in bdd.BddTestRunner
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.143 s - in bdd.BddTestRunner
