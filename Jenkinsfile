@@ -717,13 +717,33 @@ EOF
                         <p><strong>Browser:</strong> ${params.BROWSER}</p>
                         <p><strong>Duration:</strong> ${currentBuild.durationString}</p>
 
-                        <h3>📊 Reports Available:</h3>
-                        <ul>
-                            <li><strong>Allure Test Report:</strong> <a href="${BUILD_URL}allure/">View Interactive Test Report</a></li>
-                            <li><strong>Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html">View ZAP Security Scan</a></li>
-                            <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html">View JMeter Performance Report</a></li>
-                            <li><strong>Jenkins Console:</strong> <a href="${BUILD_URL}console">View Build Logs</a></li>
-                        </ul>
+                        <h3>📊 Professional QA Reports:</h3>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🔒 Security Analysis</h4>
+                            <ul>
+                                <li><strong>Enhanced Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html" style="color: #007bff;">View Professional ZAP Security Analysis</a> - Now with modern styling!</li>
+                                <li><strong>Security Alerts (JSON):</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-alerts.json">Raw Security Data</a></li>
+                                <li><strong>Security Report (XML):</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.xml">Technical Details</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🧪 Test Results</h4>
+                            <ul>
+                                <li><strong>Interactive Test Report:</strong> <a href="${BUILD_URL}allure/" style="color: #28a745;">Allure Test Dashboard</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>⚡ Performance Analysis</h4>
+                            <ul>
+                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html" style="color: #ffc107;">JMeter Load Test Results</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #f1f3f4; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🔧 Technical Details</h4>
+                            <ul>
+                                <li><strong>Jenkins Console:</strong> <a href="${BUILD_URL}console">Build Execution Logs</a></li>
+                            </ul>
+                        </div>
 
                         <p><em>All reports are also available in the Jenkins build artifacts.</em></p>
                     """,
@@ -809,13 +829,32 @@ EOF
                         <p><strong>Browser:</strong> ${params.BROWSER}</p>
                         <p><strong>Duration:</strong> ${currentBuild.durationString}</p>
 
-                        <h3>📊 Reports Available:</h3>
-                        <ul>
-                            <li><strong>Allure Test Report:</strong> <a href="${BUILD_URL}allure/">View Test Results</a></li>
-                            <li><strong>Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html">View ZAP Security Report</a></li>
-                            <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html">View JMeter Performance Report</a></li>
-                            <li><strong>Jenkins Console:</strong> <a href="${BUILD_URL}console">View Build Logs</a></li>
-                        </ul>
+                        <h3>📊 Diagnostic Reports:</h3>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🔒 Security Analysis</h4>
+                            <ul>
+                                <li><strong>Enhanced Security Report:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.html" style="color: #007bff;">Professional ZAP Security Analysis</a></li>
+                                <li><strong>Security Data:</strong> <a href="${BUILD_URL}artifact/target/zap-reports/zap-alerts.json">JSON Format</a> | <a href="${BUILD_URL}artifact/target/zap-reports/zap-report.xml">XML Format</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #f8d7da; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🧪 Test Results (Issues Found)</h4>
+                            <ul>
+                                <li><strong>Test Report:</strong> <a href="${BUILD_URL}allure/" style="color: #dc3545;">Allure Test Results</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>⚡ Performance Analysis</h4>
+                            <ul>
+                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html" style="color: #ffc107;">JMeter Results</a></li>
+                            </ul>
+                        </div>
+                        <div style="background: #f1f3f4; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                            <h4>🔧 Troubleshooting</h4>
+                            <ul>
+                                <li><strong>Build Logs:</strong> <a href="${BUILD_URL}console">Jenkins Console Output</a></li>
+                            </ul>
+                        </div>
 
                         <p><span style="color: orange;"><strong>Note:</strong></span> Some tests may have failed or security issues were detected. Please review the reports and address any issues found.</p>
                         <p><em>All reports and logs are attached and available in Jenkins artifacts.</em></p>
