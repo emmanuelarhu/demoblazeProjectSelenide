@@ -589,6 +589,15 @@ EOF
         }
 
         stage('JMeter Performance Testing') {
+            environment {
+                TIMESTAMP = sh(script: "date +%Y%m%d_%H%M%S", returnStdout: true).trim()
+                RESULTS_FILE = "results_${TIMESTAMP}.jtl"
+                REPORT_DIR = "report_${TIMESTAMP}"
+                JMX_FILE = 'demoblaze-performance-test.jmx'
+                THREADS = '20'
+                RAMPUP = '10'
+                DURATION = '60'
+            }
             steps {
                 script {
                     echo "🚀 Running JMeter performance tests on https://www.demoblaze.com..."
@@ -597,88 +606,101 @@ EOF
                     sh 'mkdir -p target/jmeter-results target/jmeter-reports'
 
                     try {
-                        // Run JMeter performance test using Docker container with simplified approach
+                        // Debug - Check paths and files
+                        sh '''
+                            echo "=== Current working directory ==="
+                            pwd
+
+                            echo "=== Directory contents ==="
+                            ls -la
+
+                            echo "=== test-plans folder contents ==="
+                            ls -la test-plans/ || echo "test-plans folder not found"
+
+                            echo "=== Full path being used ==="
+                            echo "Looking for: $(pwd)/test-plans/${JMX_FILE}"
+
+                            echo "=== Check if file exists ==="
+                            test -f "test-plans/${JMX_FILE}" && echo "File exists" || echo "File NOT found"
+                        '''
+
+                        // Run JMeter test using the working approach
                         def jmeterExitCode = sh(
-                            script: """
-                                docker run --rm \\
-                                    -v \$(pwd)/test-plans:/app/test-plans:ro \\
-                                    -v \$(pwd)/target/jmeter-results:/app/results:rw \\
-                                    -v \$(pwd)/target/jmeter-reports:/app/reports:rw \\
-                                    ${DOCKER_IMAGE}:${BUILD_NUMBER} \\
-                                    sh -c "
-                                        echo '🚀 Starting JMeter performance test...'
-                                        cd /app
+                            script: '''
+                                echo "Running JMeter test with ${THREADS} users..."
 
-                                        # Verify JMeter and test files
-                                        echo 'Checking JMeter installation and test files:'
-                                        which jmeter || export PATH=/opt/apache-jmeter/bin:\\\$PATH
-                                        jmeter --version
-                                        ls -la test-plans/
+                                # Use Docker container's JMeter installation
+                                docker run --rm \
+                                    -v $(pwd)/test-plans:/app/test-plans:ro \
+                                    -v $(pwd)/target/jmeter-results:/app/results:rw \
+                                    -v $(pwd)/target/jmeter-reports:/app/reports:rw \
+                                    ${DOCKER_IMAGE}:${BUILD_NUMBER} \
+                                    bash -c "
+                                        # Ensure JMeter is available
+                                        export PATH=/opt/apache-jmeter/bin:$PATH
 
-                                        # Set test parameters from user.properties
-                                        THREADS=\\\$(grep '^threads=' test-plans/user.properties | cut -d'=' -f2 || echo '5')
-                                        RAMP_UP=\\\$(grep '^rampup=' test-plans/user.properties | cut -d'=' -f2 || echo '10')
-                                        DURATION=\\\$(grep '^duration=' test-plans/user.properties | cut -d'=' -f2 || echo '60')
-
-                                        echo 'JMeter Configuration:'
-                                        echo \"- Threads (Users): \\\$THREADS\"
-                                        echo \"- Ramp-up Period: \\\$RAMP_UP seconds\"
-                                        echo \"- Test Duration: \\\$DURATION seconds\"
-                                        echo '- Target URL: https://www.demoblaze.com'
+                                        # Verify JMeter installation
+                                        which jmeter && jmeter --version
 
                                         # Create results directory
-                                        mkdir -p results reports
+                                        mkdir -p /app/results /app/reports
 
                                         # Run JMeter test
-                                        echo '📊 Executing performance test...'
-                                        jmeter -n \\
-                                            -t test-plans/demoblaze-performance-test.jmx \\
-                                            -l results/performance-test-results.jtl \\
-                                            -q test-plans/user.properties \\
-                                            -e -o reports/html-report \\
-                                            -Jthreads=\\\$THREADS \\
-                                            -Jrampup=\\\$RAMP_UP \\
-                                            -Jduration=\\\$DURATION
+                                        jmeter -n \
+                                            -t /app/test-plans/${JMX_FILE} \
+                                            -l /app/results/${RESULTS_FILE} \
+                                            -q /app/test-plans/user.properties \
+                                            -e -o /app/reports/${REPORT_DIR} \
+                                            -Jthreads=${THREADS} \
+                                            -Jrampup=${RAMPUP} \
+                                            -Jduration=${DURATION}
 
-                                        echo '✅ JMeter performance test completed'
-
-                                        # Copy results to mounted volumes
-                                        echo 'Copying results to mounted volumes:'
-                                        cp -r results/* /app/results/ 2>/dev/null || echo 'Results copy completed'
-                                        cp -r reports/* /app/reports/ 2>/dev/null || echo 'Reports copy completed'
-
-                                        # Verify final results
-                                        echo 'Final generated files:'
-                                        ls -la /app/results/ /app/reports/ || echo 'Results verification completed'
+                                        echo 'JMeter test completed'
+                                        ls -la /app/results/ /app/reports/
                                     "
-                            """,
+                            ''',
                             returnStatus: true
                         )
 
                         echo "JMeter test completed with exit code: ${jmeterExitCode}"
 
-                        // Analyze results and generate summary
+                        // Generate summary using the working approach
+                        def summary = sh(
+                            script: '''
+                                if [ -f target/jmeter-results/${RESULTS_FILE} ]; then
+                                    awk -F',' 'NR>1 {
+                                        total++; rt+=$2;
+                                        if($8=="true") errors++
+                                    } END {
+                                        printf "Total Requests: %d\\n", total
+                                        printf "Average Response Time: %.0fms\\n", rt/total
+                                        printf "Error Rate: %.1f%%\\n", errors/total*100
+                                    }' target/jmeter-results/${RESULTS_FILE}
+                                else
+                                    echo "Results file not found"
+                                fi
+                            ''',
+                            returnStdout: true
+                        ).trim()
+
+                        echo "=== Performance Test Summary ==="
+                        echo summary
+                        writeFile file: "target/test-summary.txt", text: summary
+
+                        // Check results
                         sh '''
                             echo "📊 Checking JMeter test results:"
 
-                            if [ -f "target/jmeter-results/performance-test-results.jtl" ]; then
-                                LINES=\$(wc -l < target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo "0")
-                                echo "✅ Performance results file generated: \${LINES} samples"
-
-                                # Basic result analysis
-                                echo "📈 Performance Test Summary:"
-                                TOTAL=\$(grep -c '^[0-9]' target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo 'N/A')
-                                FAILED=\$(grep -c ',false,' target/jmeter-results/performance-test-results.jtl 2>/dev/null || echo '0')
-                                echo "- Total Samples: \${TOTAL}"
-                                echo "- Failed Samples: \${FAILED}"
-
+                            if [ -f "target/jmeter-results/${RESULTS_FILE}" ]; then
+                                echo "✅ Performance results file found"
+                                wc -l target/jmeter-results/${RESULTS_FILE}
                             else
                                 echo "⚠️ Performance results file not found"
                             fi
 
-                            if [ -d "target/jmeter-reports/html-report" ]; then
-                                echo "✅ HTML report generated in target/jmeter-reports/html-report/"
-                                ls -la target/jmeter-reports/html-report/ | head -10
+                            if [ -d "target/jmeter-reports/${REPORT_DIR}" ]; then
+                                echo "✅ HTML report directory found"
+                                ls -la target/jmeter-reports/${REPORT_DIR}/
                             else
                                 echo "⚠️ HTML report directory not found"
                             fi
@@ -687,9 +709,9 @@ EOF
                         // Set build status based on performance results
                         def performanceStatus = sh(
                             script: '''
-                                if [ -f "target/jmeter-results/performance-test-results.jtl" ]; then
-                                    FAILED_COUNT=$(grep -c ",false," target/jmeter-results/performance-test-results.jtl || echo "0")
-                                    TOTAL_COUNT=$(grep -c "^[0-9]" target/jmeter-results/performance-test-results.jtl || echo "1")
+                                if [ -f "target/jmeter-results/${RESULTS_FILE}" ]; then
+                                    FAILED_COUNT=$(grep -c ",false," target/jmeter-results/${RESULTS_FILE} || echo "0")
+                                    TOTAL_COUNT=$(grep -c "^[0-9]" target/jmeter-results/${RESULTS_FILE} || echo "1")
 
                                     if [ "$TOTAL_COUNT" -gt 0 ]; then
                                         FAILURE_RATE=$((FAILED_COUNT * 100 / TOTAL_COUNT))
@@ -723,8 +745,8 @@ EOF
 
                         // Create fallback report
                         sh '''
-                            mkdir -p target/jmeter-reports/html-report
-                            echo "<html><body><h1>Performance Test Status</h1><p>Performance test encountered issues but pipeline continued.</p><p>Check Jenkins logs for details.</p></body></html>" > target/jmeter-reports/html-report/index.html
+                            mkdir -p target/jmeter-reports/${REPORT_DIR}
+                            echo "<html><body><h1>Performance Test Status</h1><p>Performance test encountered issues but pipeline continued.</p><p>Check Jenkins logs for details.</p></body></html>" > target/jmeter-reports/${REPORT_DIR}/index.html
                         '''
                     }
                 }
@@ -797,7 +819,7 @@ EOF
                         <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 10px 0;">
                             <h4>⚡ Performance Analysis</h4>
                             <ul>
-                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html" style="color: #ffc107;">JMeter Load Test Results</a></li>
+                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/" style="color: #ffc107;">JMeter Load Test Results</a></li>
                             </ul>
                         </div>
                         <div style="background: #f1f3f4; padding: 15px; border-radius: 5px; margin: 10px 0;">
@@ -908,7 +930,7 @@ EOF
                         <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 10px 0;">
                             <h4>⚡ Performance Analysis</h4>
                             <ul>
-                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/html-report/index.html" style="color: #ffc107;">JMeter Results</a></li>
+                                <li><strong>Performance Report:</strong> <a href="${BUILD_URL}artifact/target/jmeter-reports/" style="color: #ffc107;">JMeter Results</a></li>
                             </ul>
                         </div>
                         <div style="background: #f1f3f4; padding: 15px; border-radius: 5px; margin: 10px 0;">
