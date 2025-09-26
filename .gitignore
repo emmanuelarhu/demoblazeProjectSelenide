@@ -12,8 +12,8 @@ buildNumber.properties
 .allure
 
 # JMeter Reports
-target/jmeter-results/
-target/jmeter-reports/
+#target/jmeter-results/
+#target/jmeter-reports/
 
 # Security Reports
 
