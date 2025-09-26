@@ -394,21 +394,25 @@ pipeline {
                                         REPORT_DIR='html-report'
 
                                         echo 'JMeter Configuration:'
-                                        echo '- Threads (Users): '\$THREADS
-                                        echo '- Ramp-up Period: '\$RAMP_UP' seconds'
-                                        echo '- Test Duration: '\$DURATION' seconds'
+                                        echo \"- Threads (Users): \$THREADS\"
+                                        echo \"- Ramp-up Period: \$RAMP_UP seconds\"
+                                        echo \"- Test Duration: \$DURATION seconds\"
                                         echo '- Target URL: https://www.demoblaze.com'
 
                                         # Verify JMeter installation
                                         jmeter --version || echo 'JMeter version check failed'
 
+                                        # List available files for debugging
+                                        echo 'Available test plans:'
+                                        ls -la /app/test-plans/ || echo 'Test plans directory not found'
+
                                         # Run JMeter test
                                         echo '📊 Executing performance test...'
                                         jmeter -n \\
-                                            -t /app/test-plans/\$JMX_FILE \\
-                                            -l /app/results/\$RESULTS_FILE \\
-                                            -q /app/test-plans/user.properties \\
-                                            -e -o /app/reports/\$REPORT_DIR \\
+                                            -t \"/app/test-plans/\$JMX_FILE\" \\
+                                            -l \"/app/results/\$RESULTS_FILE\" \\
+                                            -q \"/app/test-plans/user.properties\" \\
+                                            -e -o \"/app/reports/\$REPORT_DIR\" \\
                                             -Jthreads=\$THREADS \\
                                             -Jrampup=\$RAMP_UP \\
                                             -Jduration=\$DURATION \\
