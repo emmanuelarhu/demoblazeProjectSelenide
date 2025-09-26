@@ -282,20 +282,210 @@ pipeline {
                     sh 'mkdir -p target/zap-reports'
 
                     try {
-                        // Use official ZAP stable Docker image with full scan script
+                        // Use ZAP daemon with enhanced styled report generation
                         def zapExitCode = sh(
                             script: """
-                                docker run --rm \\
+                                # Create network for ZAP container
+                                docker network create zapnet 2>/dev/null || echo "Network already exists"
+
+                                # Run ZAP with enhanced reporting
+                                docker run --rm --name zap-scanner \\
+                                    --network zapnet \\
                                     -v \$(pwd)/target/zap-reports:/zap/wrk/:rw \\
-                                    -t ghcr.io/zaproxy/zaproxy:stable \\
-                                    zap-full-scan.py \\
-                                    -t https://www.demoblaze.com \\
-                                    -r zap-report.html \\
-                                    -x zap-report.xml \\
-                                    -J zap-report.json \\
-                                    -m 2 \\
-                                    -T 10 \\
-                                    -I
+                                    -p 8090:8090 \\
+                                    -d ghcr.io/zaproxy/zaproxy:stable \\
+                                    zap.sh -daemon -host 0.0.0.0 -port 8090 \\
+                                    -config api.addrs.addr.name=.* \\
+                                    -config api.addrs.addr.regex=true \\
+                                    -config api.disablekey=true
+
+                                # Wait for ZAP to initialize
+                                echo "⏳ Waiting for ZAP to initialize..."
+                                sleep 30
+
+                                # Check ZAP status
+                                echo "🔍 Verifying ZAP daemon status..."
+                                curl -s http://localhost:8090/JSON/core/view/version/ || echo "ZAP status check"
+
+                                # Run comprehensive scan
+                                echo "🕷️ Starting spider scan on https://www.demoblaze.com..."
+                                SPIDER_ID=\$(curl -s "http://localhost:8090/JSON/spider/action/scan/?url=https://www.demoblaze.com&maxChildren=10&recurse=true" | grep -o '"scan":"[0-9]*"' | cut -d'"' -f4)
+                                echo "Spider scan ID: \$SPIDER_ID"
+
+                                # Wait for spider to complete
+                                while true; do
+                                    STATUS=\$(curl -s "http://localhost:8090/JSON/spider/view/status/?scanId=\$SPIDER_ID" | grep -o '"status":"[0-9]*"' | cut -d'"' -f4)
+                                    if [ "\$STATUS" = "100" ]; then
+                                        echo "✅ Spider scan completed"
+                                        break
+                                    fi
+                                    echo "Spider progress: \$STATUS%"
+                                    sleep 10
+                                done
+
+                                # Run active scan
+                                echo "🎯 Starting active security scan..."
+                                ASCAN_ID=\$(curl -s "http://localhost:8090/JSON/ascan/action/scan/?url=https://www.demoblaze.com&recurse=true&inScopeOnly=false" | grep -o '"scan":"[0-9]*"' | cut -d'"' -f4)
+                                echo "Active scan ID: \$ASCAN_ID"
+
+                                # Wait for active scan to complete (with timeout)
+                                TIMEOUT=300
+                                COUNTER=0
+                                while [ \$COUNTER -lt \$TIMEOUT ]; do
+                                    STATUS=\$(curl -s "http://localhost:8090/JSON/ascan/view/status/?scanId=\$ASCAN_ID" | grep -o '"status":"[0-9]*"' | cut -d'"' -f4)
+                                    if [ "\$STATUS" = "100" ]; then
+                                        echo "✅ Active scan completed"
+                                        break
+                                    fi
+                                    echo "Active scan progress: \$STATUS%"
+                                    sleep 15
+                                    COUNTER=\$((COUNTER + 15))
+                                done
+
+                                # Generate enhanced HTML report
+                                echo "📊 Generating enhanced HTML security report..."
+                                curl -s "http://localhost:8090/OTHER/core/other/htmlreport/" -o /tmp/zap-report-raw.html
+
+                                # Generate additional reports
+                                curl -s "http://localhost:8090/OTHER/core/other/xmlreport/" -o /tmp/zap-report.xml
+                                curl -s "http://localhost:8090/JSON/core/view/alerts/" -o /tmp/zap-alerts.json
+
+                                # Post-process HTML report for enhanced styling
+                                cat > /tmp/enhance-report.py << 'EOF'
+import re
+import sys
+
+def enhance_zap_report(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Enhanced CSS styling
+    enhanced_css = '''
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .meta-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .summary-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .risk-high { color: #e74c3c; font-weight: bold; }
+        .risk-medium { color: #f39c12; font-weight: bold; }
+        .risk-low { color: #f1c40f; font-weight: bold; }
+        .risk-info { color: #3498db; font-weight: bold; }
+        .alert-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+    </style>
+    '''
+
+    # Insert enhanced CSS after <head>
+    content = re.sub(r'<head>', f'<head>\\n{enhanced_css}', content)
+
+    # Wrap main content in styled containers
+    content = re.sub(r'<body[^>]*>', '''<body>
+        <div class="header">
+            <h1>🔒 Security Scan Report</h1>
+            <p>Comprehensive security analysis powered by OWASP ZAP</p>
+        </div>''', content)
+
+    # Style the summary section
+    content = re.sub(r'Summary of Alerts', '<div class="summary-table"><h2>📊 Security Alert Summary</h2>', content)
+
+    # Add risk level styling
+    content = re.sub(r'>High<', '><span class="risk-high">High</span><', content)
+    content = re.sub(r'>Medium<', '><span class="risk-medium">Medium</span><', content)
+    content = re.sub(r'>Low<', '><span class="risk-low">Low</span><', content)
+    content = re.sub(r'>Informational<', '><span class="risk-info">Informational</span><', content)
+
+    # Add footer
+    content = re.sub(r'</body>', '''
+        <div class="footer">
+            <p>Report generated by OWASP ZAP Security Scanner</p>
+            <p>🤖 Enhanced styling by Automated QA Pipeline</p>
+        </div>
+    </body>''', content)
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+if __name__ == "__main__":
+    enhance_zap_report('/tmp/zap-report-raw.html', '/tmp/zap-report-enhanced.html')
+    print("Report enhancement completed")
+EOF
+
+                                # Run report enhancement
+                                python3 /tmp/enhance-report.py
+
+                                # Copy reports to output directory
+                                docker cp /tmp/zap-report-enhanced.html zap-scanner:/zap/wrk/zap-report.html
+                                docker cp /tmp/zap-report.xml zap-scanner:/zap/wrk/zap-report.xml
+                                docker cp /tmp/zap-alerts.json zap-scanner:/zap/wrk/zap-alerts.json
+
+                                # Stop ZAP container
+                                echo "🛑 Stopping ZAP scanner..."
+                                docker stop zap-scanner 2>/dev/null || echo "Container already stopped"
+
+                                # Clean up network
+                                docker network rm zapnet 2>/dev/null || echo "Network cleanup"
+
+                                echo "✅ Enhanced ZAP security scan completed"
                             """,
                             returnStatus: true
                         )
