@@ -2,6 +2,14 @@
 
 A comprehensive dual-architecture test automation framework for DemoBlaze e-commerce website featuring both traditional JUnit testing and BDD Cucumber implementation with Selenide, comprehensive reporting, and Docker containerization.
 
+## 🌐 Live Report Links
+Access the latest test reports directly:
+
+- **📊 Cucumber HTML Report**: [View Latest Cucumber Report](https://emmanuelarhu.github.io/demoblazeProjectSelenide/target/cucumber-reports/cucumber-html-report.html)
+- **🔒 ZAP Security Report**: [View Security Analysis](https://emmanuelarhu.github.io/demoblazeProjectSelenide/target/zap-reports/zap-report.html)
+- **📈 Allure Report**: [View Interactive Allure Dashboard](https://emmanuelarhu.github.io/demoblazeProjectSelenide/target/allure-report/)
+- **⚡ JMeter Performance Report**: [View Performance Analysis](https://emmanuelarhu.github.io/demoblazeProjectSelenide/target/jmeter-reports/report_20250926_103109/index.html)
+
 ## Framework Features
 
 ### Core Technologies
@@ -213,9 +221,12 @@ The pipeline includes `githubPush()` trigger for automatic execution on reposito
 Multiple reporting formats for comprehensive test analysis:
 - **Allure Reports** - Interactive dashboards with trends, history, and detailed test results
 - **Cucumber HTML Reports** - Business-readable BDD scenarios with step-by-step execution
+- **ZAP Security Reports** - OWASP ZAP security analysis reports
+- **JMeter Performance Reports** - Performance testing reports with detailed metrics
 - **JUnit XML Reports** - Standard format for CI/CD integration
 - **Screenshots** - Automatic capture on test failures with Allure integration
 - **Comprehensive Logs** - Separate files for test execution and page actions with rolling policy
+
 
 ### 🔔 Notifications
 Enhanced notification system with test type information:
