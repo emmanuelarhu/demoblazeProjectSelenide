@@ -19,7 +19,7 @@ import org.junit.platform.suite.api.Suite;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = "cucumber.plugin",
-    value = "pretty,html:target/cucumber-reports/cucumber-html-report.html,json:target/cucumber-reports/Cucumber.json,junit:target/cucumber-reports/Cucumber.xml,io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
+    value = "pretty,html:target/cucumber-reports/cucumber-html-report.html,json:target/cucumber-reports/cucumber.json,junit:target/cucumber-reports/Cucumber.xml,io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 @ConfigurationParameter(key = "cucumber.glue", value = "stepDefinitions,hooks")
 @ConfigurationParameter(key = "cucumber.execution.dry-run", value = "false")
 @ConfigurationParameter(key = "cucumber.publish.enabled", value = "false")
