@@ -762,6 +762,13 @@ EOF
 
                 // Archive artifacts including ZAP security reports and JMeter performance reports
                 archiveArtifacts artifacts: 'target/logs/*.log, target/screenshots/*.png, target/allure-report/**, target/zap-reports/**, target/jmeter-results/**, target/jmeter-reports/**', allowEmptyArchive: true
+
+                // Publish parsed Cucumber JSON report
+                cucumber(
+                    buildStatus: 'UNCHANGED',
+                    fileIncludePattern: 'target/cucumber-reports/cucumber.json',
+                     sortingMethod: 'ALPHABETICAL'
+                )
             }
         }
 
