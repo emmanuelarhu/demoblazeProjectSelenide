@@ -767,7 +767,7 @@ EOF
                 cucumber(
                     buildStatus: 'UNCHANGED',
                     fileIncludePattern: 'target/cucumber-reports/cucumber.json',
-                     sortingMethod: 'ALPHABETICAL'
+                    sortingMethod: 'ALPHABETICAL'
                 )
 
                 // Publish HTML report
