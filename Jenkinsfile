@@ -769,6 +769,17 @@ EOF
                     fileIncludePattern: 'target/cucumber-reports/cucumber.json',
                      sortingMethod: 'ALPHABETICAL'
                 )
+
+                // Publish HTML report
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/cucumber-reports',
+                    reportFiles: 'cucumber-html-report.html',
+                    reportName: 'Cucumber Test Report',
+                    reportTitles: 'BDD Test Results'
+                ])
             }
         }
 
