@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="9,765.498" tests="33" skipped="0" failures="9" errors="0">
-<testcase classname="DemoBlaze Shopping Cart" name="Add product to cart successfully" time="12.876">
+<testsuite name="Cucumber" time="373.703" tests="33" skipped="0" failures="9" errors="0">
+<testcase classname="DemoBlaze Shopping Cart" name="Add product to cart successfully" time="10.921">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Samsung galaxy s6" product.................................passed
@@ -11,19 +11,19 @@ Then I should see "Samsung galaxy s6" in the cart...........................pass
 And I should see cart total price...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Shopping Cart" name="Manage multiple products in cart" time="19.981">
+<testcase classname="DemoBlaze Shopping Cart" name="Manage multiple products in cart" time="17.983">
 <failure type="com.codeborne.selenide.ex.ElementNotFound" message="Element not found {By.xpath: //td[normalize-space()='Nexus 6']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758894751337.0.png
-Page source: file:/app/target/screenshots/1758894751337.0.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009659462.0.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009659462.0.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nexus 6']">
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[normalize-space()='Nexus 6']&quot;}">
 <![CDATA[Element not found {By.xpath: //td[normalize-space()='Nexus 6']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758894751337.0.png
-Page source: file:/app/target/screenshots/1758894751337.0.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009659462.0.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009659462.0.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nexus 6']
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nexus 6']"}
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -35,18 +35,19 @@ Caused by: NoSuchElementException: Unable to locate element: //td[normalize-spac
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
-	at ✽.I should see "Nexus 6" in the cart(file:///app/src/test/resources/features/Cart.feature:25)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nexus 6']
+	at ✽.I should see "Nexus 6" in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/Cart.feature:25)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nexus 6']"}
+  (Session info: chrome=140.0.7339.208)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3a9d49b5-cabf-46f5-b759-baa94cf3d8cc, findElement {value=//td[normalize-space()='Nexus 6'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 6687, moz:profile: /tmp/rust_mozprofilex22wbs, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:34235/sessio...}
-Session ID: 3a9d49b5-cabf-46f5-b759-baa94cf3d8cc
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [afcf2f2fa393f655ccf7bf0d927c4242, findElement {value=//td[normalize-space()='Nexus 6'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3357}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3357/devtool..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: afcf2f2fa393f655ccf7bf0d927c4242
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -73,7 +74,7 @@ Session ID: 3a9d49b5-cabf-46f5-b759-baa94cf3d8cc
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -119,27 +120,12 @@ Session ID: 3a9d49b5-cabf-46f5-b759-baa94cf3d8cc
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -152,7 +138,7 @@ And I should see "Nexus 6" in the cart......................................fail
 And the cart total should reflect both products.............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Shopping Cart" name="Remove product from cart" time="14.256">
+<testcase classname="DemoBlaze Shopping Cart" name="Remove product from cart" time="21.226">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 Given I have "Samsung galaxy s6" in my cart.................................passed
@@ -162,7 +148,7 @@ Then "Samsung galaxy s6" should not be in the cart..........................pass
 And the cart should be empty or show updated total..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Shopping Cart" name="Verify empty cart behavior" time="7.959">
+<testcase classname="DemoBlaze Shopping Cart" name="Verify empty cart behavior" time="5.713">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I navigate to cart page without adding products........................passed
@@ -170,19 +156,19 @@ Then I should see an empty cart.............................................pass
 And the total should show appropriate message or zero.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Shopping Cart" name="Verify cart maintains items across navigation" time="17.392">
+<testcase classname="DemoBlaze Shopping Cart" name="Verify cart maintains items across navigation" time="13.737">
 <failure type="com.codeborne.selenide.ex.ElementNotFound" message="Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758894791177.1.png
-Page source: file:/app/target/screenshots/1758894791177.1.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009700278.1.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009700278.1.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']">
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[normalize-space()='Nokia lumia 1520']&quot;}">
 <![CDATA[Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758894791177.1.png
-Page source: file:/app/target/screenshots/1758894791177.1.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009700278.1.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009700278.1.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -194,18 +180,19 @@ Caused by: NoSuchElementException: Unable to locate element: //td[normalize-spac
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.should_still_be_in_the_cart(CartSteps.java:172)
-	at ✽."Nokia lumia 1520" should still be in the cart(file:///app/src/test/resources/features/Cart.feature:47)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
+	at ✽."Nokia lumia 1520" should still be in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/Cart.feature:47)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
+  (Session info: chrome=140.0.7339.208)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [18861be5-a91a-4810-a4be-6873061ec49c, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 7770, moz:profile: /tmp/rust_mozprofile7lvKrF, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:37803/sessio...}
-Session ID: 18861be5-a91a-4810-a4be-6873061ec49c
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1aac8a45b605f2c78c7f1a244459252, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3485}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3485/devtool..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1aac8a45b605f2c78c7f1a244459252
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -232,7 +219,7 @@ Session ID: 18861be5-a91a-4810-a4be-6873061ec49c
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.should_still_be_in_the_cart(CartSteps.java:172)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -278,27 +265,12 @@ Session ID: 18861be5-a91a-4810-a4be-6873061ec49c
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -309,7 +281,7 @@ And I return to cart page...................................................pass
 Then "Nokia lumia 1520" should still be in the cart.........................failed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Open and close contact modal" time="8.703">
+<testcase classname="DemoBlaze Contact Modal" name="Open and close contact modal" time="5.515">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -319,7 +291,7 @@ When I close the contact modal..............................................pass
 Then the contact modal should be hidden.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Send valid contact message" time="8.359">
+<testcase classname="DemoBlaze Contact Modal" name="Send valid contact message" time="5.659">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -328,7 +300,7 @@ And I click "Send message" contact button...................................pass
 Then I should see success alert "Thanks for the message!!"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.1" time="8.185">
+<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.1" time="6.294">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -337,7 +309,7 @@ And I click "Send message" contact button...................................pass
 Then I should see appropriate response for "valid_data".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.2" time="8.288">
+<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.2" time="4.734">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -346,7 +318,7 @@ And I click "Send message" contact button...................................pass
 Then I should see appropriate response for "missing_email"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.3" time="8.955">
+<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.3" time="5.826">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -355,16 +327,74 @@ And I click "Send message" contact button...................................pass
 Then I should see appropriate response for "missing_name"...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.4" time="8.519">
+<testcase classname="DemoBlaze Contact Modal" name="Validate contact form fields - Example #1.4" time="60.495">
+<failure type="org.openqa.selenium.SessionNotCreatedException" message="Could not start a new session. Response code 500. Message: session not created
+from chrome not reachable 
+Host info: host: 'EMMANUEL-LAPTOP', ip: '172.29.32.1'
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1920,1080], binary: C:\Program Files\Google\Chr..., excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, download.default_directory: E:\Courses\Amalitech GTP\Pr..., plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, unhandledPromptBehavior: accept}]}]
+selenide.url: https://www.demoblaze.com/index.html
+selenide.baseUrl: http://localhost:8080">
+<![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from chrome not reachable 
+Host info: host: 'EMMANUEL-LAPTOP', ip: '172.29.32.1'
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--proxy-bypass-list=<-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1920,1080], binary: C:\Program Files\Google\Chr..., excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, download.default_directory: E:\Courses\Amalitech GTP\Pr..., plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, unhandledPromptBehavior: accept}]}]
+selenide.url: https://www.demoblaze.com/index.html
+selenide.baseUrl: http://localhost:8080
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:99)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:28)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:105)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:59)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:68)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:44)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:181)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:177)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:164)
+	at com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:130)
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:99)
+	at com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:41)
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:229)
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:67)
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:65)
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:29)
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:86)
+	at com.codeborne.selenide.Selenide.open(Selenide.java:50)
+	at pages.HomePage.open(HomePage.java:44)
+	at pages.HomePage.openHomePage(HomePage.java:157)
+	at stepDefinitions.HomePageSteps.i_navigate_to_the_demoblaze_home_page(HomePageSteps.java:31)
+	at ✽.I navigate to the DemoBlaze home page(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/Contact.feature:8)
+]]>
+</failure>
 <system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-When I click on "Contact" link..............................................passed
-And I fill the contact form with:...........................................passed
-And I click "Send message" contact button...................................passed
-Then I should see appropriate response for "missing_message"................passed
+Given I navigate to the DemoBlaze home page.................................failed
+When I click on "Contact" link..............................................skipped
+And I fill the contact form with:...........................................skipped
+And I click "Send message" contact button...................................skipped
+Then I should see appropriate response for "missing_message"................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Reset contact form" time="10.184">
+<testcase classname="DemoBlaze Contact Modal" name="Reset contact form" time="6.52">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
@@ -374,134 +404,17 @@ And I click on "Contact" link again.........................................pass
 Then the contact form should be empty.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Contact Modal" name="Contact form data persistence during session" time="23.2">
-<failure type="com.codeborne.selenide.ex.InvalidStateError" message="Invalid element state [a[data-target='#exampleModal']]: Element &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt; is not clickable at point (1098,37) because another element &lt;div class=&quot;modal-header&quot;&gt; obscures it
-Screenshot: file:/app/target/screenshots/1758894873964.2.png
-Page source: file:/app/target/screenshots/1758894873964.2.html
-Timeout: 4 s.
-Caused by: ElementClickInterceptedException: Element &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt; is not clickable at point (1098,37) because another element &lt;div class=&quot;modal-header&quot;&gt; obscures it">
-<![CDATA[Invalid element state [a[data-target='#exampleModal']]: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
-Screenshot: file:/app/target/screenshots/1758894873964.2.png
-Page source: file:/app/target/screenshots/1758894873964.2.html
-Timeout: 4 s.
-Caused by: ElementClickInterceptedException: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
-	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:19)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:153)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
-	at pages.HomePage.clickContactLink(HomePage.java:175)
-	at stepDefinitions.ContactSteps.i_click_on_link(ContactSteps.java:36)
-	at stepDefinitions.ContactSteps.i_click_on_link_again(ContactSteps.java:143)
-	at ✽.I click on "Contact" link again(file:///app/src/test/resources/features/Contact.feature:60)
-Caused by: org.openqa.selenium.ElementClickInterceptedException: Element <a class="nav-link" href="#"> is not clickable at point (1098,37) because another element <div class="modal-header"> obscures it
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [259696cf-6c41-4258-9054-defc52f5cd64, clickElement {id=868dd09c-6ff4-465f-b79e-f45aac946663}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 10642, moz:profile: /tmp/rust_mozprofilemHTg1c, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:44133/sessio...}
-Element: [[FirefoxDriver: firefox on linux (259696cf-6c41-4258-9054-defc52f5cd64)] -> css selector: a[data-target='#exampleModal']]
-Session ID: 259696cf-6c41-4258-9054-defc52f5cd64
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:105)
-	at com.codeborne.selenide.commands.Click.doClick(Click.java:83)
-	at com.codeborne.selenide.commands.Click.click(Click.java:59)
-	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
-	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
-	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
-	at pages.HomePage.clickContactLink(HomePage.java:175)
-	at stepDefinitions.ContactSteps.i_click_on_link(ContactSteps.java:36)
-	at stepDefinitions.ContactSteps.i_click_on_link_again(ContactSteps.java:143)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-</failure>
+<testcase classname="DemoBlaze Contact Modal" name="Contact form data persistence during session" time="7.357">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I click on "Contact" link..............................................passed
 And I fill the contact form partially.......................................passed
 And I close the contact modal without sending...............................passed
-And I click on "Contact" link again.........................................failed
-Then the form data should be cleared........................................skipped
+And I click on "Contact" link again.........................................passed
+Then the form data should be cleared........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify navigation bar elements are visible" time="10.143">
+<testcase classname="DemoBlaze Home Page" name="Verify navigation bar elements are visible" time="5.244">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I view the home page...................................................passed
@@ -514,7 +427,7 @@ And the "Log in" link should be visible.....................................pass
 And the "Sign up" link should be visible....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify product categories section" time="11.113">
+<testcase classname="DemoBlaze Home Page" name="Verify product categories section" time="4.714">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I view the home page...................................................passed
@@ -525,7 +438,7 @@ And I should see "Laptops" category.........................................pass
 And I should see "Monitors" category........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify product listings on home page" time="8.47">
+<testcase classname="DemoBlaze Home Page" name="Verify product listings on home page" time="4.743">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I view the home page...................................................passed
@@ -538,7 +451,7 @@ And I should see "Sony xperia z5" product with price "$320".................pass
 And I should see "Nokia lumia 1520" product with price "$820"...............passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.1" time="10.228">
+<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.1" time="7.652">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I view the home page...................................................passed
@@ -551,493 +464,19 @@ When I navigate back to home page...........................................pass
 Then I should be on the home page...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.2" time="9.991">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-When I view the home page...................................................passed
-And I click on "Nexus 6" product............................................passed
-Then I should navigate to the product details page..........................passed
-And I should see the product image..........................................passed
-And I should see product title as "Nexus 6".................................passed
-And I should see product price as "$650 *includes tax"......................passed
-When I navigate back to home page...........................................passed
-Then I should be on the home page...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.3" time="9.416">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-When I view the home page...................................................passed
-And I click on "Nokia lumia 1520" product...................................passed
-Then I should navigate to the product details page..........................passed
-And I should see the product image..........................................passed
-And I should see product title as "Nokia lumia 1520"........................passed
-And I should see product price as "$820 *includes tax"......................passed
-When I navigate back to home page...........................................passed
-Then I should be on the home page...........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify footer elements" time="6.949">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-When I view the home page...................................................passed
-And I scroll to the footer..................................................passed
-Then I should see footer section............................................passed
-And I should see "About Us" in footer.......................................passed
-And I should see "Get in Touch" in footer...................................passed
-And I should see contact information in footer..............................passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Home Page" name="Verify carousel functionality" time="6.795">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-When I view the home page...................................................passed
-Then I should see the product carousel......................................passed
-And the carousel should be functional.......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Place order successfully with valid details" time="17.553">
-<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
-Screenshot: file:/app/target/screenshots/1758894966874.3.png
-Page source: file:/app/target/screenshots/1758894966874.3.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
-<![CDATA[Alert not found
-Screenshot: file:/app/target/screenshots/1758894966874.3.png
-Page source: file:/app/target/screenshots/1758894966874.3.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
-	at ✽.I should see order success message(file:///app/src/test/resources/features/OrderPlacement.feature:25)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-</failure>
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Samsung galaxy s6" to cart.....................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-Then I should see the order placement form..................................passed
-When I fill order details with valid information:...........................passed
-And I click purchase button.................................................passed
-Then I should see order success message.....................................failed
-And I should see order confirmation with details............................skipped
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form fields" time="13.089">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nokia lumia 1520" to cart......................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-Then I should see the order placement form..................................passed
-And I should see all required order fields:.................................passed
-And I should see purchase button............................................passed
-And I should see close button...............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.1" time="21.725">
-<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
-Screenshot: file:/app/target/screenshots/1758895001605.4.png
-Page source: file:/app/target/screenshots/1758895001605.4.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
-<![CDATA[Alert not found
-Screenshot: file:/app/target/screenshots/1758895001605.4.png
-Page source: file:/app/target/screenshots/1758895001605.4.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "valid_order"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-</failure>
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nexus 6" to cart...............................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-And I fill order details:...................................................passed
-And I click purchase button.................................................passed
-Then I should see appropriate response for order "valid_order"..............failed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.2" time="13.895">
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nexus 6" to cart...............................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-And I fill order details:...................................................passed
-And I click purchase button.................................................passed
-Then I should see appropriate response for order "missing_name".............passed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.3" time="26.492">
-<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
-Screenshot: file:/app/target/screenshots/1758895042036.5.png
-Page source: file:/app/target/screenshots/1758895042036.5.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
-<![CDATA[Alert not found
-Screenshot: file:/app/target/screenshots/1758895042036.5.png
-Page source: file:/app/target/screenshots/1758895042036.5.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "missing_country"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-</failure>
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nexus 6" to cart...............................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-And I fill order details:...................................................passed
-And I click purchase button.................................................passed
-Then I should see appropriate response for order "missing_country"..........failed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.4" time="24.703">
-<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
-Screenshot: file:/app/target/screenshots/1758895066878.6.png
-Page source: file:/app/target/screenshots/1758895066878.6.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
-<![CDATA[Alert not found
-Screenshot: file:/app/target/screenshots/1758895066878.6.png
-Page source: file:/app/target/screenshots/1758895066878.6.html
-Timeout: 4 s.
-Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at ✽.I should see appropriate response for order "missing_city"(file:///app/src/test/resources/features/OrderPlacement.feature:59)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
-	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
-	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-</failure>
-<system-out><![CDATA[
-Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nexus 6" to cart...............................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-And I fill order details:...................................................passed
-And I click purchase button.................................................passed
-Then I should see appropriate response for order "missing_city".............failed
-]]></system-out>
-</testcase>
-<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.5" time="9,288.221">
+<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.2" time="7.196">
 <failure type="com.codeborne.selenide.ex.ElementNotFound" message="Element not found {.card-title[0]}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758904344726.7.png
-Page source: file:/app/target/screenshots/1758904344726.7.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009832083.2.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009832083.2.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: .card-title">
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.card-title&quot;}">
 <![CDATA[Element not found {.card-title[0]}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758904344726.7.png
-Page source: file:/app/target/screenshots/1758904344726.7.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009832083.2.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009832083.2.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: .card-title
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".card-title"}
 	at com.codeborne.selenide.impl.CollectionElement.createElementNotFoundError(CollectionElement.java:58)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
 	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
@@ -1049,19 +488,20 @@ Caused by: NoSuchElementException: Unable to locate element: .card-title
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
 	at pages.HomePage.clickProduct(HomePage.java:119)
 	at pages.HomePage.clickOnFirstProduct(HomePage.java:170)
-	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:80)
-	at ✽.I add "Nexus 6" to cart(file:///app/src/test/resources/features/OrderPlacement.feature:47)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .card-title
+	at stepDefinitions.HomePageSteps.i_click_on_product(HomePageSteps.java:99)
+	at ✽.I click on "Nexus 6" product(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/HomePage.feature:44)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".card-title"}
+  (Session info: chrome=140.0.7339.208)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [32971595-1702-4fcc-b5a4-e235238c3618, findElement {value=.card-title, using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 16042, moz:profile: /tmp/rust_mozprofileE9IRoU, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:44223/sessio...}
-Session ID: 32971595-1702-4fcc-b5a4-e235238c3618
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2b83a4526276c713c0a02dc0386211ad, findElement {value=.card-title, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3864}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3864/devtool..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b83a4526276c713c0a02dc0386211ad
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -1090,10 +530,10 @@ Session ID: 32971595-1702-4fcc-b5a4-e235238c3618
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
 	at pages.HomePage.clickProduct(HomePage.java:119)
 	at pages.HomePage.clickOnFirstProduct(HomePage.java:170)
-	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:80)
+	at stepDefinitions.HomePageSteps.i_click_on_product(HomePageSteps.java:99)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
@@ -1137,40 +577,364 @@ Session ID: 32971595-1702-4fcc-b5a4-e235238c3618
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 ]]>
 </failure>
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
-Given I add "Nexus 6" to cart...............................................failed
-When I navigate to cart page................................................skipped
-And I click place order button..............................................skipped
-And I fill order details:...................................................skipped
-And I click purchase button.................................................skipped
-Then I should see appropriate response for order "missing_card".............skipped
+When I view the home page...................................................passed
+And I click on "Nexus 6" product............................................failed
+Then I should navigate to the product details page..........................skipped
+And I should see the product image..........................................skipped
+And I should see product title as "Nexus 6".................................skipped
+And I should see product price as "$650 *includes tax"......................skipped
+When I navigate back to home page...........................................skipped
+Then I should be on the home page...........................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Order Placement" name="Cancel order placement" time="61.127">
+<testcase classname="DemoBlaze Home Page" name="Verify individual product details - Example #1.3" time="11.206">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+When I view the home page...................................................passed
+And I click on "Nokia lumia 1520" product...................................passed
+Then I should navigate to the product details page..........................passed
+And I should see the product image..........................................passed
+And I should see product title as "Nokia lumia 1520"........................passed
+And I should see product price as "$820 *includes tax"......................passed
+When I navigate back to home page...........................................passed
+Then I should be on the home page...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Home Page" name="Verify footer elements" time="4.747">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+When I view the home page...................................................passed
+And I scroll to the footer..................................................passed
+Then I should see footer section............................................passed
+And I should see "About Us" in footer.......................................passed
+And I should see "Get in Touch" in footer...................................passed
+And I should see contact information in footer..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Home Page" name="Verify carousel functionality" time="4.527">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+When I view the home page...................................................passed
+Then I should see the product carousel......................................passed
+And the carousel should be functional.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Place order successfully with valid details" time="17.054">
+<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009870398.3.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009870398.3.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
+<![CDATA[Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009870398.3.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009870398.3.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
+	at ✽.I should see order success message(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:25)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_order_success_message(OrderPlacementSteps.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Samsung galaxy s6" to cart.....................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+Then I should see the order placement form..................................passed
+When I fill order details with valid information:...........................passed
+And I click purchase button.................................................passed
+Then I should see order success message.....................................failed
+And I should see order confirmation with details............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form fields" time="9.596">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nokia lumia 1520" to cart......................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+Then I should see the order placement form..................................passed
+And I should see all required order fields:.................................passed
+And I should see purchase button............................................passed
+And I should see close button...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.1" time="15.584">
+<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009895611.4.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009895611.4.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
+<![CDATA[Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009895611.4.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009895611.4.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at ✽.I should see appropriate response for order "valid_order"(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:59)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nexus 6" to cart...............................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+And I fill order details:...................................................passed
+And I click purchase button.................................................passed
+Then I should see appropriate response for order "valid_order"..............failed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.2" time="12.499">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nexus 6" to cart...............................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+And I fill order details:...................................................passed
+And I click purchase button.................................................passed
+Then I should see appropriate response for order "missing_name".............passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.3" time="11.261">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nexus 6" to cart...............................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+And I fill order details:...................................................passed
+And I click purchase button.................................................passed
+Then I should see appropriate response for order "missing_country"..........passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.4" time="14.742">
+<failure type="com.codeborne.selenide.ex.AlertNotFoundError" message="Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009934205.5.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009934205.5.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)">
+<![CDATA[Alert not found
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009934205.5.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009934205.5.html
+Timeout: 4 s.
+Caused by: TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+	at com.codeborne.selenide.SelenideTargetLocator.alertNotFoundError(SelenideTargetLocator.java:308)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:182)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at ✽.I should see appropriate response for order "missing_city"(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:59)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 4 second(s) with 200 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:179)
+	at com.codeborne.selenide.SelenideTargetLocator.alert(SelenideTargetLocator.java:172)
+	at stepDefinitions.OrderPlacementSteps.i_should_see_appropriate_response_for_order(OrderPlacementSteps.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nexus 6" to cart...............................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+And I fill order details:...................................................passed
+And I click purchase button.................................................passed
+Then I should see appropriate response for order "missing_city".............failed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Validate order form with different data combinations - Example #1.5" time="12.402">
+<system-out><![CDATA[
+Given I navigate to the DemoBlaze home page.................................passed
+Given I add "Nexus 6" to cart...............................................passed
+When I navigate to cart page................................................passed
+And I click place order button..............................................passed
+And I fill order details:...................................................passed
+And I click purchase button.................................................passed
+Then I should see appropriate response for order "missing_card".............passed
+]]></system-out>
+</testcase>
+<testcase classname="DemoBlaze Order Placement" name="Cancel order placement" time="11.395">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 Given I add "Iphone 6 32gb" to cart.........................................passed
@@ -1183,19 +947,19 @@ Then I should be back to cart page..........................................pass
 And the order should not be processed.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Order Placement" name="Place order with multiple products" time="27.374">
+<testcase classname="DemoBlaze Order Placement" name="Place order with multiple products" time="19.233">
 <failure type="com.codeborne.selenide.ex.ElementNotFound" message="Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758904441828.8.png
-Page source: file:/app/target/screenshots/1758904441828.8.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009976957.6.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009976957.6.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']">
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[normalize-space()='Nokia lumia 1520']&quot;}">
 <![CDATA[Element not found {By.xpath: //td[normalize-space()='Nokia lumia 1520']}
 Expected: visible
-Screenshot: file:/app/target/screenshots/1758904441828.8.png
-Page source: file:/app/target/screenshots/1758904441828.8.html
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009976957.6.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009976957.6.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
 	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
@@ -1207,18 +971,19 @@ Caused by: NoSuchElementException: Unable to locate element: //td[normalize-spac
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
-	at ✽.I should see "Nokia lumia 1520" in the cart(file:///app/src/test/resources/features/OrderPlacement.feature:86)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //td[normalize-space()='Nokia lumia 1520']
+	at ✽.I should see "Nokia lumia 1520" in the cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:86)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[normalize-space()='Nokia lumia 1520']"}
+  (Session info: chrome=140.0.7339.208)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [1b503e0a-9285-485d-ba86-017f430c561c, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.3.0, moz:accessibilityChecks: false, moz:buildID: 20250908182512, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 16857, moz:profile: /tmp/rust_mozprofilebDjqUO, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (X11; Linux x86..., webSocketUrl: ws://127.0.0.1:40931/sessio...}
-Session ID: 1b503e0a-9285-485d-ba86-017f430c561c
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [65c64a4471fb5af1201cbef5f37d2e55, findElement {value=//td[normalize-space()='Nokia lumia 1520'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5271/devtool..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 65c64a4471fb5af1201cbef5f37d2e55
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -1245,7 +1010,7 @@ Session ID: 1b503e0a-9285-485d-ba86-017f430c561c
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.shouldBe(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.shouldBe(Unknown Source)
 	at pages.CartPage.verifyProductInCart(CartPage.java:74)
 	at stepDefinitions.CartSteps.i_should_see_in_the_cart(CartSteps.java:66)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -1291,27 +1056,12 @@ Session ID: 1b503e0a-9285-485d-ba86-017f430c561c
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -1328,19 +1078,139 @@ Then I should see order success message.....................................skip
 And the order should include all products...................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Order Placement" name="Verify order form data persistence during session" time="18.525">
+<testcase classname="DemoBlaze Order Placement" name="Verify order form data persistence during session" time="16.707">
+<failure type="com.codeborne.selenide.ex.ElementNotFound" message="Element not found {By.linkText: Add to cart}
+Expected: clickable: interactable and enabled
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009993697.7.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009993697.7.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Add to cart&quot;}">
+<![CDATA[Element not found {By.linkText: Add to cart}
+Expected: clickable: interactable and enabled
+Screenshot: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009993697.7.png
+Page source: file:/E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/target/screenshots/1759009993697.7.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Add to cart"}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsClickable(WebElementSource.java:169)
+	at com.codeborne.selenide.commands.Click.findElement(Click.java:53)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at pages.ProductDetailsPage.clickAddToCart(ProductDetailsPage.java:48)
+	at pages.ProductDetailsPage.addToCart(ProductDetailsPage.java:63)
+	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:81)
+	at ✽.I add "MacBook air" to cart(file:///E:/Courses/Amalitech%20GTP/Projects/demoblazeProjectPlaywright/src/test/resources/features/OrderPlacement.feature:102)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Add to cart"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b3452dddb32360a0e5afe90ede8102f9, findElement {value=Add to cart, using=link text}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\EMMANU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:5311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:5311/devtool..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b3452dddb32360a0e5afe90ede8102f9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsClickable(WebElementSource.java:169)
+	at com.codeborne.selenide.commands.Click.findElement(Click.java:53)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at pages.ProductDetailsPage.clickAddToCart(ProductDetailsPage.java:48)
+	at pages.ProductDetailsPage.addToCart(ProductDetailsPage.java:63)
+	at stepDefinitions.CartSteps.i_add_to_cart(CartSteps.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+]]>
+</failure>
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
-Given I add "MacBook air" to cart...........................................passed
-When I navigate to cart page................................................passed
-And I click place order button..............................................passed
-And I fill order details partially:.........................................passed
-And I click close button....................................................passed
-And I click place order button again........................................passed
-Then the order form should be empty.........................................passed
+Given I add "MacBook air" to cart...........................................failed
+When I navigate to cart page................................................skipped
+And I click place order button..............................................skipped
+And I fill order details partially:.........................................skipped
+And I click close button....................................................skipped
+And I click place order button again........................................skipped
+Then the order form should be empty.........................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="DemoBlaze Order Placement" name="Attempt to place order with empty cart" time="12.67">
+<testcase classname="DemoBlaze Order Placement" name="Attempt to place order with empty cart" time="5.106">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I navigate to cart page without adding products........................passed
@@ -1348,7 +1218,7 @@ Then I should see an empty cart.............................................pass
 And the place order button should be disabled or not visible................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Simple DemoBlaze Test" name="Verify home page loads" time="9.521">
+<testcase classname="Simple DemoBlaze Test" name="Verify home page loads" time="5.081">
 <system-out><![CDATA[
 Given I navigate to the DemoBlaze home page.................................passed
 When I view the home page...................................................passed
