@@ -1,1 +1,3 @@
-Results file not found
+Total Requests: 2020
+Average Response Time: 689ms
+Error Rate: 98.7%

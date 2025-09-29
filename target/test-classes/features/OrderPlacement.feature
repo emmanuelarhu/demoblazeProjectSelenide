@@ -25,7 +25,7 @@ Feature: DemoBlaze Order Placement
     Then I should see order success message
     And I should see order confirmation with details
 
-  @OrderValidation @Functional
+  @OrderValidation @Functional  @Smoke
   Scenario: Validate order form fields
     Given I add "Nokia lumia 1520" to cart
     When I navigate to cart page
@@ -42,7 +42,7 @@ Feature: DemoBlaze Order Placement
     And I should see purchase button
     And I should see close button
 
-  @OrderFormValidation @Edge
+  @OrderFormValidation @Edge @regression
   Scenario Outline: Validate order form with different data combinations
     Given I add "Nexus 6" to cart
     When I navigate to cart page
@@ -77,7 +77,7 @@ Feature: DemoBlaze Order Placement
     Then I should be back to cart page
     And the order should not be processed
 
-  @MultipleProductsOrder @E2E
+  @MultipleProductsOrder @E2E @regression
   Scenario: Place order with multiple products
     Given I add "Samsung galaxy s6" to cart
     And I add "Nokia lumia 1520" to cart
@@ -97,7 +97,7 @@ Feature: DemoBlaze Order Placement
     Then I should see order success message
     And the order should include all products
 
-  @OrderPersistence @Functional
+  @OrderPersistence @Functional @regression
   Scenario: Verify order form data persistence during session
     Given I add "MacBook air" to cart
     When I navigate to cart page
