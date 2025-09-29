@@ -31,7 +31,9 @@ The project follows a comprehensive Page Object Model pattern with proper separa
   - `HomePageSteps.java` - Home page step implementations
   - `CartSteps.java` - Cart functionality steps
   - `ContactSteps.java` - Contact modal steps
-- **Runners**: Located in `src/test/java/runners/` - Cucumber test execution configuration
+- **Runners**: Located in `src/test/java/runners/` - Multiple Cucumber test execution configurations
+  - `TestRunner.java` - JUnit 5 based runner (recommended)
+  - `CucumberTestRunner.java` - JUnit 4 based runner (alternative)
 - **Hooks**: Located in `src/test/java/hooks/` - Setup and teardown for BDD tests
 - **Test Target**: All tests target the DemoBlaze demo e-commerce site for testing various e-commerce workflows
 
@@ -84,8 +86,11 @@ mvn test -Dselenide.browser=firefox -Dselenide.headless=true
 
 #### BDD Cucumber Tests
 ```bash
-# Run all BDD tests using Cucumber
+# Run all BDD tests using JUnit 5 Cucumber runner (recommended)
 mvn test -Dtest=runners.TestRunner
+
+# Run all BDD tests using JUnit 4 Cucumber runner (alternative)
+mvn test -Dtest=runners.CucumberTestRunner
 
 # Run BDD tests with specific tags
 mvn test -Dtest=runners.TestRunner -Dcucumber.filter.tags="@Smoke"

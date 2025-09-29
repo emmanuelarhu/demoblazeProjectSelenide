@@ -28,15 +28,24 @@ Feature: DemoBlaze Home Page
     And I should see "Monitors" category
 
   @Products @regression
-  Scenario: Verify product listings on home page
+  Scenario Outline: Verify product listings on home page
     When I view the home page
     Then I should see product listings
-    And I should see "Samsung galaxy s6" product with price "$360"
-    And I should see "Nexus 6" product with price "$650"
-    And I should see "Samsung galaxy s7" product with price "$800"
-    And I should see "Iphone 6 32gb" product with price "$790"
-    And I should see "Sony xperia z5" product with price "$320"
-    And I should see "Nokia lumia 1520" product with price "$820"
+    And I should see "<productName>" product with price "<price>"
+    And I should see "<productName>" product with price "<price>"
+    And I should see "<productName>" product with price "<price>"
+    And I should see "<productName>" product with price "<price>"
+    And I should see "<productName>" product with price "<price>"
+    And I should see "<productName>" product with price "<price>"
+
+    Examples:
+      | productName      | price |
+      | Samsung galaxy s6| $360  |
+      | Nexus 6          | $650  |
+      | Samsung galaxy s7 | $800  |
+      | Iphone 6 32gb | $790  |
+      | Sony xperia z5 | $320  |
+      | Nokia lumia 1520 | $820  |
 
   @ProductDetails @regression
   Scenario Outline: Verify individual product details
@@ -55,7 +64,7 @@ Feature: DemoBlaze Home Page
       | Nexus 6          | $650  |
       | Nokia lumia 1520 | $820  |
 
-  @Footer @UI
+  @Footer @UI @Smoke
   Scenario: Verify footer elements
     When I view the home page
     And I scroll to the footer
@@ -64,7 +73,7 @@ Feature: DemoBlaze Home Page
     And I should see "Get in Touch" in footer
     And I should see contact information in footer
 
-  @Carousel @UI
+  @Carousel @UI @regression
   Scenario: Verify carousel functionality
     When I view the home page
     Then I should see the product carousel

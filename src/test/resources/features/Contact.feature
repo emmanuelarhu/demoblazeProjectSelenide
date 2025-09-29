@@ -1,4 +1,4 @@
-@Contact @UI @Communication
+@Contact @UI @Communication @Smoke
 Feature: DemoBlaze Contact Modal
   As a user of DemoBlaze website
   I want to contact the support team
@@ -26,7 +26,7 @@ Feature: DemoBlaze Contact Modal
     And I click "Send message" contact button
     Then I should see success alert "Thanks for the message!!"
 
-  @ContactValidation @Functional
+  @ContactValidation @Functional @regression
   Scenario Outline: Validate contact form fields
     When I click on "Contact" link
     And I fill the contact form with:
@@ -44,7 +44,7 @@ Feature: DemoBlaze Contact Modal
       | invalid@email.com    |               | Valid message     | missing_name    |
       | valid@email.com      | Valid Name    |                   | missing_message |
 
-  @ContactFormReset @UI
+  @ContactFormReset @UI @regression
   Scenario: Reset contact form
     When I click on "Contact" link
     And I fill the contact form with test data
@@ -52,7 +52,7 @@ Feature: DemoBlaze Contact Modal
     And I click on "Contact" link again
     Then the contact form should be empty
 
-  @ContactFormPersistence @Edge
+  @ContactFormPersistence @Edge @regression
   Scenario: Contact form data persistence during session
     When I click on "Contact" link
     And I fill the contact form partially

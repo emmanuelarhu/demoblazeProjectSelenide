@@ -25,7 +25,7 @@ Feature: DemoBlaze Shopping Cart
     And I should see "Nexus 6" in the cart
     And the cart total should reflect both products
 
-  @RemoveFromCart @Functional
+  @RemoveFromCart @Functional @Smoke
   Scenario: Remove product from cart
     Given I have "Samsung galaxy s6" in my cart
     When I navigate to cart page
@@ -33,13 +33,13 @@ Feature: DemoBlaze Shopping Cart
     Then "Samsung galaxy s6" should not be in the cart
     And the cart should be empty or show updated total
 
-  @EmptyCart @Edge
+  @EmptyCart @Edge @Smoke
   Scenario: Verify empty cart behavior
     When I navigate to cart page without adding products
     Then I should see an empty cart
     And the total should show appropriate message or zero
 
-  @CartPersistence @Functional
+  @CartPersistence @Functional @regression
   Scenario: Verify cart maintains items across navigation
     Given I add "Nokia lumia 1520" to cart
     When I navigate to different pages
