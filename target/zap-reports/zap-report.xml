@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<OWASPZAPReport programName="ZAP" version="2.16.1" generated="Fri, 26 Sept 2025 11:47:49" created="2025-09-26T11:47:49.247745367Z">
+<OWASPZAPReport programName="ZAP" version="2.16.1" generated="Mon, 29 Sept 2025 11:24:22" created="2025-09-29T11:24:22.859501040Z">
 	
 		<site name="https://www.demoblaze.com" host="www.demoblaze.com" port="443" ssl="true">
 			<alerts>
@@ -82,7 +82,7 @@
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;https://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-csp/&lt;/p&gt;&lt;p&gt;https://web.dev/articles/csp&lt;/p&gt;&lt;p&gt;https://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;https://content-security-policy.com/&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -144,7 +144,7 @@
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options&lt;/p&gt;</reference>
 						<cweid>1021</cweid>
 						<wascid>15</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -782,7 +782,7 @@ The following web/application server has been identified:
 						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231#section-5.1.2&lt;/p&gt;</reference>
 						<cweid>204</cweid>
 						<wascid>45</wascid>
-						<sourceid>3382</sourceid>
+						<sourceid>4822</sourceid>
 					</alertitem>
 				
 				
@@ -822,7 +822,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 						<reference>&lt;p&gt;https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/&lt;/p&gt;</reference>
 						<cweid>1395</cweid>
 						<wascid>-1</wascid>
-						<sourceid>60</sourceid>
+						<sourceid>53</sourceid>
 					</alertitem>
 				
 				
@@ -837,6 +837,16 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 						<confidencedesc>Medium</confidencedesc>
 						<desc>&lt;p&gt;Cross-Origin-Resource-Policy header is an opt-in header designed to counter side-channels attacks like Spectre. Resource should be specifically set as shareable amongst different origins.&lt;/p&gt;</desc>
 						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Resource-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
 							
 								<instance>
 									<uri>https://www.demoblaze.com/</uri>
@@ -899,7 +909,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
 									<method>GET</method>
 									<param>Cross-Origin-Resource-Policy</param>
 									<attack></attack>
@@ -919,7 +929,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
 									<method>GET</method>
 									<param>Cross-Origin-Resource-Policy</param>
 									<attack></attack>
@@ -929,9 +939,9 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/Samsung1.jpg</uri>
+									<uri>https://www.demoblaze.com</uri>
 									<method>GET</method>
-									<param>Cross-Origin-Resource-Policy</param>
+									<param>Cross-Origin-Embedder-Policy</param>
 									<attack></attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
@@ -949,6 +959,16 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Cross-Origin-Opener-Policy</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
 									<uri>https://www.demoblaze.com/</uri>
 									<method>GET</method>
 									<param>Cross-Origin-Opener-Policy</param>
@@ -958,13 +978,13 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 								</instance>
 							
 						</instances>
-						<count>12</count>
+						<count>14</count>
 						<solution>&lt;p&gt;Ensure that the application/web server sets the Cross-Origin-Resource-Policy header appropriately, and that it sets the Cross-Origin-Resource-Policy header to &apos;same-origin&apos; for all web pages.&lt;/p&gt;&lt;p&gt;&apos;same-site&apos; is considered as less secured and should be avoided.&lt;/p&gt;&lt;p&gt;If resources must be shared, set the header to &apos;cross-origin&apos;.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Resource-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-resource-policy).&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>14</wascid>
-						<sourceid>1</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1031,16 +1051,6 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/js/bootstrap.min.js</uri>
 									<method>GET</method>
 									<param></param>
@@ -1062,6 +1072,16 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 								<instance>
 									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1096,7 +1116,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy&lt;/p&gt;&lt;p&gt;https://developer.chrome.com/blog/feature-policy/&lt;/p&gt;&lt;p&gt;https://scotthelme.co.uk/a-new-security-header-feature-policy/&lt;/p&gt;&lt;p&gt;https://w3c.github.io/webappsec-feature-policy/&lt;/p&gt;&lt;p&gt;https://www.smashingmagazine.com/2018/12/feature-policy/&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1173,7 +1193,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1193,7 +1213,7 @@ https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1332,7 +1352,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
 									<method>GET</method>
 									<param>x-content-type-options</param>
 									<attack></attack>
@@ -1354,7 +1374,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
 									<method>GET</method>
 									<param>x-content-type-options</param>
 									<attack></attack>
@@ -1381,7 +1401,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<reference>&lt;p&gt;https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
 						<cweid>693</cweid>
 						<wascid>15</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1433,7 +1453,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<reference></reference>
 						<cweid>615</cweid>
 						<wascid>13</wascid>
-						<sourceid>60</sourceid>
+						<sourceid>53</sourceid>
 					</alertitem>
 				
 				
@@ -1495,7 +1515,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<reference></reference>
 						<cweid>-1</cweid>
 						<wascid>-1</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1557,7 +1577,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control&lt;/p&gt;&lt;p&gt;https://grayduck.mn/2021/09/13/cache-control-recommendations/&lt;/p&gt;</reference>
 						<cweid>525</cweid>
 						<wascid>13</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1594,16 +1614,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/</uri>
-									<method>GET</method>
-									<param></param>
-									<attack></attack>
-									<evidence>Age: 3</evidence>
-									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
-								</instance>
-							
-							
-								<instance>
 									<uri>https://www.demoblaze.com/bm.png</uri>
 									<method>GET</method>
 									<param></param>
@@ -1654,7 +1664,17 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<uri>https://www.demoblaze.com/index.html</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Age: 0</evidence>
+									<otherinfo>The presence of the &apos;Age&apos; header indicates that a HTTP/1.1 compliant caching server is in use.</otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1674,7 +1694,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1699,7 +1719,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.rfc-editor.org/rfc/rfc9110.html&lt;/p&gt;</reference>
 						<cweid>525</cweid>
 						<wascid>-1</wascid>
-						<sourceid>7</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1714,6 +1734,16 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<confidencedesc>Medium</confidencedesc>
 						<desc>&lt;p&gt;The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where &quot;shared&quot; caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.&lt;/p&gt;</desc>
 						<instances>
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>max-age=10</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
 							
 								<instance>
 									<uri>https://www.demoblaze.com/</uri>
@@ -1776,7 +1806,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/iphone1.jpg</uri>
+									<uri>https://www.demoblaze.com/js/index.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1796,7 +1826,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/video.js/dist/video-js.min.css</uri>
+									<uri>https://www.demoblaze.com/node_modules/tether/dist/js/tether.min.js</uri>
 									<method>GET</method>
 									<param></param>
 									<attack></attack>
@@ -1835,13 +1865,13 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 								</instance>
 							
 						</instances>
-						<count>12</count>
+						<count>13</count>
 						<solution>&lt;p&gt;Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:&lt;/p&gt;&lt;p&gt;Cache-Control: no-cache, no-store, must-revalidate, private&lt;/p&gt;&lt;p&gt;Pragma: no-cache&lt;/p&gt;&lt;p&gt;Expires: 0&lt;/p&gt;&lt;p&gt;This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.&lt;/p&gt;</solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7234&lt;/p&gt;&lt;p&gt;https://datatracker.ietf.org/doc/html/rfc7231&lt;/p&gt;&lt;p&gt;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&lt;/p&gt;</reference>
 						<cweid>524</cweid>
 						<wascid>13</wascid>
-						<sourceid>1</sourceid>
+						<sourceid>9</sourceid>
 					</alertitem>
 				
 				
@@ -1881,27 +1911,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://www.demoblaze.com</uri>
-									<method>GET</method>
-									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://www.demoblaze.com</uri>
-									<method>GET</method>
-									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -1931,6 +1941,16 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
 									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
@@ -1941,7 +1961,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -1951,7 +1971,17 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -1978,10 +2008,20 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/cart.html</uri>
+									<uri>https://www.demoblaze.com/</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -1991,14 +2031,84 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/cart.html</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/index.html</uri>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/cart.html</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
@@ -2008,10 +2118,90 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/index.html</uri>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/css/latostyle.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -2031,14 +2221,14 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/js/cart.js</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/js/index.js</uri>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
@@ -2048,17 +2238,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 							
 							
 								<instance>
-									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
-									<method>GET</method>
-									<param>Header User-Agent</param>
-									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
-									<evidence></evidence>
-									<otherinfo></otherinfo>
-								</instance>
-							
-							
-								<instance>
-									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<uri>https://www.demoblaze.com/js/cart.js</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16</attack>
@@ -2071,7 +2251,77 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
-									<attack>msnbot/1.1 (+http://search.msn.com/msnbot.htm)</attack>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.css</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -2091,7 +2341,37 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
 									<method>GET</method>
 									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
 									<attack>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4</attack>
 									<evidence></evidence>
 									<otherinfo></otherinfo>
 								</instance>
@@ -2106,14 +2386,24 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 									<otherinfo></otherinfo>
 								</instance>
 							
+							
+								<instance>
+									<uri>https://www.demoblaze.com/node_modules/bootstrap/dist/js/bootstrap.min.js</uri>
+									<method>GET</method>
+									<param>Header User-Agent</param>
+									<attack>Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko</attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
 						</instances>
-						<count>25</count>
+						<count>51</count>
 						<solution></solution>
 						<otherinfo></otherinfo>
 						<reference>&lt;p&gt;https://owasp.org/wstg&lt;/p&gt;</reference>
 						<cweid>0</cweid>
 						<wascid>0</wascid>
-						<sourceid>1485</sourceid>
+						<sourceid>2897</sourceid>
 					</alertitem>
 				
 			</alerts>
