@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CartPageTest" time="53.412" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CartPageTest" time="51.015" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,8 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/openjdk-21/lib"/>
-    <property name="selenide.browser" value="firefox"/>
-    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar /app/target/surefire 2025-09-26T13-47-56_725-jvmRun1 surefire-20250926134801173_1tmp surefire_0-20250926134801173_2tmp"/>
+    <property name="selenide.browser" value="chrome"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar /app/target/surefire 2025-09-29T10-57-59_800-jvmRun1 surefire-20250929105803682_1tmp surefire_0-20250929105803682_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/root/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/root/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/root/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/root/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/root/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/root/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/root/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/root/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/root/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/root/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/root/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/root/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
     <property name="allure.results.directory" value="/app/target/allure-results"/>
@@ -27,9 +27,10 @@
     <property name="basedir" value="/app"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="chromeoptions.args" value="--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-extensions,--user-data-dir=/tmp/chrome-user-data-1759143520429,--remote-debugging-port=9222"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-2513"/>
     <property name="user.name" value="root"/>
@@ -56,112 +57,171 @@
     <property name="selenide.headless" value="true"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testAddMultipleProductsToCart" classname="tests.CartPageTest" time="27.957">
-    <system-out><![CDATA[13:48:20.899 [main] INFO  base.BaseTest - Setting up base test configuration
-13:48:20.899 [main] INFO  base.BaseTest - Base test configuration completed
-13:48:20.900 [main] INFO  tests.CartPageTest - Setting up cart test instances
-13:48:20.901 [main] INFO  tests.CartPageTest - Cart test setup completed
-13:48:20.902 [main] INFO  tests.CartPageTest - Starting test: Add multiple products to cart
-13:48:20.902 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:48:20.903 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:48:23.986 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:48:24.258 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:48:26.627 [main] INFO  pages.HomePage - Home page opened successfully
-13:48:26.627 [main] INFO  pages.HomePage - Verifying categories section
-13:48:27.532 [main] INFO  pages.HomePage - Categories section verified successfully
-13:48:27.533 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
-13:48:29.144 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
-13:48:29.145 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Samsung galaxy s6 with price: $360 *includes tax
-13:48:29.974 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Samsung galaxy s6
-13:48:29.974 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:48:30.316 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:48:31.365 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:48:32.024 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:48:32.024 [main] INFO  pages.HomePage - Verifying categories section
-13:48:33.896 [main] INFO  pages.HomePage - Categories section verified successfully
-13:48:33.897 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
-13:48:34.721 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
-13:48:34.722 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nokia lumia 1520 with price: $820 *includes tax
-13:48:36.241 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nokia lumia 1520
-13:48:36.245 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:48:36.972 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:48:38.037 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:48:38.720 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:48:38.722 [main] INFO  pages.HomePage - Verifying categories section
-13:48:40.423 [main] INFO  pages.HomePage - Categories section verified successfully
-13:48:40.423 [main] INFO  pages.HomePage - Clicking on first product: Nexus 6
-13:48:41.167 [main] INFO  pages.HomePage - Successfully clicked on first product: Nexus 6
-13:48:41.167 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nexus 6 with price: $650 *includes tax
-13:48:42.246 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nexus 6
-13:48:42.247 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:48:42.811 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:48:43.842 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:48:44.180 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:48:45.225 [main] INFO  pages.HomePage - Navigating to cart page
-13:48:46.052 [main] INFO  pages.HomePage - Successfully navigated to cart page
-13:48:46.052 [main] INFO  pages.CartPage - Verifying cart page headers and elements
-13:48:46.232 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
-13:48:46.232 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
-13:48:47.532 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
-13:48:47.532 [main] INFO  pages.CartPage - Verifying product is in cart: Nokia lumia 1520
-13:48:47.549 [main] INFO  pages.CartPage - Product verified in cart: Nokia lumia 1520
-13:48:47.550 [main] INFO  tests.CartPageTest - Test completed successfully: Add multiple products to cart
-13:48:47.554 [main] INFO  base.BaseTest - Cleaning up test resources
-13:48:48.845 [main] INFO  base.BaseTest - Test cleanup completed
-13:48:48.851 [main] INFO  utils.TestListener - Test passed: Add multiple products to cart and verify cart functionality
+  <testcase name="testAddMultipleProductsToCart" classname="tests.CartPageTest" time="29.212">
+    <system-out><![CDATA[10:58:07,160 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+10:58:07,167 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - No custom configurators were discovered as a service.
+10:58:07,167 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+10:58:07,173 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+10:58:07,186 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+10:58:07,186 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+10:58:07,202 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 15 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+10:58:07,202 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+10:58:07,204 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+10:58:07,209 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback-test.xml] at [file:/app/target/test-classes/logback-test.xml]
+10:58:07,500 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+10:58:07,500 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+10:58:07,522 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+10:58:07,629 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+10:58:07,629 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:58:07,680 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2039984535 - setting totalSizeCap to 100 MB
+10:58:07,696 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2039984535 - No compression will be used
+10:58:07,700 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2039984535 - Will use the pattern target/logs/test-execution.%d{yyyy-MM-dd}.%i.log for the active file
+10:58:07,784 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@11dee337 - The date pattern is 'yyyy-MM-dd' from file name pattern 'target/logs/test-execution.%d{yyyy-MM-dd}.%i.log'.
+10:58:07,784 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@11dee337 - Roll-over at midnight.
+10:58:07,804 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@11dee337 - Setting initial period to 2025-09-27T17:56:36.362Z
+10:58:07,805 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@11dee337 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+10:58:07,805 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@11dee337 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+10:58:07,810 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+10:58:07,820 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: target/logs/test-execution.log
+10:58:07,820 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [target/logs/test-execution.log]
+10:58:07,821 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [PAGE_ACTIONS]
+10:58:07,821 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:58:07,823 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1175418534 - setting totalSizeCap to 100 MB
+10:58:07,823 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1175418534 - No compression will be used
+10:58:07,823 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1175418534 - Will use the pattern target/logs/page-actions.%d{yyyy-MM-dd}.%i.log for the active file
+10:58:07,824 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@55f3c410 - The date pattern is 'yyyy-MM-dd' from file name pattern 'target/logs/page-actions.%d{yyyy-MM-dd}.%i.log'.
+10:58:07,824 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@55f3c410 - Roll-over at midnight.
+10:58:07,825 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@55f3c410 - Setting initial period to 2025-09-27T17:56:36.247Z
+10:58:07,825 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@55f3c410 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+10:58:07,825 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@55f3c410 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+10:58:07,825 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+10:58:07,827 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[PAGE_ACTIONS] - Active log file name: target/logs/page-actions.log
+10:58:07,827 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[PAGE_ACTIONS] - File property is set to [target/logs/page-actions.log]
+10:58:07,828 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [pages] to INFO
+10:58:07,833 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [pages] to false
+10:58:07,835 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [PAGE_ACTIONS] to Logger[pages]
+10:58:07,836 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[pages]
+10:58:07,836 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [tests] to INFO
+10:58:07,836 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [tests] to false
+10:58:07,836 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[tests]
+10:58:07,836 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[tests]
+10:58:07,837 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.codeborne.selenide] to INFO
+10:58:07,837 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+10:58:07,837 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+10:58:07,837 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+10:58:07,837 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@11acdc30 - End of configuration.
+10:58:07,838 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@770d4269 - Registering current configuration as safe fallback point
+10:58:07,838 |-INFO in ch.qos.logback.classic.util.ContextInitializer@21c64522 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 634 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+10:58:11.130 [main] INFO  base.BaseTest - Setting up base test configuration
+10:58:11.177 [main] INFO  base.BaseTest - Base test configuration completed
+10:58:11.177 [main] INFO  tests.CartPageTest - Setting up cart test instances
+10:58:11.480 [main] INFO  tests.CartPageTest - Cart test setup completed
+10:58:11.484 [main] INFO  tests.CartPageTest - Starting test: Add multiple products to cart
+10:58:11.484 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:58:11.497 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:58:23.083 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:58:25.131 [main] INFO  pages.HomePage - Home page opened successfully
+10:58:25.131 [main] INFO  pages.HomePage - Verifying categories section
+10:58:25.783 [main] INFO  pages.HomePage - Categories section verified successfully
+10:58:25.783 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
+10:58:27.556 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
+10:58:27.556 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Samsung galaxy s6 with price: $360 *includes tax
+10:58:28.506 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Samsung galaxy s6
+10:58:28.506 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:28.691 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:29.747 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:58:29.935 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:58:29.936 [main] INFO  pages.HomePage - Verifying categories section
+10:58:30.230 [main] INFO  pages.HomePage - Categories section verified successfully
+10:58:30.230 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
+10:58:31.091 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
+10:58:31.091 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nokia lumia 1520 with price: $820 *includes tax
+10:58:31.768 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nokia lumia 1520
+10:58:31.769 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:31.907 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:32.956 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:58:33.199 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:58:33.199 [main] INFO  pages.HomePage - Verifying categories section
+10:58:33.527 [main] INFO  pages.HomePage - Categories section verified successfully
+10:58:33.527 [main] INFO  pages.HomePage - Clicking on first product: Nexus 6
+10:58:33.927 [main] INFO  pages.HomePage - Successfully clicked on first product: Nexus 6
+10:58:33.927 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nexus 6 with price: $650 *includes tax
+10:58:34.744 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nexus 6
+10:58:34.744 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:34.900 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:35.946 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:36.150 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:37.194 [main] INFO  pages.HomePage - Navigating to cart page
+10:58:38.395 [main] INFO  pages.HomePage - Successfully navigated to cart page
+10:58:38.395 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+10:58:38.622 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+10:58:38.622 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
+10:58:39.989 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
+10:58:39.989 [main] INFO  pages.CartPage - Verifying product is in cart: Nokia lumia 1520
+10:58:40.025 [main] INFO  pages.CartPage - Product verified in cart: Nokia lumia 1520
+10:58:40.025 [main] INFO  tests.CartPageTest - Test completed successfully: Add multiple products to cart
+10:58:40.029 [main] INFO  base.BaseTest - Cleaning up test resources
+10:58:40.301 [main] INFO  base.BaseTest - Test cleanup completed
+10:58:40.308 [main] INFO  utils.TestListener - Test passed: Add multiple products to cart and verify cart functionality
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:58:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testCartItemDeletion" classname="tests.CartPageTest" time="25.433">
-    <system-out><![CDATA[13:48:48.866 [main] INFO  base.BaseTest - Setting up base test configuration
-13:48:48.866 [main] INFO  base.BaseTest - Base test configuration completed
-13:48:48.866 [main] INFO  tests.CartPageTest - Setting up cart test instances
-13:48:48.867 [main] INFO  tests.CartPageTest - Cart test setup completed
-13:48:48.867 [main] INFO  tests.CartPageTest - Starting test: Cart item deletion functionality
-13:48:48.867 [main] INFO  tests.CartPageTest - Adding test products to cart
-13:48:48.867 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:48:48.867 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:48:51.715 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:48:52.001 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:48:54.845 [main] INFO  pages.HomePage - Home page opened successfully
-13:48:54.845 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
-13:48:56.892 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
-13:48:56.892 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:48:58.411 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:48:59.452 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:48:59.946 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:48:59.947 [main] INFO  pages.HomePage - Verifying categories section
-13:49:00.889 [main] INFO  pages.HomePage - Categories section verified successfully
-13:49:00.889 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
-13:49:01.380 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
-13:49:01.380 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:49:02.415 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:49:03.452 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:49:04.253 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:49:04.253 [main] INFO  pages.HomePage - Verifying categories section
-13:49:05.132 [main] INFO  pages.HomePage - Categories section verified successfully
-13:49:05.133 [main] INFO  pages.HomePage - Clicking on product at index 3: Samsung galaxy s7
-13:49:05.740 [main] INFO  pages.HomePage - Successfully clicked on product at index 3: Samsung galaxy s7
-13:49:05.740 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:49:07.555 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:49:08.618 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:49:08.981 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:49:10.037 [main] INFO  tests.CartPageTest - Test products added to cart successfully
-13:49:10.037 [main] INFO  pages.HomePage - Navigating to cart page
-13:49:10.838 [main] INFO  pages.HomePage - Successfully navigated to cart page
-13:49:10.839 [main] INFO  pages.CartPage - Verifying cart page headers and elements
-13:49:10.970 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
-13:49:10.970 [main] INFO  pages.CartPage - Clicking first delete button in cart
-13:49:12.510 [main] INFO  pages.CartPage - Successfully clicked first delete button
-13:49:12.510 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
-13:49:12.534 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
-13:49:12.534 [main] INFO  pages.CartPage - Deleting product from cart: Samsung galaxy s6
-13:49:12.813 [main] INFO  pages.CartPage - Successfully deleted product from cart: Samsung galaxy s6
-13:49:12.813 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s7
-13:49:12.841 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s7
-13:49:12.842 [main] INFO  tests.CartPageTest - Test completed successfully: Cart item deletion functionality
-13:49:12.842 [main] INFO  base.BaseTest - Cleaning up test resources
-13:49:14.297 [main] INFO  base.BaseTest - Test cleanup completed
-13:49:14.298 [main] INFO  utils.TestListener - Test passed: Test cart item deletion functionality
+  <testcase name="testCartItemDeletion" classname="tests.CartPageTest" time="21.553">
+    <system-out><![CDATA[10:58:40.429 [main] INFO  base.BaseTest - Setting up base test configuration
+10:58:40.429 [main] INFO  base.BaseTest - Base test configuration completed
+10:58:40.429 [main] INFO  tests.CartPageTest - Setting up cart test instances
+10:58:40.429 [main] INFO  tests.CartPageTest - Cart test setup completed
+10:58:40.430 [main] INFO  tests.CartPageTest - Starting test: Cart item deletion functionality
+10:58:40.430 [main] INFO  tests.CartPageTest - Adding test products to cart
+10:58:40.430 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:58:40.431 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:58:40.939 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:58:43.000 [main] INFO  pages.HomePage - Home page opened successfully
+10:58:43.000 [main] INFO  pages.HomePage - Clicking on product at index 0: Samsung galaxy s6
+10:58:44.781 [main] INFO  pages.HomePage - Successfully clicked on product at index 0: Samsung galaxy s6
+10:58:44.782 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:49.137 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:50.180 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:58:50.637 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:58:50.640 [main] INFO  pages.HomePage - Verifying categories section
+10:58:50.913 [main] INFO  pages.HomePage - Categories section verified successfully
+10:58:50.913 [main] INFO  pages.HomePage - Clicking on product at index 1: Nokia lumia 1520
+10:58:51.904 [main] INFO  pages.HomePage - Successfully clicked on product at index 1: Nokia lumia 1520
+10:58:51.904 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:52.316 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:53.358 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:58:54.525 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:58:54.525 [main] INFO  pages.HomePage - Verifying categories section
+10:58:54.793 [main] INFO  pages.HomePage - Categories section verified successfully
+10:58:54.794 [main] INFO  pages.HomePage - Clicking on product at index 3: Samsung galaxy s7
+10:58:55.857 [main] INFO  pages.HomePage - Successfully clicked on product at index 3: Samsung galaxy s7
+10:58:55.922 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:56.812 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:57.856 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+10:58:57.984 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+10:58:59.022 [main] INFO  tests.CartPageTest - Test products added to cart successfully
+10:58:59.022 [main] INFO  pages.HomePage - Navigating to cart page
+10:59:00.283 [main] INFO  pages.HomePage - Successfully navigated to cart page
+10:59:00.283 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+10:59:00.500 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+10:59:00.500 [main] INFO  pages.CartPage - Clicking first delete button in cart
+10:59:01.575 [main] INFO  pages.CartPage - Successfully clicked first delete button
+10:59:01.575 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s6
+10:59:01.616 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s6
+10:59:01.616 [main] INFO  pages.CartPage - Deleting product from cart: Samsung galaxy s6
+10:59:01.736 [main] INFO  pages.CartPage - Successfully deleted product from cart: Samsung galaxy s6
+10:59:01.736 [main] INFO  pages.CartPage - Verifying product is in cart: Samsung galaxy s7
+10:59:01.763 [main] INFO  pages.CartPage - Product verified in cart: Samsung galaxy s7
+10:59:01.764 [main] INFO  tests.CartPageTest - Test completed successfully: Cart item deletion functionality
+10:59:01.764 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:01.980 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:01.981 [main] INFO  utils.TestListener - Test passed: Test cart item deletion functionality
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:58:40 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
 </testsuite>

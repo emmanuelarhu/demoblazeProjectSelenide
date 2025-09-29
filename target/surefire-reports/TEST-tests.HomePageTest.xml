@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.HomePageTest" time="72.079" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.HomePageTest" time="34.236" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,8 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/openjdk-21/lib"/>
-    <property name="selenide.browser" value="firefox"/>
-    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar /app/target/surefire 2025-09-26T13-47-56_725-jvmRun1 surefire-20250926134801173_1tmp surefire_0-20250926134801173_2tmp"/>
+    <property name="selenide.browser" value="chrome"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar /app/target/surefire 2025-09-29T10-57-59_800-jvmRun1 surefire-20250929105803682_1tmp surefire_0-20250929105803682_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/root/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/root/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/root/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/root/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/root/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/root/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/root/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/root/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/root/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/root/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/root/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/root/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
     <property name="allure.results.directory" value="/app/target/allure-results"/>
@@ -27,9 +27,10 @@
     <property name="basedir" value="/app"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="chromeoptions.args" value="--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-extensions,--user-data-dir=/tmp/chrome-user-data-1759143596375,--remote-debugging-port=9222"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-2513"/>
     <property name="user.name" value="root"/>
@@ -56,171 +57,185 @@
     <property name="selenide.headless" value="true"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testNavigationBarElements" classname="tests.HomePageTest" time="8.553">
-    <system-out><![CDATA[13:49:55.801 [main] INFO  base.BaseTest - Setting up base test configuration
-13:49:55.801 [main] INFO  base.BaseTest - Base test configuration completed
-13:49:55.801 [main] INFO  tests.HomePageTest - Setting up test instances
-13:49:55.801 [main] INFO  tests.HomePageTest - Test setup completed
-13:49:55.802 [main] INFO  tests.HomePageTest - Starting test: Verify navigation bar elements
-13:49:55.802 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:49:55.802 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:49:58.699 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:49:59.001 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:02.919 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:02.920 [main] INFO  pages.HomePage - Verifying navigation elements are visible
-13:50:03.255 [main] INFO  pages.HomePage - All navigation elements verified successfully
-13:50:03.255 [main] INFO  tests.HomePageTest - Test completed successfully: Verify navigation bar elements
-13:50:03.256 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:04.352 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:04.353 [main] INFO  utils.TestListener - Test passed: Verify navigation bar elements are visible
+  <testcase name="testNavigationBarElements" classname="tests.HomePageTest" time="3.19">
+    <system-out><![CDATA[10:59:25.552 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:25.553 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:25.555 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:25.556 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:25.557 [main] INFO  tests.HomePageTest - Starting test: Verify navigation bar elements
+10:59:25.557 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:25.557 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:26.031 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:28.140 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:28.140 [main] INFO  pages.HomePage - Verifying navigation elements are visible
+10:59:28.616 [main] INFO  pages.HomePage - All navigation elements verified successfully
+10:59:28.616 [main] INFO  tests.HomePageTest - Test completed successfully: Verify navigation bar elements
+10:59:28.616 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:28.742 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:28.742 [main] INFO  utils.TestListener - Test passed: Verify navigation bar elements are visible
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testCategoriesSection" classname="tests.HomePageTest" time="8.268">
-    <system-out><![CDATA[13:50:04.360 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:04.360 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:04.361 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:04.361 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:04.361 [main] INFO  tests.HomePageTest - Starting test: Verify categories section
-13:50:04.361 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:04.362 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:50:07.400 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:50:07.721 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:10.464 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:10.464 [main] INFO  pages.HomePage - Verifying categories section
-13:50:11.231 [main] INFO  pages.HomePage - Categories section verified successfully
-13:50:11.232 [main] INFO  tests.HomePageTest - Test completed successfully: Verify categories section
-13:50:11.232 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:12.626 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:12.627 [main] INFO  utils.TestListener - Test passed: Verify categories section is visible
+  <testcase name="testCategoriesSection" classname="tests.HomePageTest" time="2.985">
+    <system-out><![CDATA[10:59:28.746 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:28.746 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:28.746 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:28.747 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:28.747 [main] INFO  tests.HomePageTest - Starting test: Verify categories section
+10:59:28.747 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:28.747 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:29.237 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:31.267 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:31.267 [main] INFO  pages.HomePage - Verifying categories section
+10:59:31.586 [main] INFO  pages.HomePage - Categories section verified successfully
+10:59:31.586 [main] INFO  tests.HomePageTest - Test completed successfully: Verify categories section
+10:59:31.587 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:31.730 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:31.731 [main] INFO  utils.TestListener - Test passed: Verify categories section is visible
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testNexusProductDetails" classname="tests.HomePageTest" time="12.585">
-    <system-out><![CDATA[13:50:12.633 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:12.634 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:12.636 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:12.640 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:12.640 [main] INFO  tests.HomePageTest - Starting test: Verify Nexus product details
-13:50:12.641 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:12.641 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:50:16.099 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:50:16.410 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:19.465 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:19.465 [main] INFO  pages.HomePage - Verifying product details for: Nexus 6 with price: $650
-13:50:20.741 [main] INFO  pages.HomePage - Product details verified successfully for: Nexus 6
-13:50:20.742 [main] INFO  pages.HomePage - Clicking on first product: Nexus 6
-13:50:21.738 [main] INFO  pages.HomePage - Successfully clicked on first product: Nexus 6
-13:50:21.738 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
-13:50:22.813 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
-13:50:22.814 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nexus 6 with price: $650 *includes tax
-13:50:23.105 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nexus 6
-13:50:23.105 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:50:23.831 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:50:23.831 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Nexus product details
-13:50:23.832 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:25.216 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:25.217 [main] INFO  utils.TestListener - Test passed: Verify Nexus product details
+  <testcase name="testNexusProductDetails" classname="tests.HomePageTest" time="5.971">
+    <system-out><![CDATA[10:59:31.736 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:31.736 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:31.736 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:31.736 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:31.737 [main] INFO  tests.HomePageTest - Starting test: Verify Nexus product details
+10:59:31.737 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:31.737 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:32.221 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:34.697 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:34.698 [main] INFO  pages.HomePage - Verifying product details for: Nexus 6 with price: $650
+10:59:35.495 [main] INFO  pages.HomePage - Product details verified successfully for: Nexus 6
+10:59:35.495 [main] INFO  pages.HomePage - Clicking on first product: Nexus 6
+10:59:36.319 [main] INFO  pages.HomePage - Successfully clicked on first product: Nexus 6
+10:59:36.319 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
+10:59:37.056 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
+10:59:37.056 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nexus 6 with price: $650 *includes tax
+10:59:37.149 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nexus 6
+10:59:37.150 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:59:37.594 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:59:37.594 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Nexus product details
+10:59:37.595 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:37.706 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:37.706 [main] INFO  utils.TestListener - Test passed: Verify Nexus product details
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:32 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testSamsungGalaxyS6ProductDetails" classname="tests.HomePageTest" time="12.896">
-    <system-out><![CDATA[13:50:25.224 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:25.224 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:25.225 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:25.225 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:25.225 [main] INFO  tests.HomePageTest - Starting test: Verify Samsung Galaxy S6 product details
-13:50:25.225 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:25.225 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:50:28.420 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:50:28.744 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:31.772 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:31.772 [main] INFO  pages.HomePage - Verifying product details for: Samsung galaxy s6 with price: $360
-13:50:33.646 [main] INFO  pages.HomePage - Product details verified successfully for: Samsung galaxy s6
-13:50:33.646 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
-13:50:34.841 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
-13:50:34.841 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
-13:50:35.812 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
-13:50:35.813 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Samsung galaxy s6 with price: $360 *includes tax
-13:50:36.189 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Samsung galaxy s6
-13:50:36.189 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:50:36.792 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:50:36.792 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Samsung Galaxy S6 product details
-13:50:36.792 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:38.118 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:38.119 [main] INFO  utils.TestListener - Test passed: Verify Samsung Galaxy S6 product details
+  <testcase name="testSamsungGalaxyS6ProductDetails" classname="tests.HomePageTest" time="5.888">
+    <system-out><![CDATA[10:59:37.710 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:37.710 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:37.710 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:37.710 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:37.711 [main] INFO  tests.HomePageTest - Starting test: Verify Samsung Galaxy S6 product details
+10:59:37.711 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:37.711 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:38.432 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:40.314 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:40.314 [main] INFO  pages.HomePage - Verifying product details for: Samsung galaxy s6 with price: $360
+10:59:41.369 [main] INFO  pages.HomePage - Product details verified successfully for: Samsung galaxy s6
+10:59:41.369 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
+10:59:42.047 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
+10:59:42.048 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
+10:59:42.788 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
+10:59:42.788 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Samsung galaxy s6 with price: $360 *includes tax
+10:59:42.893 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Samsung galaxy s6
+10:59:42.894 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:59:43.431 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:59:43.431 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Samsung Galaxy S6 product details
+10:59:43.432 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:43.597 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:43.597 [main] INFO  utils.TestListener - Test passed: Verify Samsung Galaxy S6 product details
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testAllProductsAndFooterElements" classname="tests.HomePageTest" time="9.04">
-    <system-out><![CDATA[13:50:38.125 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:38.125 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:38.125 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:38.126 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:38.127 [main] INFO  tests.HomePageTest - Starting test: Verify all products and footer elements
-13:50:38.127 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:38.127 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:50:41.055 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:50:41.358 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:44.135 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:44.135 [main] INFO  pages.HomePage - Verifying product details for: Samsung galaxy s7 with price: $800
-13:50:45.568 [main] INFO  pages.HomePage - Product details verified successfully for: Samsung galaxy s7
-13:50:45.568 [main] INFO  pages.HomePage - Verifying product details for: Iphone 6 32gb with price: $790
-13:50:45.637 [main] INFO  pages.HomePage - Product details verified successfully for: Iphone 6 32gb
-13:50:45.637 [main] INFO  pages.HomePage - Verifying product details for: Sony xperia z5 with price: $320
-13:50:45.780 [main] INFO  pages.HomePage - Product details verified successfully for: Sony xperia z5
-13:50:45.780 [main] INFO  pages.HomePage - Verifying product navigation buttons
-13:50:45.861 [main] INFO  pages.HomePage - Product navigation buttons verified successfully
-13:50:45.861 [main] INFO  pages.HomePage - Verifying footer elements
-13:50:46.038 [main] INFO  pages.HomePage - Footer elements verified successfully
-13:50:46.039 [main] INFO  tests.HomePageTest - Test completed successfully: Verify all products and footer elements
-13:50:46.039 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:47.164 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:47.164 [main] INFO  utils.TestListener - Test passed: Verify all products and footer elements on home page
+  <testcase name="testAllProductsAndFooterElements" classname="tests.HomePageTest" time="4.099">
+    <system-out><![CDATA[10:59:43.603 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:43.603 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:43.603 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:43.603 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:43.604 [main] INFO  tests.HomePageTest - Starting test: Verify all products and footer elements
+10:59:43.604 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:43.604 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:44.207 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:46.087 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:46.087 [main] INFO  pages.HomePage - Verifying product details for: Samsung galaxy s7 with price: $800
+10:59:47.138 [main] INFO  pages.HomePage - Product details verified successfully for: Samsung galaxy s7
+10:59:47.138 [main] INFO  pages.HomePage - Verifying product details for: Iphone 6 32gb with price: $790
+10:59:47.237 [main] INFO  pages.HomePage - Product details verified successfully for: Iphone 6 32gb
+10:59:47.237 [main] INFO  pages.HomePage - Verifying product details for: Sony xperia z5 with price: $320
+10:59:47.324 [main] INFO  pages.HomePage - Product details verified successfully for: Sony xperia z5
+10:59:47.324 [main] INFO  pages.HomePage - Verifying product navigation buttons
+10:59:47.395 [main] INFO  pages.HomePage - Product navigation buttons verified successfully
+10:59:47.395 [main] INFO  pages.HomePage - Verifying footer elements
+10:59:47.573 [main] INFO  pages.HomePage - Footer elements verified successfully
+10:59:47.573 [main] INFO  tests.HomePageTest - Test completed successfully: Verify all products and footer elements
+10:59:47.573 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:47.700 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:47.700 [main] INFO  utils.TestListener - Test passed: Verify all products and footer elements on home page
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testNokiaLumiaProductDetails" classname="tests.HomePageTest" time="12.085">
-    <system-out><![CDATA[13:50:47.168 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:47.169 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:47.169 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:47.169 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:47.169 [main] INFO  tests.HomePageTest - Starting test: Verify Nokia Lumia product details
-13:50:47.169 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:47.169 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:50:51.846 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:50:52.216 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:50:54.744 [main] INFO  pages.HomePage - Home page opened successfully
-13:50:54.744 [main] INFO  pages.HomePage - Verifying product details for: Nokia lumia 1520 with price: $820
-13:50:56.117 [main] INFO  pages.HomePage - Product details verified successfully for: Nokia lumia 1520
-13:50:56.117 [main] INFO  pages.HomePage - Clicking on first product: Nokia lumia 1520
-13:50:57.018 [main] INFO  pages.HomePage - Successfully clicked on first product: Nokia lumia 1520
-13:50:57.018 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
-13:50:57.698 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
-13:50:57.698 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nokia lumia 1520 with price: $820 *includes tax
-13:50:57.834 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nokia lumia 1520
-13:50:57.835 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:50:58.033 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:50:58.034 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Nokia Lumia product details
-13:50:58.034 [main] INFO  base.BaseTest - Cleaning up test resources
-13:50:59.252 [main] INFO  base.BaseTest - Test cleanup completed
-13:50:59.252 [main] INFO  utils.TestListener - Test passed: Verify Nokia Lumia product details
+  <testcase name="testNokiaLumiaProductDetails" classname="tests.HomePageTest" time="8.663">
+    <system-out><![CDATA[10:59:47.705 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:47.705 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:47.706 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:47.706 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:47.706 [main] INFO  tests.HomePageTest - Starting test: Verify Nokia Lumia product details
+10:59:47.706 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:47.706 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:48.329 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:50.212 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:50.212 [main] INFO  pages.HomePage - Verifying product details for: Nokia lumia 1520 with price: $820
+10:59:50.264 [main] INFO  pages.HomePage - Product details verified successfully for: Nokia lumia 1520
+10:59:50.264 [main] INFO  pages.HomePage - Clicking on first product: Nokia lumia 1520
+10:59:54.776 [main] INFO  pages.HomePage - Successfully clicked on first product: Nokia lumia 1520
+10:59:54.776 [main] INFO  pages.ProductDetailsPage - Verifying product image is visible
+10:59:55.515 [main] INFO  pages.ProductDetailsPage - Product image verified successfully
+10:59:55.515 [main] INFO  pages.ProductDetailsPage - Verifying product details for: Nokia lumia 1520 with price: $820 *includes tax
+10:59:55.615 [main] INFO  pages.ProductDetailsPage - Product details verified successfully for: Nokia lumia 1520
+10:59:55.615 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+10:59:56.083 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+10:59:56.083 [main] INFO  tests.HomePageTest - Test completed successfully: Verify Nokia Lumia product details
+10:59:56.083 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:56.368 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:56.368 [main] INFO  utils.TestListener - Test passed: Verify Nokia Lumia product details
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testHomePageBasicElements" classname="tests.HomePageTest" time="8.616">
-    <system-out><![CDATA[13:50:59.259 [main] INFO  base.BaseTest - Setting up base test configuration
-13:50:59.259 [main] INFO  base.BaseTest - Base test configuration completed
-13:50:59.259 [main] INFO  tests.HomePageTest - Setting up test instances
-13:50:59.259 [main] INFO  tests.HomePageTest - Test setup completed
-13:50:59.260 [main] INFO  tests.HomePageTest - Starting test: Verify home page basic elements
-13:50:59.260 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:50:59.260 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:51:02.750 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:51:03.085 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:51:06.362 [main] INFO  pages.HomePage - Home page opened successfully
-13:51:06.364 [main] INFO  pages.HomePage - Verifying navigation elements are visible
-13:51:06.760 [main] INFO  pages.HomePage - All navigation elements verified successfully
-13:51:06.760 [main] INFO  pages.HomePage - Verifying carousel elements are visible
-13:51:06.796 [main] INFO  pages.HomePage - Carousel elements verified successfully
-13:51:06.797 [main] INFO  tests.HomePageTest - Test completed successfully: Verify home page basic elements
-13:51:06.797 [main] INFO  base.BaseTest - Cleaning up test resources
-13:51:07.874 [main] INFO  base.BaseTest - Test cleanup completed
-13:51:07.875 [main] INFO  utils.TestListener - Test passed: Verify home page basic elements are visible
+  <testcase name="testHomePageBasicElements" classname="tests.HomePageTest" time="3.406">
+    <system-out><![CDATA[10:59:56.375 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:56.375 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:56.375 [main] INFO  tests.HomePageTest - Setting up test instances
+10:59:56.376 [main] INFO  tests.HomePageTest - Test setup completed
+10:59:56.379 [main] INFO  tests.HomePageTest - Starting test: Verify home page basic elements
+10:59:56.381 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:56.381 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:56.969 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:59.016 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:59.016 [main] INFO  pages.HomePage - Verifying navigation elements are visible
+10:59:59.587 [main] INFO  pages.HomePage - All navigation elements verified successfully
+10:59:59.587 [main] INFO  pages.HomePage - Verifying carousel elements are visible
+10:59:59.653 [main] INFO  pages.HomePage - Carousel elements verified successfully
+10:59:59.653 [main] INFO  tests.HomePageTest - Test completed successfully: Verify home page basic elements
+10:59:59.654 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:59.780 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:59.780 [main] INFO  utils.TestListener - Test passed: Verify home page basic elements are visible
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
 </testsuite>

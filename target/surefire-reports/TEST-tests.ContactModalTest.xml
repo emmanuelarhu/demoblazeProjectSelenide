@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.ContactModalTest" time="41.483" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.ContactModalTest" time="23.538" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,8 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/openjdk-21/lib"/>
-    <property name="selenide.browser" value="firefox"/>
-    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar /app/target/surefire 2025-09-26T13-47-56_725-jvmRun1 surefire-20250926134801173_1tmp surefire_0-20250926134801173_2tmp"/>
+    <property name="selenide.browser" value="chrome"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar /app/target/surefire 2025-09-29T10-57-59_800-jvmRun1 surefire-20250929105803682_1tmp surefire_0-20250929105803682_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/root/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/root/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/root/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/root/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/root/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/root/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/root/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/root/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/root/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/root/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/root/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/root/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
     <property name="allure.results.directory" value="/app/target/allure-results"/>
@@ -27,9 +27,10 @@
     <property name="basedir" value="/app"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="chromeoptions.args" value="--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-extensions,--user-data-dir=/tmp/chrome-user-data-1759143557855,--remote-debugging-port=9222"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-2513"/>
     <property name="user.name" value="root"/>
@@ -56,106 +57,114 @@
     <property name="selenide.headless" value="true"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSendInvalidContactData" classname="tests.ContactModalTest" time="11.133">
-    <system-out><![CDATA[13:49:14.318 [main] INFO  base.BaseTest - Setting up base test configuration
-13:49:14.318 [main] INFO  base.BaseTest - Base test configuration completed
-13:49:14.318 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
-13:49:14.319 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
-13:49:14.320 [main] INFO  tests.ContactModalTest - Starting test: Send invalid contact data
-13:49:14.320 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:49:14.320 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:49:17.650 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:49:17.946 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:49:20.738 [main] INFO  pages.HomePage - Home page opened successfully
-13:49:21.175 [main] INFO  pages.ContactModal - Verifying contact modal is visible
-13:49:21.274 [main] INFO  pages.ContactModal - Contact form fields verified successfully
-13:49:21.275 [main] INFO  pages.ContactModal - Filling complete contact form for: 1234567890- (1234567890-)
-13:49:21.275 [main] INFO  pages.ContactModal - Filling contact email field with: 1234567890-
-13:49:21.473 [main] INFO  pages.ContactModal - Filling contact name field with: 1234567890-
-13:49:21.609 [main] INFO  pages.ContactModal - Filling message field
-13:49:21.677 [main] INFO  pages.ContactModal - Contact form filled successfully for: 1234567890-
-13:49:21.677 [main] INFO  pages.ContactModal - Clicking 'Send message' button
-13:49:22.056 [main] INFO  pages.ContactModal - Send message button clicked successfully
-13:49:23.068 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
-13:49:23.091 [main] INFO  pages.HomePage - Verifying categories section
-13:49:24.305 [main] INFO  pages.HomePage - Categories section verified successfully
-13:49:24.305 [main] INFO  tests.ContactModalTest - Test completed successfully: Send invalid contact data
-13:49:24.305 [main] INFO  base.BaseTest - Cleaning up test resources
-13:49:25.449 [main] INFO  base.BaseTest - Test cleanup completed
-13:49:25.450 [main] INFO  utils.TestListener - Test passed: Test sending invalid contact data
+  <testcase name="testSendInvalidContactData" classname="tests.ContactModalTest" time="6.346">
+    <system-out><![CDATA[10:59:02.006 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:02.006 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:02.007 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
+10:59:02.008 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
+10:59:02.008 [main] INFO  tests.ContactModalTest - Starting test: Send invalid contact data
+10:59:02.008 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:02.009 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:02.580 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:04.775 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:05.212 [main] INFO  pages.ContactModal - Verifying contact modal is visible
+10:59:05.669 [main] INFO  pages.ContactModal - Contact form fields verified successfully
+10:59:05.669 [main] INFO  pages.ContactModal - Filling complete contact form for: 1234567890- (1234567890-)
+10:59:05.670 [main] INFO  pages.ContactModal - Filling contact email field with: 1234567890-
+10:59:05.879 [main] INFO  pages.ContactModal - Filling contact name field with: 1234567890-
+10:59:06.039 [main] INFO  pages.ContactModal - Filling message field
+10:59:06.348 [main] INFO  pages.ContactModal - Contact form filled successfully for: 1234567890-
+10:59:06.349 [main] INFO  pages.ContactModal - Clicking 'Send message' button
+10:59:06.530 [main] INFO  pages.ContactModal - Send message button clicked successfully
+10:59:07.551 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
+10:59:07.566 [main] INFO  pages.HomePage - Verifying categories section
+10:59:08.205 [main] INFO  pages.HomePage - Categories section verified successfully
+10:59:08.205 [main] INFO  tests.ContactModalTest - Test completed successfully: Send invalid contact data
+10:59:08.205 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:08.350 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:08.350 [main] INFO  utils.TestListener - Test passed: Test sending invalid contact data
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testSendEmptyContactData" classname="tests.ContactModalTest" time="10.672">
-    <system-out><![CDATA[13:49:25.463 [main] INFO  base.BaseTest - Setting up base test configuration
-13:49:25.463 [main] INFO  base.BaseTest - Base test configuration completed
-13:49:25.463 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
-13:49:25.463 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
-13:49:25.464 [main] INFO  tests.ContactModalTest - Starting test: Send empty contact data
-13:49:25.464 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:49:25.464 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:49:29.833 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:49:30.137 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:49:32.774 [main] INFO  pages.HomePage - Home page opened successfully
-13:49:33.326 [main] INFO  pages.ContactModal - Verifying contact modal is visible
-13:49:33.396 [main] INFO  pages.ContactModal - Contact form fields verified successfully
-13:49:33.396 [main] INFO  pages.ContactModal - Clicking 'Send message' button
-13:49:33.595 [main] INFO  pages.ContactModal - Send message button clicked successfully
-13:49:34.660 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
-13:49:34.722 [main] INFO  tests.ContactModalTest - Test completed successfully: Send empty contact data
-13:49:34.723 [main] INFO  base.BaseTest - Cleaning up test resources
-13:49:36.133 [main] INFO  base.BaseTest - Test cleanup completed
-13:49:36.134 [main] INFO  utils.TestListener - Test passed: Test sending empty contact data
+  <testcase name="testSendEmptyContactData" classname="tests.ContactModalTest" time="4.497">
+    <system-out><![CDATA[10:59:08.360 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:08.360 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:08.360 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
+10:59:08.361 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
+10:59:08.361 [main] INFO  tests.ContactModalTest - Starting test: Send empty contact data
+10:59:08.361 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:08.363 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:08.925 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:10.935 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:11.078 [main] INFO  pages.ContactModal - Verifying contact modal is visible
+10:59:11.543 [main] INFO  pages.ContactModal - Contact form fields verified successfully
+10:59:11.543 [main] INFO  pages.ContactModal - Clicking 'Send message' button
+10:59:11.698 [main] INFO  pages.ContactModal - Send message button clicked successfully
+10:59:12.719 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
+10:59:12.736 [main] INFO  tests.ContactModalTest - Test completed successfully: Send empty contact data
+10:59:12.737 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:12.855 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:12.855 [main] INFO  utils.TestListener - Test passed: Test sending empty contact data
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:08 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testSendValidContactData" classname="tests.ContactModalTest" time="10.337">
-    <system-out><![CDATA[13:49:36.140 [main] INFO  base.BaseTest - Setting up base test configuration
-13:49:36.140 [main] INFO  base.BaseTest - Base test configuration completed
-13:49:36.140 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
-13:49:36.141 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
-13:49:36.141 [main] INFO  tests.ContactModalTest - Starting test: Send valid contact data
-13:49:36.141 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:49:36.141 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:49:40.475 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:49:40.762 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:49:43.343 [main] INFO  pages.HomePage - Home page opened successfully
-13:49:43.777 [main] INFO  pages.ContactModal - Verifying contact modal is visible
-13:49:43.844 [main] INFO  pages.ContactModal - Contact form fields verified successfully
-13:49:43.845 [main] INFO  pages.ContactModal - Filling complete contact form for: Emmanuel Arhu (emmanuel@example.com)
-13:49:43.845 [main] INFO  pages.ContactModal - Filling contact email field with: emmanuel@example.com
-13:49:43.987 [main] INFO  pages.ContactModal - Filling contact name field with: Emmanuel Arhu
-13:49:44.053 [main] INFO  pages.ContactModal - Filling message field
-13:49:44.127 [main] INFO  pages.ContactModal - Contact form filled successfully for: Emmanuel Arhu
-13:49:44.127 [main] INFO  pages.ContactModal - Clicking 'Send message' button
-13:49:44.330 [main] INFO  pages.ContactModal - Send message button clicked successfully
-13:49:45.341 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
-13:49:45.367 [main] INFO  tests.ContactModalTest - Test completed successfully: Send valid contact data
-13:49:45.368 [main] INFO  base.BaseTest - Cleaning up test resources
-13:49:46.475 [main] INFO  base.BaseTest - Test cleanup completed
-13:49:46.476 [main] INFO  utils.TestListener - Test passed: Test sending valid contact data
+  <testcase name="testSendValidContactData" classname="tests.ContactModalTest" time="4.988">
+    <system-out><![CDATA[10:59:12.859 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:12.859 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:12.859 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
+10:59:12.859 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
+10:59:12.860 [main] INFO  tests.ContactModalTest - Starting test: Send valid contact data
+10:59:12.860 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:12.860 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:13.348 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:15.332 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:15.472 [main] INFO  pages.ContactModal - Verifying contact modal is visible
+10:59:15.924 [main] INFO  pages.ContactModal - Contact form fields verified successfully
+10:59:15.924 [main] INFO  pages.ContactModal - Filling complete contact form for: Emmanuel Arhu (emmanuel@example.com)
+10:59:15.924 [main] INFO  pages.ContactModal - Filling contact email field with: emmanuel@example.com
+10:59:16.121 [main] INFO  pages.ContactModal - Filling contact name field with: Emmanuel Arhu
+10:59:16.306 [main] INFO  pages.ContactModal - Filling message field
+10:59:16.491 [main] INFO  pages.ContactModal - Contact form filled successfully for: Emmanuel Arhu
+10:59:16.491 [main] INFO  pages.ContactModal - Clicking 'Send message' button
+10:59:16.678 [main] INFO  pages.ContactModal - Send message button clicked successfully
+10:59:17.702 [main] INFO  tests.ContactModalTest - Alert message: Thanks for the message!!
+10:59:17.720 [main] INFO  tests.ContactModalTest - Test completed successfully: Send valid contact data
+10:59:17.720 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:17.847 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:17.847 [main] INFO  utils.TestListener - Test passed: Test sending valid contact data
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:13 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testContactModalClose" classname="tests.ContactModalTest" time="9.309">
-    <system-out><![CDATA[13:49:46.483 [main] INFO  base.BaseTest - Setting up base test configuration
-13:49:46.483 [main] INFO  base.BaseTest - Base test configuration completed
-13:49:46.484 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
-13:49:46.484 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
-13:49:46.485 [main] INFO  tests.ContactModalTest - Starting test: Contact modal close functionality
-13:49:46.485 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:49:46.485 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:49:49.709 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:49:50.010 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:49:52.723 [main] INFO  pages.HomePage - Home page opened successfully
-13:49:52.723 [main] INFO  tests.ContactModalTest - Clicking Contact link to open modal
-13:49:54.126 [main] INFO  pages.ContactModal - Verifying contact modal is visible
-13:49:54.242 [main] INFO  pages.ContactModal - Contact form fields verified successfully
-13:49:54.242 [main] INFO  pages.ContactModal - Filling contact email field with: test@example.com
-13:49:54.345 [main] INFO  pages.ContactModal - Filling contact name field with: Test User
-13:49:54.466 [main] INFO  pages.ContactModal - Clicking 'Close' button to close contact modal
-13:49:54.743 [main] INFO  pages.ContactModal - Contact modal closed successfully
-13:49:54.743 [main] INFO  tests.ContactModalTest - Test completed successfully: Contact modal close functionality
-13:49:54.743 [main] INFO  base.BaseTest - Cleaning up test resources
-13:49:55.791 [main] INFO  base.BaseTest - Test cleanup completed
-13:49:55.791 [main] INFO  utils.TestListener - Test passed: Test contact modal close functionality
+  <testcase name="testContactModalClose" classname="tests.ContactModalTest" time="7.682">
+    <system-out><![CDATA[10:59:17.854 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:17.855 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:17.855 [main] INFO  tests.ContactModalTest - Setting up contact modal test instances
+10:59:17.855 [main] INFO  tests.ContactModalTest - Contact modal test setup completed
+10:59:17.855 [main] INFO  tests.ContactModalTest - Starting test: Contact modal close functionality
+10:59:17.855 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:17.856 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+10:59:18.333 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+10:59:23.190 [main] INFO  pages.HomePage - Home page opened successfully
+10:59:23.190 [main] INFO  tests.ContactModalTest - Clicking Contact link to open modal
+10:59:24.358 [main] INFO  pages.ContactModal - Verifying contact modal is visible
+10:59:24.749 [main] INFO  pages.ContactModal - Contact form fields verified successfully
+10:59:24.749 [main] INFO  pages.ContactModal - Filling contact email field with: test@example.com
+10:59:25.100 [main] INFO  pages.ContactModal - Filling contact name field with: Test User
+10:59:25.280 [main] INFO  pages.ContactModal - Clicking 'Close' button to close contact modal
+10:59:25.405 [main] INFO  pages.ContactModal - Contact modal closed successfully
+10:59:25.405 [main] INFO  tests.ContactModalTest - Test completed successfully: Contact modal close functionality
+10:59:25.406 [main] INFO  base.BaseTest - Cleaning up test resources
+10:59:25.535 [main] INFO  base.BaseTest - Test cleanup completed
+10:59:25.535 [main] INFO  utils.TestListener - Test passed: Test contact modal close functionality
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 10:59:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
 </testsuite>

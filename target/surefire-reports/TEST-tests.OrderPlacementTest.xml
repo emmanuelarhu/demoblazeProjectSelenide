@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.OrderPlacementTest" time="52.174" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.OrderPlacementTest" time="31.677" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,8 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/openjdk-21/lib"/>
-    <property name="selenide.browser" value="firefox"/>
-    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar /app/target/surefire 2025-09-26T13-47-56_725-jvmRun1 surefire-20250926134801173_1tmp surefire_0-20250926134801173_2tmp"/>
+    <property name="selenide.browser" value="chrome"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar /app/target/surefire 2025-09-29T10-57-59_800-jvmRun1 surefire-20250929105803682_1tmp surefire_0-20250929105803682_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/codeborne/selenide/7.10.0/selenide-7.10.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-java/4.35.0/selenium-java-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-api/4.35.0/selenium-api-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.35.0/selenium-chrome-driver-4.35.0.jar:/root/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.35.0/selenium-chromium-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-json/4.35.0/selenium-json-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.35.0/selenium-manager-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.35.0/selenium-devtools-v137-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.35.0/selenium-devtools-v138-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.35.0/selenium-devtools-v139-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.35.0/selenium-edge-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.35.0/selenium-firefox-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-http/4.35.0/selenium-http-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.35.0/selenium-ie-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.35.0/selenium-remote-driver-4.35.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-api/1.53.0/opentelemetry-api-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-context/1.53.0/opentelemetry-context-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-common/1.53.0/opentelemetry-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.53.0/opentelemetry-exporter-logging-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.53.0/opentelemetry-sdk-common-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.53.0/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.53.0/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.53.0/opentelemetry-sdk-trace-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.53.0/opentelemetry-sdk-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.53.0/opentelemetry-sdk-metrics-1.53.0.jar:/root/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.53.0/opentelemetry-sdk-logs-1.53.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-os/4.35.0/selenium-os-4.35.0.jar:/root/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.35.0/selenium-safari-driver-4.35.0.jar:/root/.m2/repository/org/seleniumhq/selenium/selenium-support/4.35.0/selenium-support-4.35.0.jar:/root/.m2/repository/com/codeborne/selenide-core/7.10.0/selenide-core-7.10.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/root/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/root/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/root/.m2/repository/com/github/valfirst/browserup-proxy/browserup-proxy-core/3.2.0/browserup-proxy-core-3.2.0.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/root/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/root/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/root/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit5/2.30.0/allure-junit5-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-junit-platform/2.30.0/allure-junit-platform-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-test-filter/2.30.0/allure-test-filter-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-selenide/2.30.0/allure-selenide-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-java-commons/2.30.0/allure-java-commons-2.30.0.jar:/root/.m2/repository/io/qameta/allure/allure-model/2.30.0/allure-model-2.30.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/root/.m2/repository/io/cucumber/cucumber-java/7.14.1/cucumber-java-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-core/7.14.1/cucumber-core-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin/7.14.1/cucumber-gherkin-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.1/cucumber-gherkin-messages-7.14.1.jar:/root/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/root/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/root/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/root/.m2/repository/io/cucumber/datatable/7.14.1/datatable-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-plugin/7.14.1/cucumber-plugin-7.14.1.jar:/root/.m2/repository/io/cucumber/docstring/7.14.1/docstring-7.14.1.jar:/root/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/root/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/root/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/root/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.1/cucumber-junit-platform-engine-7.14.1.jar:/root/.m2/repository/io/cucumber/cucumber-junit/7.14.1/cucumber-junit-7.14.1.jar:/root/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.30.0/allure-cucumber7-jvm-2.30.0.jar:"/>
     <property name="allure.results.directory" value="/app/target/allure-results"/>
@@ -27,9 +27,10 @@
     <property name="basedir" value="/app"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="chromeoptions.args" value="--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--disable-extensions,--user-data-dir=/tmp/chrome-user-data-1759143621597,--remote-debugging-port=9222"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250926134801173_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250929105803682_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-2513"/>
     <property name="user.name" value="root"/>
@@ -56,144 +57,150 @@
     <property name="selenide.headless" value="true"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testOrderPlacementWithValidData" classname="tests.OrderPlacementTest" time="19.656">
-    <system-out><![CDATA[13:51:07.888 [main] INFO  base.BaseTest - Setting up base test configuration
-13:51:07.888 [main] INFO  base.BaseTest - Base test configuration completed
-13:51:07.889 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
-13:51:07.889 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
-13:51:07.890 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement with valid data
-13:51:07.890 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
-13:51:07.890 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:51:07.890 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:51:10.850 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:51:11.146 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:51:15.045 [main] INFO  pages.HomePage - Home page opened successfully
-13:51:15.045 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
-13:51:17.755 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
-13:51:17.755 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:51:19.001 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:51:20.010 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
-13:51:20.044 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:51:20.243 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:51:20.243 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
-13:51:20.243 [main] INFO  pages.HomePage - Navigating to cart page
-13:51:21.103 [main] INFO  pages.HomePage - Successfully navigated to cart page
-13:51:22.217 [main] INFO  pages.CartPage - Verifying cart page headers and elements
-13:51:22.348 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
-13:51:22.349 [main] INFO  pages.CartPage - Clicking 'Place Order' button
-13:51:22.603 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
-13:51:22.603 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
-13:51:23.042 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
-13:51:23.042 [main] INFO  pages.OrderPlacementPage - Filling complete order details for customer: Emmanuel Arhu
-13:51:23.042 [main] INFO  pages.OrderPlacementPage - Filling name field with: Emmanuel Arhu
-13:51:23.152 [main] INFO  pages.OrderPlacementPage - Filling country field with: Ghana
-13:51:23.206 [main] INFO  pages.OrderPlacementPage - Filling city field with: Takoradi
-13:51:23.257 [main] INFO  pages.OrderPlacementPage - Filling credit card field
-13:51:23.310 [main] INFO  pages.OrderPlacementPage - Filling month field with: 12
-13:51:23.365 [main] INFO  pages.OrderPlacementPage - Filling year field with: 2030
-13:51:23.462 [main] INFO  pages.OrderPlacementPage - Order details filled successfully for customer: Emmanuel Arhu
-13:51:23.463 [main] INFO  pages.OrderPlacementPage - Clicking 'Purchase' button to complete order
-13:51:23.784 [main] INFO  pages.OrderPlacementPage - Purchase button clicked successfully
-13:51:24.074 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
-13:51:24.213 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
-13:51:24.214 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
-13:51:24.450 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
-13:51:24.450 [main] INFO  pages.CartPage - Navigating back to home page from cart
-13:51:25.559 [main] INFO  pages.CartPage - Successfully navigated to home page from cart
-13:51:25.559 [main] INFO  pages.HomePage - Verifying categories section
-13:51:26.284 [main] INFO  pages.HomePage - Categories section verified successfully
-13:51:26.284 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement with valid data
-13:51:26.284 [main] INFO  base.BaseTest - Cleaning up test resources
-13:51:27.543 [main] INFO  base.BaseTest - Test cleanup completed
-13:51:27.543 [main] INFO  utils.TestListener - Test passed: Test order placement with valid data
+  <testcase name="testOrderPlacementWithValidData" classname="tests.OrderPlacementTest" time="13.206">
+    <system-out><![CDATA[10:59:59.795 [main] INFO  base.BaseTest - Setting up base test configuration
+10:59:59.795 [main] INFO  base.BaseTest - Base test configuration completed
+10:59:59.795 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
+10:59:59.796 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
+10:59:59.796 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement with valid data
+10:59:59.797 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
+10:59:59.797 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+10:59:59.797 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:00:00.332 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+11:00:02.684 [main] INFO  pages.HomePage - Home page opened successfully
+11:00:02.685 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
+11:00:04.504 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
+11:00:04.505 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+11:00:05.535 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+11:00:06.562 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
+11:00:06.582 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+11:00:06.808 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+11:00:06.808 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
+11:00:06.808 [main] INFO  pages.HomePage - Navigating to cart page
+11:00:07.586 [main] INFO  pages.HomePage - Successfully navigated to cart page
+11:00:08.740 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+11:00:08.926 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+11:00:08.926 [main] INFO  pages.CartPage - Clicking 'Place Order' button
+11:00:09.071 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
+11:00:09.071 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
+11:00:09.614 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
+11:00:09.614 [main] INFO  pages.OrderPlacementPage - Filling complete order details for customer: Emmanuel Arhu
+11:00:09.614 [main] INFO  pages.OrderPlacementPage - Filling name field with: Emmanuel Arhu
+11:00:09.812 [main] INFO  pages.OrderPlacementPage - Filling country field with: Ghana
+11:00:09.976 [main] INFO  pages.OrderPlacementPage - Filling city field with: Takoradi
+11:00:10.138 [main] INFO  pages.OrderPlacementPage - Filling credit card field
+11:00:10.293 [main] INFO  pages.OrderPlacementPage - Filling month field with: 12
+11:00:10.429 [main] INFO  pages.OrderPlacementPage - Filling year field with: 2030
+11:00:10.559 [main] INFO  pages.OrderPlacementPage - Order details filled successfully for customer: Emmanuel Arhu
+11:00:10.559 [main] INFO  pages.OrderPlacementPage - Clicking 'Purchase' button to complete order
+11:00:10.687 [main] INFO  pages.OrderPlacementPage - Purchase button clicked successfully
+11:00:10.885 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
+11:00:11.051 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
+11:00:11.051 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
+11:00:11.164 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
+11:00:11.164 [main] INFO  pages.CartPage - Navigating back to home page from cart
+11:00:12.464 [main] INFO  pages.CartPage - Successfully navigated to home page from cart
+11:00:12.464 [main] INFO  pages.HomePage - Verifying categories section
+11:00:12.819 [main] INFO  pages.HomePage - Categories section verified successfully
+11:00:12.819 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement with valid data
+11:00:12.820 [main] INFO  base.BaseTest - Cleaning up test resources
+11:00:13.000 [main] INFO  base.BaseTest - Test cleanup completed
+11:00:13.000 [main] INFO  utils.TestListener - Test passed: Test order placement with valid data
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 11:00:00 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testOrderPlacementFormClose" classname="tests.OrderPlacementTest" time="14.535">
-    <system-out><![CDATA[13:51:27.550 [main] INFO  base.BaseTest - Setting up base test configuration
-13:51:27.550 [main] INFO  base.BaseTest - Base test configuration completed
-13:51:27.550 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
-13:51:27.551 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
-13:51:27.551 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement form close
-13:51:27.551 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
-13:51:27.551 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:51:27.551 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:51:30.983 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:51:31.295 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:51:33.846 [main] INFO  pages.HomePage - Home page opened successfully
-13:51:33.846 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
-13:51:35.837 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
-13:51:35.838 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:51:37.341 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:51:38.351 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
-13:51:38.380 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:51:38.863 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:51:38.863 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
-13:51:38.863 [main] INFO  pages.HomePage - Navigating to cart page
-13:51:39.679 [main] INFO  pages.HomePage - Successfully navigated to cart page
-13:51:39.679 [main] INFO  pages.CartPage - Clicking 'Place Order' button
-13:51:40.030 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
-13:51:40.031 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
-13:51:40.212 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
-13:51:40.212 [main] INFO  pages.OrderPlacementPage - Filling name field with: Test User
-13:51:40.415 [main] INFO  pages.OrderPlacementPage - Filling country field with: Test Country
-13:51:40.498 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
-13:51:40.747 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
-13:51:40.748 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement form close
-13:51:40.748 [main] INFO  base.BaseTest - Cleaning up test resources
-13:51:42.085 [main] INFO  base.BaseTest - Test cleanup completed
-13:51:42.085 [main] INFO  utils.TestListener - Test passed: Test order placement form close
+  <testcase name="testOrderPlacementFormClose" classname="tests.OrderPlacementTest" time="8.587">
+    <system-out><![CDATA[11:00:13.006 [main] INFO  base.BaseTest - Setting up base test configuration
+11:00:13.006 [main] INFO  base.BaseTest - Base test configuration completed
+11:00:13.006 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
+11:00:13.007 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
+11:00:13.007 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement form close
+11:00:13.007 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
+11:00:13.007 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+11:00:13.008 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:00:13.569 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+11:00:15.437 [main] INFO  pages.HomePage - Home page opened successfully
+11:00:15.437 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
+11:00:17.186 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
+11:00:17.186 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+11:00:18.194 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+11:00:19.222 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
+11:00:19.241 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+11:00:19.434 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+11:00:19.434 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
+11:00:19.434 [main] INFO  pages.HomePage - Navigating to cart page
+11:00:20.286 [main] INFO  pages.HomePage - Successfully navigated to cart page
+11:00:20.286 [main] INFO  pages.CartPage - Clicking 'Place Order' button
+11:00:20.458 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
+11:00:20.458 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
+11:00:20.988 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
+11:00:20.988 [main] INFO  pages.OrderPlacementPage - Filling name field with: Test User
+11:00:21.170 [main] INFO  pages.OrderPlacementPage - Filling country field with: Test Country
+11:00:21.335 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
+11:00:21.463 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
+11:00:21.463 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement form close
+11:00:21.464 [main] INFO  base.BaseTest - Cleaning up test resources
+11:00:21.591 [main] INFO  base.BaseTest - Test cleanup completed
+11:00:21.592 [main] INFO  utils.TestListener - Test passed: Test order placement form close
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 11:00:13 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
-  <testcase name="testOrderPlacementWithInvalidData" classname="tests.OrderPlacementTest" time="17.964">
-    <system-out><![CDATA[13:51:42.091 [main] INFO  base.BaseTest - Setting up base test configuration
-13:51:42.092 [main] INFO  base.BaseTest - Base test configuration completed
-13:51:42.092 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
-13:51:42.092 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
-13:51:42.092 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement with invalid data
-13:51:42.092 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
-13:51:42.092 [main] INFO  pages.HomePage - Opening DemoBlaze home page
-13:51:42.092 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-13:51:45.811 [main] INFO  c.c.s.webdriver.BrowserResizer - Set browser size to 1920x1080
-13:51:46.145 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / firefox 140.3.0 linux
-13:51:48.940 [main] INFO  pages.HomePage - Home page opened successfully
-13:51:48.940 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
-13:51:51.391 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
-13:51:51.392 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
-13:51:52.407 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
-13:51:53.417 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
-13:51:53.451 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
-13:51:53.978 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
-13:51:53.978 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
-13:51:53.978 [main] INFO  pages.HomePage - Navigating to cart page
-13:51:54.758 [main] INFO  pages.HomePage - Successfully navigated to cart page
-13:51:54.758 [main] INFO  pages.CartPage - Verifying cart page headers and elements
-13:51:54.990 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
-13:51:54.990 [main] INFO  pages.CartPage - Clicking 'Place Order' button
-13:51:55.292 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
-13:51:55.293 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
-13:51:55.497 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
-13:51:55.497 [main] INFO  pages.OrderPlacementPage - Filling complete order details for customer: 1234567890-
-13:51:55.497 [main] INFO  pages.OrderPlacementPage - Filling name field with: 1234567890-
-13:51:55.664 [main] INFO  pages.OrderPlacementPage - Filling country field with: 1234567890-
-13:51:55.735 [main] INFO  pages.OrderPlacementPage - Filling city field with: 1234567890-
-13:51:55.877 [main] INFO  pages.OrderPlacementPage - Filling credit card field
-13:51:56.002 [main] INFO  pages.OrderPlacementPage - Filling month field with: 1234567890-
-13:51:56.088 [main] INFO  pages.OrderPlacementPage - Filling year field with: 1234567890-
-13:51:56.147 [main] INFO  pages.OrderPlacementPage - Order details filled successfully for customer: 1234567890-
-13:51:56.148 [main] INFO  pages.OrderPlacementPage - Clicking 'Purchase' button to complete order
-13:51:56.401 [main] INFO  pages.OrderPlacementPage - Purchase button clicked successfully
-13:51:56.661 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
-13:51:56.802 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
-13:51:56.802 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
-13:51:57.043 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
-13:51:57.043 [main] INFO  pages.CartPage - Navigating back to home page from cart
-13:51:58.140 [main] INFO  pages.CartPage - Successfully navigated to home page from cart
-13:51:58.140 [main] INFO  pages.HomePage - Verifying categories section
-13:51:58.868 [main] INFO  pages.HomePage - Categories section verified successfully
-13:51:58.868 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement with invalid data
-13:51:58.869 [main] INFO  base.BaseTest - Cleaning up test resources
-13:52:00.054 [main] INFO  base.BaseTest - Test cleanup completed
-13:52:00.054 [main] INFO  utils.TestListener - Test passed: Test order placement with invalid data
+  <testcase name="testOrderPlacementWithInvalidData" classname="tests.OrderPlacementTest" time="9.868">
+    <system-out><![CDATA[11:00:21.596 [main] INFO  base.BaseTest - Setting up base test configuration
+11:00:21.597 [main] INFO  base.BaseTest - Base test configuration completed
+11:00:21.597 [main] INFO  tests.OrderPlacementTest - Setting up order placement test instances
+11:00:21.597 [main] INFO  tests.OrderPlacementTest - Order placement test setup completed
+11:00:21.597 [main] INFO  tests.OrderPlacementTest - Starting test: Order placement with invalid data
+11:00:21.597 [main] INFO  tests.OrderPlacementTest - Adding product to cart for order test
+11:00:21.597 [main] INFO  pages.HomePage - Opening DemoBlaze home page
+11:00:21.597 [main] INFO  c.c.s.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+11:00:22.102 [main] INFO  c.c.s.webdriver.WebDriverFactory - Selenide 7.10.0 / Selenium 4.35.0 / chrome 140.0.7339.207 linux
+11:00:23.154 [main] INFO  pages.HomePage - Home page opened successfully
+11:00:23.155 [main] INFO  pages.HomePage - Clicking on first product: Samsung galaxy s6
+11:00:25.077 [main] INFO  pages.HomePage - Successfully clicked on first product: Samsung galaxy s6
+11:00:25.077 [main] INFO  pages.ProductDetailsPage - Clicking 'Add to cart' button
+11:00:25.930 [main] INFO  pages.ProductDetailsPage - Successfully clicked 'Add to cart' button
+11:00:26.954 [main] INFO  tests.OrderPlacementTest - Alert message: Product added
+11:00:26.972 [main] INFO  pages.ProductDetailsPage - Navigating back to home page
+11:00:27.174 [main] INFO  pages.ProductDetailsPage - Successfully navigated to home page
+11:00:27.174 [main] INFO  tests.OrderPlacementTest - Product added to cart successfully
+11:00:27.174 [main] INFO  pages.HomePage - Navigating to cart page
+11:00:27.986 [main] INFO  pages.HomePage - Successfully navigated to cart page
+11:00:27.986 [main] INFO  pages.CartPage - Verifying cart page headers and elements
+11:00:28.206 [main] INFO  pages.CartPage - Cart headers and elements verified successfully
+11:00:28.206 [main] INFO  pages.CartPage - Clicking 'Place Order' button
+11:00:28.340 [main] INFO  pages.CartPage - Successfully clicked 'Place Order' button
+11:00:28.340 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
+11:00:28.866 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
+11:00:28.866 [main] INFO  pages.OrderPlacementPage - Filling complete order details for customer: 1234567890-
+11:00:28.866 [main] INFO  pages.OrderPlacementPage - Filling name field with: 1234567890-
+11:00:29.015 [main] INFO  pages.OrderPlacementPage - Filling country field with: 1234567890-
+11:00:29.162 [main] INFO  pages.OrderPlacementPage - Filling city field with: 1234567890-
+11:00:29.325 [main] INFO  pages.OrderPlacementPage - Filling credit card field
+11:00:29.492 [main] INFO  pages.OrderPlacementPage - Filling month field with: 1234567890-
+11:00:29.681 [main] INFO  pages.OrderPlacementPage - Filling year field with: 1234567890-
+11:00:29.855 [main] INFO  pages.OrderPlacementPage - Order details filled successfully for customer: 1234567890-
+11:00:29.855 [main] INFO  pages.OrderPlacementPage - Clicking 'Purchase' button to complete order
+11:00:30.007 [main] INFO  pages.OrderPlacementPage - Purchase button clicked successfully
+11:00:30.237 [main] INFO  pages.OrderPlacementPage - Verifying order placement form is visible
+11:00:30.444 [main] INFO  pages.OrderPlacementPage - Order placement form verified successfully
+11:00:30.445 [main] INFO  pages.OrderPlacementPage - Clicking 'Close' button to cancel order
+11:00:30.559 [main] INFO  pages.OrderPlacementPage - Close button clicked successfully
+11:00:30.559 [main] INFO  pages.CartPage - Navigating back to home page from cart
+11:00:31.004 [main] INFO  pages.CartPage - Successfully navigated to home page from cart
+11:00:31.005 [main] INFO  pages.HomePage - Verifying categories section
+11:00:31.287 [main] INFO  pages.HomePage - Categories section verified successfully
+11:00:31.287 [main] INFO  tests.OrderPlacementTest - Test completed successfully: Order placement with invalid data
+11:00:31.287 [main] INFO  base.BaseTest - Cleaning up test resources
+11:00:31.464 [main] INFO  base.BaseTest - Test cleanup completed
+11:00:31.464 [main] INFO  utils.TestListener - Test passed: Test order placement with invalid data
 ]]></system-out>
+    <system-err><![CDATA[Sep 29, 2025 11:00:22 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 139; Please update to a Selenium version that supports CDP version 140
+]]></system-err>
   </testcase>
 </testsuite>
