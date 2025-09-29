@@ -1,181 +1,287 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"  As a user visiting DemoBlaze e-commerce website
-  I want to navigate and interact with the home page
-  So that I can browse products and access different sections","10228","Verify individual product details","","Fri Sep 26 13:55:07 UTC 2025","passed","Fri Sep 26 13:55:17 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
-"","18903","Place order with multiple products","","Thu Sep 25 06:19:19 UTC 2025","failed","Thu Sep 25 06:19:37 UTC 2025","","","",""
-"","9041","Verify all products and footer elements on home page","","Fri Sep 26 13:50:38 UTC 2025","passed","Fri Sep 26 13:50:47 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testAllProductsAndFooterElements"
-"","10233","Verify individual product details #1","","Fri Sep 26 13:55:07 UTC 2025","passed","Fri Sep 26 13:55:17 UTC 2025","","","",""
-"","19953","Validate order form with different data combinations #4","","Thu Sep 25 06:18:32 UTC 2025","failed","Thu Sep 25 06:18:52 UTC 2025","","","",""
-"","11749","Validate order form with different data combinations #3","","Thu Sep 25 06:18:20 UTC 2025","failed","Thu Sep 25 06:18:32 UTC 2025","","","",""
-"","10672","Test sending empty contact data","","Fri Sep 26 13:49:25 UTC 2025","passed","Fri Sep 26 13:49:36 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendEmptyContactData"
-"","13900","Validate order form with different data combinations #2","","Fri Sep 26 13:56:43 UTC 2025","passed","Fri Sep 26 13:56:56 UTC 2025","","","",""
-"","3950","Attempt to place order with empty cart","","Thu Sep 25 06:19:49 UTC 2025","passed","Thu Sep 25 06:19:53 UTC 2025","","","",""
-"","8097","Validate order form fields","","Thu Sep 25 06:17:47 UTC 2025","passed","Thu Sep 25 06:17:55 UTC 2025","","","",""
-"  As a user visiting DemoBlaze e-commerce website
-  I want to navigate and interact with the home page
-  So that I can browse products and access different sections","6949","Verify footer elements","","Fri Sep 26 13:55:36 UTC 2025","passed","Fri Sep 26 13:55:43 UTC 2025","","DemoBlaze Home Page","Verify footer elements",""
-"","8193","Validate contact form fields #1","","Fri Sep 26 13:53:30 UTC 2025","passed","Fri Sep 26 13:53:38 UTC 2025","","","",""
-"","24709","Validate order form with different data combinations #4","","Fri Sep 26 13:57:23 UTC 2025","failed","Fri Sep 26 13:57:48 UTC 2025","","","",""
-"","25433","Test cart item deletion functionality","","Fri Sep 26 13:48:48 UTC 2025","passed","Fri Sep 26 13:49:14 UTC 2025","","tests.CartPageTest","tests.CartPageTest","testCartItemDeletion"
-"","8964","Validate contact form fields #3","","Fri Sep 26 13:53:46 UTC 2025","passed","Fri Sep 26 13:53:55 UTC 2025","","","",""
-"","2976","Reset contact form","","Thu Sep 25 06:17:05 UTC 2025","passed","Thu Sep 25 06:17:08 UTC 2025","","","",""
-"","9423","Verify individual product details #3","","Fri Sep 26 13:55:27 UTC 2025","passed","Fri Sep 26 13:55:36 UTC 2025","","","",""
-"  As a user visiting DemoBlaze e-commerce website
-  I want to navigate and interact with the home page
-  So that I can browse products and access different sections","9416","Verify individual product details","","Fri Sep 26 13:55:27 UTC 2025","passed","Fri Sep 26 13:55:36 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
-"","61136","Cancel order placement","","Fri Sep 26 16:32:36 UTC 2025","passed","Fri Sep 26 16:33:37 UTC 2025","","","",""
-"","17560","Place order successfully with valid details","","Fri Sep 26 13:55:50 UTC 2025","failed","Fri Sep 26 13:56:08 UTC 2025","","","",""
 "  As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","24703","Validate order form with different data combinations","","Fri Sep 26 13:57:23 UTC 2025","failed","Fri Sep 26 13:57:48 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
-"","2079","Verify product listings on home page","","Thu Sep 25 06:17:15 UTC 2025","passed","Thu Sep 25 06:17:17 UTC 2025","","","",""
+  So that I can complete my purchase and receive the products","1141","Attempt to place order with empty cart","","Mon Sep 29 11:04:01 UTC 2025","passed","Mon Sep 29 11:04:02 UTC 2025","","DemoBlaze Order Placement","Attempt to place order with empty cart",""
 "  As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","13088","Validate order form fields","","Fri Sep 26 13:56:08 UTC 2025","passed","Fri Sep 26 13:56:21 UTC 2025","","DemoBlaze Order Placement","Validate order form fields",""
-"","6799","Verify carousel functionality","","Fri Sep 26 13:55:43 UTC 2025","passed","Fri Sep 26 13:55:50 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to manage items in my shopping cart
-  So that I can review and purchase selected products","12869","Add product to cart successfully","","Fri Sep 26 13:52:00 UTC 2025","passed","Fri Sep 26 13:52:13 UTC 2025","","DemoBlaze Shopping Cart","Add product to cart successfully",""
-"  As a user visiting DemoBlaze e-commerce website
-  I want to navigate and interact with the home page
-  So that I can browse products and access different sections","6795","Verify carousel functionality","","Fri Sep 26 13:55:43 UTC 2025","passed","Fri Sep 26 13:55:50 UTC 2025","","DemoBlaze Home Page","Verify carousel functionality",""
-"","7970","Verify empty cart behavior","","Fri Sep 26 13:52:47 UTC 2025","passed","Fri Sep 26 13:52:55 UTC 2025","","","",""
+  So that I can complete my purchase and receive the products","16177","Place order with multiple products","","Mon Sep 29 11:03:37 UTC 2025","failed","Mon Sep 29 11:03:53 UTC 2025","","DemoBlaze Order Placement","Place order with multiple products",""
+"","9040","Verify cart maintains items across navigation","","Mon Sep 29 11:01:07 UTC 2025","failed","Mon Sep 29 11:01:16 UTC 2025","","","",""
+"","15530","Verify cart maintains items across navigation","","Thu Sep 25 04:46:23 UTC 2025","failed","Thu Sep 25 04:46:38 UTC 2025","","","",""
+"","5378","Verify empty cart behavior","","Thu Sep 25 04:46:17 UTC 2025","passed","Thu Sep 25 04:46:23 UTC 2025","","","",""
 "  As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","21725","Validate order form with different data combinations","","Fri Sep 26 13:56:21 UTC 2025","failed","Fri Sep 26 13:56:43 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
-"","17964","Test order placement with invalid data","","Fri Sep 26 13:51:42 UTC 2025","passed","Fri Sep 26 13:52:00 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementWithInvalidData"
-"","8716","Open and close contact modal","","Fri Sep 26 13:53:12 UTC 2025","passed","Fri Sep 26 13:53:21 UTC 2025","","","",""
-"","8880","Verify cart maintains items across navigation","","Thu Sep 25 06:16:37 UTC 2025","failed","Thu Sep 25 06:16:46 UTC 2025","","","",""
-"","12922","Add product to cart successfully","","Fri Sep 26 13:52:00 UTC 2025","passed","Fri Sep 26 13:52:13 UTC 2025","","","",""
-"","2218","Verify navigation bar elements are visible","","Thu Sep 25 06:17:12 UTC 2025","passed","Thu Sep 25 06:17:14 UTC 2025","","","",""
-"","14291","Remove product from cart","","Fri Sep 26 13:52:33 UTC 2025","passed","Fri Sep 26 13:52:47 UTC 2025","","","",""
-"","2728","Validate contact form fields #1","","Thu Sep 25 06:16:53 UTC 2025","passed","Thu Sep 25 06:16:56 UTC 2025","","","",""
-"","11688","Place order successfully with valid details","","Thu Sep 25 06:17:35 UTC 2025","failed","Thu Sep 25 06:17:47 UTC 2025","","","",""
-"  As a user visiting DemoBlaze e-commerce website
-  I want to navigate and interact with the home page
-  So that I can browse products and access different sections","10136","Verify navigation bar elements are visible","","Fri Sep 26 13:54:37 UTC 2025","passed","Fri Sep 26 13:54:47 UTC 2025","","DemoBlaze Home Page","Verify navigation bar elements are visible",""
-"","1985","Verify footer elements","","Thu Sep 25 06:17:31 UTC 2025","passed","Thu Sep 25 06:17:33 UTC 2025","","","",""
-"","17405","Verify cart maintains items across navigation","","Fri Sep 26 13:52:55 UTC 2025","failed","Fri Sep 26 13:53:12 UTC 2025","","","",""
-"","2610","Validate contact form fields #4","","Thu Sep 25 06:17:03 UTC 2025","passed","Thu Sep 25 06:17:05 UTC 2025","","","",""
-"","18537","Verify order form data persistence during session","","Fri Sep 26 16:34:04 UTC 2025","passed","Fri Sep 26 16:34:23 UTC 2025","","","",""
-"","14592","Validate order form with different data combinations #5","","Thu Sep 25 06:18:52 UTC 2025","passed","Thu Sep 25 06:19:06 UTC 2025","","","",""
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","8697","Open and close contact modal","","Fri Sep 26 13:53:13 UTC 2025","passed","Fri Sep 26 13:53:21 UTC 2025","","DemoBlaze Contact Modal","Open and close contact modal",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","12669","Attempt to place order with empty cart","","Fri Sep 26 16:34:23 UTC 2025","passed","Fri Sep 26 16:34:36 UTC 2025","","DemoBlaze Order Placement","Attempt to place order with empty cart",""
-"","11907","Verify order form data persistence during session","","Thu Sep 25 06:19:37 UTC 2025","passed","Thu Sep 25 06:19:49 UTC 2025","","","",""
-"","20026","Manage multiple products in cart","","Fri Sep 26 13:52:13 UTC 2025","failed","Fri Sep 26 13:52:33 UTC 2025","","","",""
-"","10190","Reset contact form","","Fri Sep 26 13:54:04 UTC 2025","passed","Fri Sep 26 13:54:14 UTC 2025","","","",""
-"","3332","Verify individual product details #3","","Thu Sep 25 06:17:28 UTC 2025","passed","Thu Sep 25 06:17:31 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","9288222","Validate order form with different data combinations","","Fri Sep 26 13:57:48 UTC 2025","failed","Fri Sep 26 16:32:36 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
-"","9526","Verify home page loads","","Fri Sep 26 16:34:36 UTC 2025","passed","Fri Sep 26 16:34:45 UTC 2025","","","",""
-"","15540","Validate order form with different data combinations #1","","Thu Sep 25 06:17:55 UTC 2025","failed","Thu Sep 25 06:18:10 UTC 2025","","","",""
-"","11133","Test sending invalid contact data","","Fri Sep 26 13:49:14 UTC 2025","passed","Fri Sep 26 13:49:25 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendInvalidContactData"
-"","27391","Place order with multiple products","","Fri Sep 26 16:33:37 UTC 2025","failed","Fri Sep 26 16:34:04 UTC 2025","","","",""
-"","4073","Verify individual product details #1","","Thu Sep 25 06:17:17 UTC 2025","passed","Thu Sep 25 06:17:21 UTC 2025","","","",""
-"","9997","Verify individual product details #2","","Fri Sep 26 13:55:17 UTC 2025","passed","Fri Sep 26 13:55:27 UTC 2025","","","",""
-"","3618","Validate contact form fields #2","","Thu Sep 25 06:16:56 UTC 2025","passed","Thu Sep 25 06:17:00 UTC 2025","","","",""
-"","11119","Verify product categories section","","Fri Sep 26 13:54:47 UTC 2025","passed","Fri Sep 26 13:54:58 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to manage items in my shopping cart
-  So that I can review and purchase selected products","19990","Manage multiple products in cart","","Fri Sep 26 13:52:13 UTC 2025","failed","Fri Sep 26 13:52:33 UTC 2025","","DemoBlaze Shopping Cart","Manage multiple products in cart",""
-"","5844","Add product to cart successfully","","Thu Sep 25 06:16:06 UTC 2025","passed","Thu Sep 25 06:16:11 UTC 2025","","","",""
+  So that I can complete my purchase and receive the products","9985","Validate order form with different data combinations","","Mon Sep 29 11:02:45 UTC 2025","failed","Mon Sep 29 11:02:55 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+"","5668","Verify individual product details #1","","Sat Sep 27 17:54:40 UTC 2025","passed","Sat Sep 27 17:54:46 UTC 2025","","","",""
+"","6306","Verify carousel functionality","","Thu Sep 25 02:49:30 UTC 2025","passed","Thu Sep 25 02:49:36 UTC 2025","","","",""
+"","1149","Attempt to place order with empty cart","","Mon Sep 29 11:04:01 UTC 2025","passed","Mon Sep 29 11:04:02 UTC 2025","","","",""
+"","2934","Verify individual product details #2","","Mon Sep 29 11:02:13 UTC 2025","passed","Mon Sep 29 11:02:16 UTC 2025","","","",""
 "","9932","Validate order form with different data combinations #2","","Thu Sep 25 06:18:10 UTC 2025","passed","Thu Sep 25 06:18:20 UTC 2025","","","",""
+"","2464","Open and close contact modal","","Mon Sep 29 11:01:16 UTC 2025","passed","Mon Sep 29 11:01:19 UTC 2025","","","",""
+"","15159","Place order successfully with valid details","","Mon Sep 29 11:02:23 UTC 2025","failed","Mon Sep 29 11:02:38 UTC 2025","","","",""
+"","964","Verify product listings on home page #4","","Mon Sep 29 11:02:00 UTC 2025","passed","Mon Sep 29 11:02:01 UTC 2025","","","",""
+"","8587","Test order placement form close","","Mon Sep 29 11:00:13 UTC 2025","passed","Mon Sep 29 11:00:21 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementFormClose"
+"","4988","Test sending valid contact data","","Mon Sep 29 10:59:12 UTC 2025","passed","Mon Sep 29 10:59:17 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendValidContactData"
+"","3028","Verify product listings on home page #2","","Mon Sep 29 11:01:55 UTC 2025","passed","Mon Sep 29 11:01:58 UTC 2025","","","",""
+"","15421","Manage multiple products in cart","","Mon Sep 29 11:00:44 UTC 2025","failed","Mon Sep 29 11:00:59 UTC 2025","","","",""
+"","8360","Verify individual product details #1","","Thu Sep 25 04:47:47 UTC 2025","passed","Thu Sep 25 04:47:56 UTC 2025","","","",""
+"","6676","Verify product listings on home page","","Thu Sep 25 02:48:45 UTC 2025","passed","Thu Sep 25 02:48:52 UTC 2025","","","",""
 "  As a customer on DemoBlaze e-commerce website
-  I want to manage items in my shopping cart
-  So that I can review and purchase selected products","7959","Verify empty cart behavior","","Fri Sep 26 13:52:47 UTC 2025","passed","Fri Sep 26 13:52:55 UTC 2025","","DemoBlaze Shopping Cart","Verify empty cart behavior",""
-"","1566","Verify carousel functionality","","Thu Sep 25 06:17:33 UTC 2025","passed","Thu Sep 25 06:17:35 UTC 2025","","","",""
-"","10152","Verify navigation bar elements are visible","","Fri Sep 26 13:54:37 UTC 2025","passed","Fri Sep 26 13:54:47 UTC 2025","","","",""
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","8517","Validate contact form fields","","Fri Sep 26 13:53:55 UTC 2025","passed","Fri Sep 26 13:54:04 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
-"","12585","Verify Nexus product details","","Fri Sep 26 13:50:12 UTC 2025","passed","Fri Sep 26 13:50:25 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNexusProductDetails"
-"","26498","Validate order form with different data combinations #3","","Fri Sep 26 13:56:56 UTC 2025","failed","Fri Sep 26 13:57:23 UTC 2025","","","",""
-"","6615","Verify individual product details #2","","Thu Sep 25 06:17:21 UTC 2025","passed","Thu Sep 25 06:17:28 UTC 2025","","","",""
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","7327","Validate order form with different data combinations","","Mon Sep 29 11:03:24 UTC 2025","passed","Mon Sep 29 11:03:31 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+"","16834","Add product to cart successfully","","Thu Sep 25 04:45:29 UTC 2025","passed","Thu Sep 25 04:45:46 UTC 2025","","","",""
+"","7582","Open and close contact modal","","Thu Sep 25 02:47:20 UTC 2025","passed","Thu Sep 25 02:47:28 UTC 2025","","","",""
+"","15812","Validate order form with different data combinations #3","","Thu Sep 25 02:50:31 UTC 2025","failed","Thu Sep 25 02:50:47 UTC 2025","","","",""
+"","8664","Verify Nokia Lumia product details","","Mon Sep 29 10:59:47 UTC 2025","passed","Mon Sep 29 10:59:56 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNokiaLumiaProductDetails"
+"","8006","runCucumberTests()","","Sat Sep 27 17:50:40 UTC 2025","passed","Sat Sep 27 17:50:48 UTC 2025","","bdd.BddTestRunner","bdd.BddTestRunner","runCucumberTests"
 "","2558","Verify home page loads","","Thu Sep 25 06:19:53 UTC 2025","passed","Thu Sep 25 06:19:56 UTC 2025","","","",""
-"","13094","Validate order form fields","","Fri Sep 26 13:56:08 UTC 2025","passed","Fri Sep 26 13:56:21 UTC 2025","","","",""
+"","6615","Verify individual product details #2","","Thu Sep 25 06:17:21 UTC 2025","passed","Thu Sep 25 06:17:28 UTC 2025","","","",""
+"","6318","Verify home page loads","","Thu Sep 25 02:52:12 UTC 2025","passed","Thu Sep 25 02:52:18 UTC 2025","","","",""
+"  Simple test to verify BDD integration","1829","Verify home page loads","","Mon Sep 29 11:04:02 UTC 2025","passed","Mon Sep 29 11:04:04 UTC 2025","","Simple DemoBlaze Test","Verify home page loads",""
+"","8933","Verify product categories section","","Thu Sep 25 02:48:36 UTC 2025","passed","Thu Sep 25 02:48:45 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","1977","Verify product listings on home page","","Mon Sep 29 11:01:58 UTC 2025","passed","Mon Sep 29 11:02:00 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","12762","Verify order form data persistence during session","","Thu Sep 25 04:50:57 UTC 2025","passed","Thu Sep 25 04:51:10 UTC 2025","","","",""
+"","3452","Validate contact form fields #2","","Mon Sep 29 11:01:25 UTC 2025","passed","Mon Sep 29 11:01:28 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","6492","Verify product listings on home page","","Mon Sep 29 11:02:01 UTC 2025","passed","Mon Sep 29 11:02:07 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","3332","Verify individual product details #3","","Thu Sep 25 06:17:28 UTC 2025","passed","Thu Sep 25 06:17:31 UTC 2025","","","",""
+"","21593","Manage multiple products in cart","","Thu Sep 25 02:46:23 UTC 2025","failed","Thu Sep 25 02:46:44 UTC 2025","","","",""
+"","963","Verify empty cart behavior","","Mon Sep 29 11:01:06 UTC 2025","passed","Mon Sep 29 11:01:07 UTC 2025","","","",""
+"","8495","Verify individual product details #1","","Thu Sep 25 02:48:52 UTC 2025","passed","Thu Sep 25 02:49:01 UTC 2025","","","",""
 "  As a user of DemoBlaze website
   I want to contact the support team
-  So that I can get help or send inquiries","8950","Validate contact form fields","","Fri Sep 26 13:53:46 UTC 2025","passed","Fri Sep 26 13:53:55 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
-"","9309","Test contact modal close functionality","","Fri Sep 26 13:49:46 UTC 2025","passed","Fri Sep 26 13:49:55 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testContactModalClose"
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","8358","Send valid contact message","","Fri Sep 26 13:53:21 UTC 2025","passed","Fri Sep 26 13:53:30 UTC 2025","","DemoBlaze Contact Modal","Send valid contact message",""
-"","3085","Open and close contact modal","","Thu Sep 25 06:16:46 UTC 2025","passed","Thu Sep 25 06:16:49 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","61127","Cancel order placement","","Fri Sep 26 16:32:36 UTC 2025","passed","Fri Sep 26 16:33:37 UTC 2025","","DemoBlaze Order Placement","Cancel order placement",""
-"","8293","Validate contact form fields #2","","Fri Sep 26 13:53:38 UTC 2025","passed","Fri Sep 26 13:53:46 UTC 2025","","","",""
-"","16866","Manage multiple products in cart","","Thu Sep 25 06:16:11 UTC 2025","failed","Thu Sep 25 06:16:28 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","27376","Place order with multiple products","","Fri Sep 26 16:33:37 UTC 2025","failed","Fri Sep 26 16:34:04 UTC 2025","","DemoBlaze Order Placement","Place order with multiple products",""
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","23200","Contact form data persistence during session","","Fri Sep 26 13:54:14 UTC 2025","failed","Fri Sep 26 13:54:37 UTC 2025","","DemoBlaze Contact Modal","Contact form data persistence during session",""
-"","6956","Verify footer elements","","Fri Sep 26 13:55:36 UTC 2025","passed","Fri Sep 26 13:55:43 UTC 2025","","","",""
-"","14062","runCucumberTests()","","Fri Sep 26 13:48:06 UTC 2025","passed","Fri Sep 26 13:48:20 UTC 2025","","bdd.BddTestRunner","bdd.BddTestRunner","runCucumberTests"
-"","1430","Verify product categories section","","Thu Sep 25 06:17:14 UTC 2025","passed","Thu Sep 25 06:17:15 UTC 2025","","","",""
-"","12085","Verify Nokia Lumia product details","","Fri Sep 26 13:50:47 UTC 2025","passed","Fri Sep 26 13:50:59 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNokiaLumiaProductDetails"
-"","7065","Remove product from cart","","Thu Sep 25 06:16:28 UTC 2025","passed","Thu Sep 25 06:16:35 UTC 2025","","","",""
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","10184","Reset contact form","","Fri Sep 26 13:54:04 UTC 2025","passed","Fri Sep 26 13:54:14 UTC 2025","","DemoBlaze Contact Modal","Reset contact form",""
+  So that I can get help or send inquiries","3434","Validate contact form fields","","Mon Sep 29 11:01:25 UTC 2025","passed","Mon Sep 29 11:01:28 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
 "","1300","Verify empty cart behavior","","Thu Sep 25 06:16:35 UTC 2025","passed","Thu Sep 25 06:16:37 UTC 2025","","","",""
-"","8553","Verify navigation bar elements are visible","","Fri Sep 26 13:49:55 UTC 2025","passed","Fri Sep 26 13:50:04 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNavigationBarElements"
-"  Simple test to verify BDD integration","9511","Verify home page loads","","Fri Sep 26 16:34:36 UTC 2025","passed","Fri Sep 26 16:34:45 UTC 2025","","Simple DemoBlaze Test","Verify home page loads",""
-"  As a user of DemoBlaze website
-  I want to contact the support team
-  So that I can get help or send inquiries","8183","Validate contact form fields","","Fri Sep 26 13:53:30 UTC 2025","passed","Fri Sep 26 13:53:38 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
+"","8097","Validate order form fields","","Thu Sep 25 06:17:47 UTC 2025","passed","Thu Sep 25 06:17:55 UTC 2025","","","",""
 "  As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","26492","Validate order form with different data combinations","","Fri Sep 26 13:56:56 UTC 2025","failed","Fri Sep 26 13:57:23 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
-"","12061","Cancel order placement","","Thu Sep 25 06:19:06 UTC 2025","passed","Thu Sep 25 06:19:19 UTC 2025","","","",""
-"","8616","Verify home page basic elements are visible","","Fri Sep 26 13:50:59 UTC 2025","passed","Fri Sep 26 13:51:07 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testHomePageBasicElements"
-"  As a customer on DemoBlaze e-commerce website
-  I want to manage items in my shopping cart
-  So that I can review and purchase selected products","14255","Remove product from cart","","Fri Sep 26 13:52:33 UTC 2025","passed","Fri Sep 26 13:52:47 UTC 2025","","DemoBlaze Shopping Cart","Remove product from cart",""
-"","21732","Validate order form with different data combinations #1","","Fri Sep 26 13:56:21 UTC 2025","failed","Fri Sep 26 13:56:43 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","18523","Verify order form data persistence during session","","Fri Sep 26 16:34:04 UTC 2025","passed","Fri Sep 26 16:34:23 UTC 2025","","DemoBlaze Order Placement","Verify order form data persistence during session",""
-"","12896","Verify Samsung Galaxy S6 product details","","Fri Sep 26 13:50:25 UTC 2025","passed","Fri Sep 26 13:50:38 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testSamsungGalaxyS6ProductDetails"
-"","9288239","Validate order form with different data combinations #5","","Fri Sep 26 13:57:48 UTC 2025","failed","Fri Sep 26 16:32:36 UTC 2025","","","",""
-"","8269","Verify categories section is visible","","Fri Sep 26 13:50:04 UTC 2025","passed","Fri Sep 26 13:50:12 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testCategoriesSection"
+  So that I can complete my purchase and receive the products","6901","Validate order form fields","","Mon Sep 29 11:02:38 UTC 2025","passed","Mon Sep 29 11:02:45 UTC 2025","","DemoBlaze Order Placement","Validate order form fields",""
 "  As a user visiting DemoBlaze e-commerce website
   I want to navigate and interact with the home page
-  So that I can browse products and access different sections","8469","Verify product listings on home page","","Fri Sep 26 13:54:58 UTC 2025","passed","Fri Sep 26 13:55:07 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+  So that I can browse products and access different sections","959","Verify product listings on home page","","Mon Sep 29 11:02:00 UTC 2025","passed","Mon Sep 29 11:02:01 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","4803","Verify home page loads","","Thu Sep 25 04:51:16 UTC 2025","passed","Thu Sep 25 04:51:21 UTC 2025","","","",""
+"","828","Verify carousel functionality","","Mon Sep 29 11:02:22 UTC 2025","passed","Mon Sep 29 11:02:23 UTC 2025","","","",""
+"","6908","Validate order form fields","","Mon Sep 29 11:02:38 UTC 2025","passed","Mon Sep 29 11:02:45 UTC 2025","","","",""
 "  As a user of DemoBlaze website
   I want to contact the support team
-  So that I can get help or send inquiries","8287","Validate contact form fields","","Fri Sep 26 13:53:38 UTC 2025","passed","Fri Sep 26 13:53:46 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
-"","4854","Send valid contact message","","Thu Sep 25 06:16:49 UTC 2025","passed","Thu Sep 25 06:16:53 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to manage items in my shopping cart
-  So that I can review and purchase selected products","17392","Verify cart maintains items across navigation","","Fri Sep 26 13:52:55 UTC 2025","failed","Fri Sep 26 13:53:12 UTC 2025","","DemoBlaze Shopping Cart","Verify cart maintains items across navigation",""
-"","10337","Test sending valid contact data","","Fri Sep 26 13:49:36 UTC 2025","passed","Fri Sep 26 13:49:46 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendValidContactData"
-"","8372","Send valid contact message","","Fri Sep 26 13:53:21 UTC 2025","passed","Fri Sep 26 13:53:30 UTC 2025","","","",""
-"  As a customer on DemoBlaze e-commerce website
-  I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","13894","Validate order form with different data combinations","","Fri Sep 26 13:56:43 UTC 2025","passed","Fri Sep 26 13:56:56 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+  So that I can get help or send inquiries","9822","Validate contact form fields","","Mon Sep 29 11:01:28 UTC 2025","passed","Mon Sep 29 11:01:38 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
+"","7712","Contact form data persistence during session","","Thu Sep 25 04:47:23 UTC 2025","passed","Thu Sep 25 04:47:31 UTC 2025","","","",""
+"","7523","Attempt to place order with empty cart","","Thu Sep 25 02:52:05 UTC 2025","passed","Thu Sep 25 02:52:12 UTC 2025","","","",""
+"","5606","Open and close contact modal","","Thu Sep 25 04:46:38 UTC 2025","passed","Thu Sep 25 04:46:44 UTC 2025","","","",""
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","2542","Send valid contact message","","Mon Sep 29 11:01:19 UTC 2025","passed","Mon Sep 29 11:01:21 UTC 2025","","DemoBlaze Contact Modal","Send valid contact message",""
 "  As a customer on DemoBlaze e-commerce website
   I want to place orders for items in my cart
-  So that I can complete my purchase and receive the products","17544","Place order successfully with valid details","","Fri Sep 26 13:55:50 UTC 2025","failed","Fri Sep 26 13:56:08 UTC 2025","","DemoBlaze Order Placement","Place order successfully with valid details",""
-"","27957","Add multiple products to cart and verify cart functionality","","Fri Sep 26 13:48:20 UTC 2025","passed","Fri Sep 26 13:48:48 UTC 2025","","tests.CartPageTest","tests.CartPageTest","testAddMultipleProductsToCart"
-"","8525","Validate contact form fields #4","","Fri Sep 26 13:53:55 UTC 2025","passed","Fri Sep 26 13:54:04 UTC 2025","","","",""
+  So that I can complete my purchase and receive the products","8233","Verify order form data persistence during session","","Mon Sep 29 11:03:53 UTC 2025","passed","Mon Sep 29 11:04:01 UTC 2025","","DemoBlaze Order Placement","Verify order form data persistence during session",""
+"","14728","Verify order form data persistence during session","","Thu Sep 25 02:51:50 UTC 2025","passed","Thu Sep 25 02:52:04 UTC 2025","","","",""
+"","6346","Test sending invalid contact data","","Mon Sep 29 10:59:02 UTC 2025","passed","Mon Sep 29 10:59:08 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendInvalidContactData"
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","4312","Reset contact form","","Mon Sep 29 11:01:43 UTC 2025","passed","Mon Sep 29 11:01:47 UTC 2025","","DemoBlaze Contact Modal","Reset contact form",""
+"","2728","Validate contact form fields #1","","Thu Sep 25 06:16:53 UTC 2025","passed","Thu Sep 25 06:16:56 UTC 2025","","","",""
+"","2079","Verify product listings on home page","","Thu Sep 25 06:17:15 UTC 2025","passed","Thu Sep 25 06:17:17 UTC 2025","","","",""
+"","3618","Validate contact form fields #2","","Thu Sep 25 06:16:56 UTC 2025","passed","Thu Sep 25 06:17:00 UTC 2025","","","",""
+"","7682","Test contact modal close functionality","","Mon Sep 29 10:59:17 UTC 2025","passed","Mon Sep 29 10:59:25 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testContactModalClose"
+"","6330","Send valid contact message","","Thu Sep 25 04:46:44 UTC 2025","passed","Thu Sep 25 04:46:50 UTC 2025","","","",""
+"","9836","Validate contact form fields #3","","Mon Sep 29 11:01:28 UTC 2025","passed","Mon Sep 29 11:01:38 UTC 2025","","","",""
+"","14458","Validate order form with different data combinations #5","","Thu Sep 25 04:50:06 UTC 2025","passed","Thu Sep 25 04:50:21 UTC 2025","","","",""
+"","5844","Add product to cart successfully","","Thu Sep 25 06:16:06 UTC 2025","passed","Thu Sep 25 06:16:11 UTC 2025","","","",""
+"","18903","Place order with multiple products","","Thu Sep 25 06:19:19 UTC 2025","failed","Thu Sep 25 06:19:37 UTC 2025","","","",""
+"","7132","Verify product listings on home page","","Sat Sep 27 17:54:33 UTC 2025","failed","Sat Sep 27 17:54:40 UTC 2025","","","",""
 "  As a user visiting DemoBlaze e-commerce website
   I want to navigate and interact with the home page
-  So that I can browse products and access different sections","11112","Verify product categories section","","Fri Sep 26 13:54:47 UTC 2025","passed","Fri Sep 26 13:54:58 UTC 2025","","DemoBlaze Home Page","Verify product categories section",""
-"","12685","Attempt to place order with empty cart","","Fri Sep 26 16:34:23 UTC 2025","passed","Fri Sep 26 16:34:36 UTC 2025","","","",""
-"","19657","Test order placement with valid data","","Fri Sep 26 13:51:07 UTC 2025","passed","Fri Sep 26 13:51:27 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementWithValidData"
-"","3256","Contact form data persistence during session","","Thu Sep 25 06:17:08 UTC 2025","passed","Thu Sep 25 06:17:12 UTC 2025","","","",""
+  So that I can browse products and access different sections","1206","Verify product categories section","","Mon Sep 29 11:01:52 UTC 2025","passed","Mon Sep 29 11:01:53 UTC 2025","","DemoBlaze Home Page","Verify product categories section",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","1934","Verify navigation bar elements are visible","","Mon Sep 29 11:01:50 UTC 2025","passed","Mon Sep 29 11:01:52 UTC 2025","","DemoBlaze Home Page","Verify navigation bar elements are visible",""
+"","4330","Reset contact form","","Mon Sep 29 11:01:43 UTC 2025","passed","Mon Sep 29 11:01:47 UTC 2025","","","",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","5492","Cancel order placement","","Mon Sep 29 11:03:31 UTC 2025","passed","Mon Sep 29 11:03:37 UTC 2025","","DemoBlaze Order Placement","Cancel order placement",""
+"","6680","Remove product from cart","","Mon Sep 29 11:00:59 UTC 2025","passed","Mon Sep 29 11:01:06 UTC 2025","","","",""
+"","18322","Validate order form with different data combinations #4","","Thu Sep 25 04:49:48 UTC 2025","failed","Thu Sep 25 04:50:06 UTC 2025","","","",""
+"","12968","Validate order form with different data combinations #2","","Thu Sep 25 04:49:16 UTC 2025","passed","Thu Sep 25 04:49:29 UTC 2025","","","",""
+"","11758","Validate order form with different data combinations #2","","Thu Sep 25 02:50:19 UTC 2025","passed","Thu Sep 25 02:50:31 UTC 2025","","","",""
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","2449","Open and close contact modal","","Mon Sep 29 11:01:16 UTC 2025","passed","Mon Sep 29 11:01:19 UTC 2025","","DemoBlaze Contact Modal","Open and close contact modal",""
+"","12479","Add product to cart successfully","","Mon Sep 29 11:00:32 UTC 2025","passed","Mon Sep 29 11:00:44 UTC 2025","","","",""
+"","1833","Verify home page loads","","Mon Sep 29 11:04:02 UTC 2025","passed","Mon Sep 29 11:04:04 UTC 2025","","","",""
+"","4073","Verify individual product details #1","","Thu Sep 25 06:17:17 UTC 2025","passed","Thu Sep 25 06:17:21 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","825","Verify carousel functionality","","Mon Sep 29 11:02:22 UTC 2025","passed","Mon Sep 29 11:02:23 UTC 2025","","DemoBlaze Home Page","Verify carousel functionality",""
+"","5357","Verify footer elements","","Thu Sep 25 04:48:14 UTC 2025","passed","Thu Sep 25 04:48:20 UTC 2025","","","",""
+"","5498","Cancel order placement","","Mon Sep 29 11:03:31 UTC 2025","passed","Mon Sep 29 11:03:37 UTC 2025","","","",""
+"","1566","Verify carousel functionality","","Thu Sep 25 06:17:33 UTC 2025","passed","Thu Sep 25 06:17:35 UTC 2025","","","",""
+"","1987","Verify product listings on home page #3","","Mon Sep 29 11:01:58 UTC 2025","passed","Mon Sep 29 11:02:00 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","2749","Verify product listings on home page","","Mon Sep 29 11:02:07 UTC 2025","passed","Mon Sep 29 11:02:10 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","2610","Validate contact form fields #4","","Thu Sep 25 06:17:03 UTC 2025","passed","Thu Sep 25 06:17:05 UTC 2025","","","",""
+"","15286","Cancel order placement","","Thu Sep 25 04:50:21 UTC 2025","passed","Thu Sep 25 04:50:36 UTC 2025","","","",""
+"","2976","Reset contact form","","Thu Sep 25 06:17:05 UTC 2025","passed","Thu Sep 25 06:17:08 UTC 2025","","","",""
+"","6318","Validate contact form fields #4","","Thu Sep 25 04:47:09 UTC 2025","passed","Thu Sep 25 04:47:15 UTC 2025","","","",""
+"","3407","Verify home page basic elements are visible","","Mon Sep 29 10:59:56 UTC 2025","passed","Mon Sep 29 10:59:59 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testHomePageBasicElements"
+"","18396","Validate order form with different data combinations #4","","Thu Sep 25 02:50:47 UTC 2025","failed","Thu Sep 25 02:51:06 UTC 2025","","","",""
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","3402","Validate contact form fields","","Mon Sep 29 11:01:21 UTC 2025","passed","Mon Sep 29 11:01:25 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
+"","7830","Reset contact form","","Thu Sep 25 04:47:15 UTC 2025","passed","Thu Sep 25 04:47:23 UTC 2025","","","",""
+"","1948","Verify navigation bar elements are visible","","Mon Sep 29 11:01:50 UTC 2025","passed","Mon Sep 29 11:01:52 UTC 2025","","","",""
+"","6075","Validate contact form fields #3","","Thu Sep 25 04:47:03 UTC 2025","passed","Thu Sep 25 04:47:09 UTC 2025","","","",""
+"","11280","Validate order form with different data combinations #5","","Thu Sep 25 02:51:06 UTC 2025","passed","Thu Sep 25 02:51:17 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","3020","Verify product listings on home page","","Mon Sep 29 11:01:55 UTC 2025","passed","Mon Sep 29 11:01:58 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","11362","Validate order form fields","","Thu Sep 25 02:49:54 UTC 2025","passed","Thu Sep 25 02:50:05 UTC 2025","","","",""
+"","2304","Contact form data persistence during session","","Mon Sep 29 11:01:47 UTC 2025","passed","Mon Sep 29 11:01:50 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","7119","Verify product listings on home page","","Sat Sep 27 17:54:33 UTC 2025","failed","Sat Sep 27 17:54:40 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to manage items in my shopping cart
+  So that I can review and purchase selected products","9032","Verify cart maintains items across navigation","","Mon Sep 29 11:01:07 UTC 2025","failed","Mon Sep 29 11:01:16 UTC 2025","","DemoBlaze Shopping Cart","Verify cart maintains items across navigation",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","12323","Validate order form with different data combinations","","Mon Sep 29 11:03:12 UTC 2025","failed","Mon Sep 29 11:03:24 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+"","10324","Add product to cart successfully","","Thu Sep 25 02:46:12 UTC 2025","passed","Thu Sep 25 02:46:23 UTC 2025","","","",""
+"","17554","Place order with multiple products","","Thu Sep 25 02:51:32 UTC 2025","failed","Thu Sep 25 02:51:50 UTC 2025","","","",""
+"","4006","Verify individual product details #3","","Mon Sep 29 11:02:16 UTC 2025","passed","Mon Sep 29 11:02:20 UTC 2025","","","",""
+"","11014","Remove product from cart","","Thu Sep 25 04:46:06 UTC 2025","passed","Thu Sep 25 04:46:17 UTC 2025","","","",""
+"","21070","Place order with multiple products","","Thu Sep 25 04:50:36 UTC 2025","failed","Thu Sep 25 04:50:57 UTC 2025","","","",""
+"","2561","Send valid contact message","","Mon Sep 29 11:01:19 UTC 2025","passed","Mon Sep 29 11:01:21 UTC 2025","","","",""
+"","2755","Verify product listings on home page #6","","Mon Sep 29 11:02:07 UTC 2025","passed","Mon Sep 29 11:02:10 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","3320","Verify individual product details","","Sat Sep 27 17:54:46 UTC 2025","passed","Sat Sep 27 17:54:49 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"","7065","Remove product from cart","","Thu Sep 25 06:16:28 UTC 2025","passed","Thu Sep 25 06:16:35 UTC 2025","","","",""
+"","7293","Validate order form with different data combinations #2","","Mon Sep 29 11:02:55 UTC 2025","passed","Mon Sep 29 11:03:02 UTC 2025","","","",""
+"","3085","Open and close contact modal","","Thu Sep 25 06:16:46 UTC 2025","passed","Thu Sep 25 06:16:49 UTC 2025","","","",""
+"","7082","Validate contact form fields #2","","Thu Sep 25 02:47:44 UTC 2025","passed","Thu Sep 25 02:47:51 UTC 2025","","","",""
+"","16182","Place order with multiple products","","Mon Sep 29 11:03:37 UTC 2025","failed","Mon Sep 29 11:03:53 UTC 2025","","","",""
+"","18926","Validate order form with different data combinations #1","","Thu Sep 25 04:48:57 UTC 2025","failed","Thu Sep 25 04:49:16 UTC 2025","","","",""
+"","11749","Validate order form with different data combinations #3","","Thu Sep 25 06:18:20 UTC 2025","failed","Thu Sep 25 06:18:32 UTC 2025","","","",""
+"","2985","Verify categories section is visible","","Mon Sep 29 10:59:28 UTC 2025","passed","Mon Sep 29 10:59:31 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testCategoriesSection"
+"","5889","Verify Samsung Galaxy S6 product details","","Mon Sep 29 10:59:37 UTC 2025","passed","Mon Sep 29 10:59:43 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testSamsungGalaxyS6ProductDetails"
+"","9026","Validate contact form fields #4","","Thu Sep 25 02:47:59 UTC 2025","passed","Thu Sep 25 02:48:08 UTC 2025","","","",""
+"","5231","Validate contact form fields #4","","Mon Sep 29 11:01:38 UTC 2025","passed","Mon Sep 29 11:01:43 UTC 2025","","","",""
+"","20571","Manage multiple products in cart","","Thu Sep 25 04:45:46 UTC 2025","failed","Thu Sep 25 04:46:06 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","3328","Verify individual product details","","Mon Sep 29 11:02:10 UTC 2025","passed","Mon Sep 29 11:02:13 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"","9446","Verify empty cart behavior","","Thu Sep 25 02:46:56 UTC 2025","passed","Thu Sep 25 02:47:06 UTC 2025","","","",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to manage items in my shopping cart
+  So that I can review and purchase selected products","12275","Add product to cart successfully","","Mon Sep 29 11:00:32 UTC 2025","passed","Mon Sep 29 11:00:44 UTC 2025","","DemoBlaze Shopping Cart","Add product to cart successfully",""
+"","9869","Test order placement with invalid data","","Mon Sep 29 11:00:21 UTC 2025","passed","Mon Sep 29 11:00:31 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementWithInvalidData"
+"  As a customer on DemoBlaze e-commerce website
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","15150","Place order successfully with valid details","","Mon Sep 29 11:02:23 UTC 2025","failed","Mon Sep 29 11:02:38 UTC 2025","","DemoBlaze Order Placement","Place order successfully with valid details",""
+"","4498","Test sending empty contact data","","Mon Sep 29 10:59:08 UTC 2025","passed","Mon Sep 29 10:59:12 UTC 2025","","tests.ContactModalTest","tests.ContactModalTest","testSendEmptyContactData"
+"","11688","Place order successfully with valid details","","Thu Sep 25 06:17:35 UTC 2025","failed","Thu Sep 25 06:17:47 UTC 2025","","","",""
+"","5971","Verify Nexus product details","","Mon Sep 29 10:59:31 UTC 2025","passed","Mon Sep 29 10:59:37 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNexusProductDetails"
+"","9965","Send valid contact message","","Thu Sep 25 02:47:28 UTC 2025","passed","Thu Sep 25 02:47:38 UTC 2025","","","",""
+"","19953","Validate order form with different data combinations #4","","Thu Sep 25 06:18:32 UTC 2025","failed","Thu Sep 25 06:18:52 UTC 2025","","","",""
+"","11275","Contact form data persistence during session","","Thu Sep 25 02:48:17 UTC 2025","failed","Thu Sep 25 02:48:28 UTC 2025","","","",""
+"","6502","Verify product listings on home page #5","","Mon Sep 29 11:02:01 UTC 2025","passed","Mon Sep 29 11:02:07 UTC 2025","","","",""
+"","7501","Verify navigation bar elements are visible","","Thu Sep 25 02:48:28 UTC 2025","passed","Thu Sep 25 02:48:36 UTC 2025","","","",""
+"","9991","Validate order form with different data combinations #1","","Mon Sep 29 11:02:45 UTC 2025","failed","Mon Sep 29 11:02:55 UTC 2025","","","",""
+"","8388","Verify individual product details #3","","Thu Sep 25 02:49:14 UTC 2025","passed","Thu Sep 25 02:49:23 UTC 2025","","","",""
+"","5551","Verify product listings on home page","","Thu Sep 25 04:47:42 UTC 2025","passed","Thu Sep 25 04:47:47 UTC 2025","","","",""
+"","21427","Place order successfully with valid details","","Thu Sep 25 04:48:24 UTC 2025","failed","Thu Sep 25 04:48:46 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","5662","Verify individual product details","","Sat Sep 27 17:54:40 UTC 2025","passed","Sat Sep 27 17:54:46 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","7281","Validate order form with different data combinations","","Mon Sep 29 11:02:55 UTC 2025","passed","Mon Sep 29 11:03:02 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+"","4430","Verify carousel functionality","","Thu Sep 25 04:48:20 UTC 2025","passed","Thu Sep 25 04:48:24 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","1477","Verify footer elements","","Mon Sep 29 11:02:20 UTC 2025","passed","Mon Sep 29 11:02:22 UTC 2025","","DemoBlaze Home Page","Verify footer elements",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to manage items in my shopping cart
+  So that I can review and purchase selected products","954","Verify empty cart behavior","","Mon Sep 29 11:01:06 UTC 2025","passed","Mon Sep 29 11:01:07 UTC 2025","","DemoBlaze Shopping Cart","Verify empty cart behavior",""
+"","11876","Validate order form fields","","Thu Sep 25 04:48:46 UTC 2025","passed","Thu Sep 25 04:48:57 UTC 2025","","","",""
+"","4809","Verify product categories section","","Thu Sep 25 04:47:37 UTC 2025","passed","Thu Sep 25 04:47:42 UTC 2025","","","",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to place orders for items in my cart
+  So that I can complete my purchase and receive the products","9608","Validate order form with different data combinations","","Mon Sep 29 11:03:02 UTC 2025","failed","Mon Sep 29 11:03:12 UTC 2025","","DemoBlaze Order Placement","Validate order form with different data combinations",""
+"","8880","Verify cart maintains items across navigation","","Thu Sep 25 06:16:37 UTC 2025","failed","Thu Sep 25 06:16:46 UTC 2025","","","",""
+"","6171","Verify navigation bar elements are visible","","Thu Sep 25 04:47:31 UTC 2025","passed","Thu Sep 25 04:47:37 UTC 2025","","","",""
+"","1614","Verify footer elements","","Sat Sep 27 17:54:52 UTC 2025","passed","Sat Sep 27 17:54:54 UTC 2025","","","",""
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","5213","Validate contact form fields","","Mon Sep 29 11:01:38 UTC 2025","passed","Mon Sep 29 11:01:43 UTC 2025","","DemoBlaze Contact Modal","Validate contact form fields",""
+"","21554","Test cart item deletion functionality","","Mon Sep 29 10:58:40 UTC 2025","passed","Mon Sep 29 10:59:01 UTC 2025","","tests.CartPageTest","tests.CartPageTest","testCartItemDeletion"
+"","3190","Verify navigation bar elements are visible","","Mon Sep 29 10:59:25 UTC 2025","passed","Mon Sep 29 10:59:28 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testNavigationBarElements"
+"","7413","Verify individual product details #3","","Thu Sep 25 04:48:07 UTC 2025","passed","Thu Sep 25 04:48:14 UTC 2025","","","",""
+"","3324","Verify individual product details #2","","Sat Sep 27 17:54:46 UTC 2025","passed","Sat Sep 27 17:54:49 UTC 2025","","","",""
+"","1212","Verify product categories section","","Mon Sep 29 11:01:52 UTC 2025","passed","Mon Sep 29 11:01:53 UTC 2025","","","",""
+"","3332","Verify individual product details #1","","Mon Sep 29 11:02:10 UTC 2025","passed","Mon Sep 29 11:02:13 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","1609","Verify footer elements","","Sat Sep 27 17:54:52 UTC 2025","passed","Sat Sep 27 17:54:54 UTC 2025","","DemoBlaze Home Page","Verify footer elements",""
+"","6012","Attempt to place order with empty cart","","Thu Sep 25 04:51:10 UTC 2025","passed","Thu Sep 25 04:51:16 UTC 2025","","","",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to manage items in my shopping cart
+  So that I can review and purchase selected products","6672","Remove product from cart","","Mon Sep 29 11:00:59 UTC 2025","passed","Mon Sep 29 11:01:06 UTC 2025","","DemoBlaze Shopping Cart","Remove product from cart",""
+"","1985","Verify footer elements","","Thu Sep 25 06:17:31 UTC 2025","passed","Thu Sep 25 06:17:33 UTC 2025","","","",""
+"","1484","Verify footer elements","","Mon Sep 29 11:02:20 UTC 2025","passed","Mon Sep 29 11:02:22 UTC 2025","","","",""
+"","9614","Validate order form with different data combinations #3","","Mon Sep 29 11:03:02 UTC 2025","failed","Mon Sep 29 11:03:12 UTC 2025","","","",""
 "","2899","Validate contact form fields #3","","Thu Sep 25 06:17:00 UTC 2025","passed","Thu Sep 25 06:17:03 UTC 2025","","","",""
 "  As a user visiting DemoBlaze e-commerce website
   I want to navigate and interact with the home page
-  So that I can browse products and access different sections","9990","Verify individual product details","","Fri Sep 26 13:55:17 UTC 2025","passed","Fri Sep 26 13:55:27 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
-"","14536","Test order placement form close","","Fri Sep 26 13:51:27 UTC 2025","passed","Fri Sep 26 13:51:42 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementFormClose"
-"","23208","Contact form data persistence during session","","Fri Sep 26 13:54:14 UTC 2025","failed","Fri Sep 26 13:54:37 UTC 2025","","","",""
-"","8489","Verify product listings on home page","","Fri Sep 26 13:54:58 UTC 2025","passed","Fri Sep 26 13:55:07 UTC 2025","","","",""
+  So that I can browse products and access different sections","4000","Verify individual product details","","Mon Sep 29 11:02:16 UTC 2025","passed","Mon Sep 29 11:02:20 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"","1430","Verify product categories section","","Thu Sep 25 06:17:14 UTC 2025","passed","Thu Sep 25 06:17:15 UTC 2025","","","",""
+"  As a user of DemoBlaze website
+  I want to contact the support team
+  So that I can get help or send inquiries","2297","Contact form data persistence during session","","Mon Sep 29 11:01:47 UTC 2025","passed","Mon Sep 29 11:01:50 UTC 2025","","DemoBlaze Contact Modal","Contact form data persistence during session",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","3313","Verify individual product details","","Sat Sep 27 17:54:49 UTC 2025","passed","Sat Sep 27 17:54:52 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","2930","Verify individual product details","","Mon Sep 29 11:02:13 UTC 2025","passed","Mon Sep 29 11:02:16 UTC 2025","","DemoBlaze Home Page","Verify individual product details",""
+"","17931","Place order successfully with valid details","","Thu Sep 25 02:49:36 UTC 2025","failed","Thu Sep 25 02:49:54 UTC 2025","","","",""
+"","5914","Verify footer elements","","Thu Sep 25 02:49:23 UTC 2025","passed","Thu Sep 25 02:49:29 UTC 2025","","","",""
+"","15066","Cancel order placement","","Thu Sep 25 02:51:17 UTC 2025","passed","Thu Sep 25 02:51:32 UTC 2025","","","",""
+"","7701","Validate contact form fields #3","","Thu Sep 25 02:47:51 UTC 2025","passed","Thu Sep 25 02:47:59 UTC 2025","","","",""
+"","14043","Validate order form with different data combinations #1","","Thu Sep 25 02:50:05 UTC 2025","failed","Thu Sep 25 02:50:19 UTC 2025","","","",""
+"","11907","Verify order form data persistence during session","","Thu Sep 25 06:19:37 UTC 2025","passed","Thu Sep 25 06:19:49 UTC 2025","","","",""
+"","16866","Manage multiple products in cart","","Thu Sep 25 06:16:11 UTC 2025","failed","Thu Sep 25 06:16:28 UTC 2025","","","",""
+"","3950","Attempt to place order with empty cart","","Thu Sep 25 06:19:49 UTC 2025","passed","Thu Sep 25 06:19:53 UTC 2025","","","",""
+"","11260","Verify individual product details #2","","Thu Sep 25 04:47:56 UTC 2025","failed","Thu Sep 25 04:48:07 UTC 2025","","","",""
+"","3256","Contact form data persistence during session","","Thu Sep 25 06:17:08 UTC 2025","passed","Thu Sep 25 06:17:12 UTC 2025","","","",""
+"","15540","Validate order form with different data combinations #1","","Thu Sep 25 06:17:55 UTC 2025","failed","Thu Sep 25 06:18:10 UTC 2025","","","",""
+"","8241","Verify order form data persistence during session","","Mon Sep 29 11:03:53 UTC 2025","passed","Mon Sep 29 11:04:01 UTC 2025","","","",""
+"","8257","Reset contact form","","Thu Sep 25 02:48:08 UTC 2025","passed","Thu Sep 25 02:48:16 UTC 2025","","","",""
+"","4854","Send valid contact message","","Thu Sep 25 06:16:49 UTC 2025","passed","Thu Sep 25 06:16:53 UTC 2025","","","",""
+"","12329","Validate order form with different data combinations #4","","Mon Sep 29 11:03:12 UTC 2025","failed","Mon Sep 29 11:03:24 UTC 2025","","","",""
+"","6643","Validate contact form fields #1","","Thu Sep 25 04:46:50 UTC 2025","passed","Thu Sep 25 04:46:57 UTC 2025","","","",""
+"","5847","Validate contact form fields #2","","Thu Sep 25 04:46:57 UTC 2025","passed","Thu Sep 25 04:47:03 UTC 2025","","","",""
+"","11769","Remove product from cart","","Thu Sep 25 02:46:44 UTC 2025","passed","Thu Sep 25 02:46:56 UTC 2025","","","",""
+"","13847","Verify individual product details #2","","Thu Sep 25 02:49:01 UTC 2025","passed","Thu Sep 25 02:49:14 UTC 2025","","","",""
+"","13206","Test order placement with valid data","","Mon Sep 29 10:59:59 UTC 2025","passed","Mon Sep 29 11:00:13 UTC 2025","","tests.OrderPlacementTest","tests.OrderPlacementTest","testOrderPlacementWithValidData"
+"","3412","Validate contact form fields #1","","Mon Sep 29 11:01:21 UTC 2025","passed","Mon Sep 29 11:01:25 UTC 2025","","","",""
+"","4099","Verify all products and footer elements on home page","","Mon Sep 29 10:59:43 UTC 2025","passed","Mon Sep 29 10:59:47 UTC 2025","","tests.HomePageTest","tests.HomePageTest","testAllProductsAndFooterElements"
+"","29217","Add multiple products to cart and verify cart functionality","","Mon Sep 29 10:58:11 UTC 2025","passed","Mon Sep 29 10:58:40 UTC 2025","","tests.CartPageTest","tests.CartPageTest","testAddMultipleProductsToCart"
+"","3319","Verify individual product details #3","","Sat Sep 27 17:54:49 UTC 2025","passed","Sat Sep 27 17:54:52 UTC 2025","","","",""
+"","14592","Validate order form with different data combinations #5","","Thu Sep 25 06:18:52 UTC 2025","passed","Thu Sep 25 06:19:06 UTC 2025","","","",""
+"","2218","Verify navigation bar elements are visible","","Thu Sep 25 06:17:12 UTC 2025","passed","Thu Sep 25 06:17:14 UTC 2025","","","",""
+"","1771","Verify product listings on home page #1","","Mon Sep 29 11:01:53 UTC 2025","passed","Mon Sep 29 11:01:55 UTC 2025","","","",""
+"","12061","Cancel order placement","","Thu Sep 25 06:19:06 UTC 2025","passed","Thu Sep 25 06:19:19 UTC 2025","","","",""
+"  As a user visiting DemoBlaze e-commerce website
+  I want to navigate and interact with the home page
+  So that I can browse products and access different sections","1760","Verify product listings on home page","","Mon Sep 29 11:01:53 UTC 2025","passed","Mon Sep 29 11:01:55 UTC 2025","","DemoBlaze Home Page","Verify product listings on home page",""
+"","6167","Validate contact form fields #1","","Thu Sep 25 02:47:38 UTC 2025","passed","Thu Sep 25 02:47:44 UTC 2025","","","",""
+"","7330","Validate order form with different data combinations #5","","Mon Sep 29 11:03:24 UTC 2025","passed","Mon Sep 29 11:03:31 UTC 2025","","","",""
+"  As a customer on DemoBlaze e-commerce website
+  I want to manage items in my shopping cart
+  So that I can review and purchase selected products","15401","Manage multiple products in cart","","Mon Sep 29 11:00:44 UTC 2025","failed","Mon Sep 29 11:00:59 UTC 2025","","DemoBlaze Shopping Cart","Manage multiple products in cart",""
+"","18490","Validate order form with different data combinations #3","","Thu Sep 25 04:49:29 UTC 2025","failed","Thu Sep 25 04:49:48 UTC 2025","","","",""
+"","14710","Verify cart maintains items across navigation","","Thu Sep 25 02:47:06 UTC 2025","failed","Thu Sep 25 02:47:20 UTC 2025","","","",""
