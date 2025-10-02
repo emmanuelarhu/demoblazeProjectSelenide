@@ -1,7 +1,4 @@
 pipeline {
-    agent {
-        label 'linux-agent'
-    }
 
     triggers {
         githubPush()
