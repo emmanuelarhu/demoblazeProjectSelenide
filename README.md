@@ -14,7 +14,7 @@ Access the latest test reports directly:
 
 ### Core Technologies
 - **Selenide 7.10.0** - Simplified WebDriver automation with built-in waits
-- **Java 21** - Latest LTS Java version with enhanced performance
+- **Java 21** -  Latest LTS Java version with enhanced performance
 - **Maven** - Build automation and dependency management
 
 ### Testing Frameworks
